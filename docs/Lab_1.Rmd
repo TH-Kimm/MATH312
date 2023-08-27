@@ -8,7 +8,7 @@ output: rmdformats::html_docco
 ## Description
 * Answer the following questions and upload the pdf and R markdown (.Rmd) files to Gradescope.
 * This lab is due at 11:00 PM today.
-* Download this [Template](https://drive.google.com/file/d/1Y2ppYENf8zu3919ayeBOdaWb_42eAKOI/view?usp=sharing) to finish your work.
+* Download this [Template](https://drive.google.com/file/d/1Y2VVNHrqGYEuL3BU6bYFwL63XurkW-xL/view?usp=sharing) to finish your work.
 
 ## Lab Questions
 1. Execute one or two R commands that you learned during today's session. Include the R code in your output. Provide a brief comment alongside the R code you wrote. Explain what the code is doing and why it's relevant or useful. 
