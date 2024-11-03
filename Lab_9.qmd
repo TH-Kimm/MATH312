@@ -1,0 +1,184 @@
+---
+title: "Lab 9"
+webr:
+  show-startup-message: true
+---
+
+```{webr-r}
+#| context: setup
+
+library(fastGraph)
+```
+# Probability (II)
+
+## Continuous Random Variable (RV)
+
+A continuous random variable can take any value within its range. For example, it might yield a value between 10 and 120 (such as the daily high temperature in the U.S.) or any value from 0 to infinity (such as the failure time of a particular device in minutes).
+
+## Probability Distribution of Continuous RV
+
+A continuous probability distribution can be represented as a curve $f(x)$ that spans the possible values of a random variable. Its shape can vary depending on the variable of interest, but it has the following properties:
+1. The total area under the probability density curve is 1.
+2. $P[ a\le X\le b ]$ is the area under the probability density curve between $a$ and $b$.
+3. $f(x)\ge 0$  for all $x$.
+
+![](images/density.png){fig-align="center"}
+
+## The Normal Distribution
+
+In our class, we focus on the normal distribution because:
+1. All manner of things appear to be distributed normally: people’s height, IQ scores, examination grades, sizes of snowflakes, errors in measurements, lifetimes of lightbulbs, and so on;
+2. Central Limit Theorem;
+3. Easy to deal with.
+
+A normal distribution can be characterized by two parameters: the mean $\mu$ and the variance $\sigma^2$ (or equivalently, the standard deviation $\sigma$).
+
+![](images/normal.gif){fig-align="center"}
+
+# Probability calculation
+
+Probability calculations under a normal distribution can be easily performed using the function $\texttt{pnorm(c)}$. Similar to using a $z$-table, this function provides the left-tail probability based on a cutoff value of $c$.
+
+Suppose $X$ to be the # of beer cans consumed by a female college student in a year. It is assumed to be normally distributed with the mean 360 and standard deviation 80. What proportion of female students drink less than 400 beer cans per year? 
+
+```{webr-r}
+# Given information
+x <- 400
+mu <- 360
+sigma <- 80
+# z-score
+z <- (x-mu)/sigma
+
+# Probability calculation
+pnorm(z)
+
+# Graphical Illustration
+x <- -1000:1000/300
+y <- dnorm(x)
+shadeDist(z,"dnorm",0,1,col=c("black","brown"),main="Area under Standard Normal Curve",xmin=-3.5,xmax=3.5)
+```
+
+This approach precisely emulates how we typically perform probability calculations using the $z$-table. Now, we can simplify the process by using the second and third arguments of the $\texttt{pnorm()}$ function, which allow us to specify the mean and standard deviation of the distribution directly.
+
+```{webr-r}
+# Given information
+x <- 400
+mu <- 360
+sigma <- 80
+# Probability calculation
+pnorm(x,mu,sigma)
+
+# Graphical Illustration
+x <- 360+(-1000:1000)/30
+y <- dnorm(x)
+shadeDist(400,"dnorm",360,80,col=c("black","brown"),main="Area under Standard Normal Curve")
+
+```
+
+## Example
+
+Let $Y$ be the # of beer cans consumed by a male college student in a year. It is assumed to be normally distributed with the mean 640 and standard deviation 60. What proportion of male students drink more than 595 beer cans per year? 
+```{webr-r}
+y <-
+mu <-
+sigma <-
+```
+
+## Sampling Distribution for Sample Mean
+
+The sampling distribution provides all the information about a statistic of interest. When examining the behavior of a sample mean randomly drawn from a population, we first consider the following properties:
+
+* The mean of "the sampling distribution for the sample mean" will always equal the population mean $\mu$:
+$$\mu_\bar{X}=E[\bar{X}]=\mu.$$
+* The standard deviation of "the sampling distribution for the sample mean" will equal the population standard deviation $\sigma$ over the square root of the sample size $n$:
+$$\sigma_\bar{X}=SD[\bar{X}]=\frac{\sigma}{\sqrt{n}}.$$
+
+Then, the shape of the sampling distribution can be described as follows:
+
+1. If population distribution is a normal distribution, then the sampling distribution for sample mean would resemble the shape of the population distribution. So, the sampling distribution also follows a normal distribution with the above mean and standard deviation.
+
+2. If population distribution is unknown, then the sampling distribution for sample mean would still follow a normal distribution with the above mean and standard deviation when we have sufficiently large sample size, e.g., $n\ge 30$.
+
+In particular, we call the second result **the central limit theorem (C.L.T)**.
+
+# Probability calculation
+
+Suppose a test score has the mean value 78 and standard deviation 10. We don't have any information regarding the population distribution. Suppose we are interested in the probability that a sample mean with the sample size $n=32$ is greater than 82.
+```{webr-r}
+# Given information
+mu <- 78
+sigma <- 10
+n<-35
+x <- 82
+
+# the mean and standard deviation of the sampling distribution
+mu_xbar <- mu
+sigma_xbar <- 10/sqrt(35)
+
+#Probability calculation based on the C.L.T.
+1 - pnorm(x,mu_xbar,sigma_xbar)
+```
+
+
+
+
+# Verification of C.L.T. through a simulation 
+
+Lastly, let us verify the central limit theorem through a short simulation. Here, we assume the population distribution is highly skewed to the right. 
+
+```{webr-r}
+## C.L.T. Simulation for exponential population distributions
+set.seed(2024)
+m<-500
+x<-1:10000/500
+
+plot(x,dexp(x,1/9),lwd=3,type="l",main="Population distribution: Highly Skewed Version")
+abline(v=9,col="blue",lwd=3)
+legend("topright",legend=c("true mean"),lwd=2,col=c("blue"))
+
+sam_dist_mean_exp<-function(N=30)
+{
+sample_means<-NULL
+for(i in 1:m)
+  sample_means[i]<-mean(rexp(N,1/9))
+hist(sample_means,probability=TRUE,lwd=2,col="brown",main=paste("Sampling Dist'n of sample mean: n=",N),xlim=c(0,20))
+
+abline(v=9,col="blue",lwd=2)
+curve(dnorm(x,9,9/sqrt(N)),add=TRUE,lwd=2)
+}
+par(mfrow=c(2,2))
+sam_dist_mean_exp(2)
+sam_dist_mean_exp(5)
+sam_dist_mean_exp(15)
+sam_dist_mean_exp(30)
+par(mfrow=c(1,1))
+```
+Note that the shape of the histogram (the empirical sample mean distribution) converges toward the theoretical sampling distribution (represented by the black curve) as the sample size increases from $n=2$ to $n=30$.
+
+
+## Lab Questions
+
+1. A survey indicates that the average American family produces 17.2 pounds of glass waste per year, with a population standard deviation of 2.5 pounds. Calculate the probability that the sample mean for a group of 55 families will fall between 17 and 18 pounds.
+i. Can we use the C.L.T. for the probability calculation?  
+True / False
+
+ii. Calculate the probability.
+```{webr-r}
+
+```
+
+2. The average teacher's salary in New Jersey is \$62,174, assuming a normal distribution with a standard deviation of \$8,500.
+i. What is the probability that a randomly selected teacher makes less than \$60,000 per year?
+```{webr-r}
+
+```
+ii. If we sample 100 teachers' salaries, what is the probability that the sample mean is less than \$60,000 per year?
+```{webr-r}
+
+```
+iii. Why is the probability in part (i) higher than the probability in part (ii)?
+
+
+
+
+

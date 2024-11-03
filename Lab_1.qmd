@@ -1,0 +1,114 @@
+---
+title: "Lab 1"
+webr:
+  show-startup-message: true
+---
+
+# Introduction to R (I)
+
+## Command line
+
+You can type commands in the "Console".
+
+Type "2+2" and then hit "Shift+Return" or click the "Run Code" icon. You'll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a "\[1\]" label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.
+
+```{webr-r}
+2 + 2
+```
+
+## Comments
+
+In your code scripts, it's often useful to include text that isn't evaluated by **R**. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol "\#". **R** will ignore everything on that line after the "\#".
+
+#### Example
+
+Let us try the rest of the fundamental arithmetic operations:
+
+```{webr-r}
+## subtraction operator: "-"
+
+## multiplication operator: "*"
+
+## division operator: "/"
+```
+
+## Mathematical functions
+
+You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.
+
+```{webr-r}
+log(42)
+```
+
+Parentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The "arguments" of a function refer to the values provided as input. For example, in "log(3)", the "log()" function is applied to the argument "3".
+
+Similarly, we can also use "exp()" for the exponential function.
+
+```{webr-r}
+exp(12)
+```
+
+Another useful mathematical function is "sqrt()", which calculates the square root of a number. For example, "sqrt(4)" returns:
+
+```{webr-r}
+sqrt(4)
+```
+
+To calculate a value with an exponent, used the "\^" symbol. For example $4^3$ is written as:
+
+```{webr-r}
+4^3
+```
+
+#### Example
+
+Let us compute the following mathematical expression: $$\frac{1}{\sqrt{2\pi} 0.5}\log\left(\frac{(12-10.8)^2}{0.4}\right).$$
+
+```{webr-r}
+
+```
+
+## Defining objects
+
+In **R**, we can store information by assigning it to objects. For example, to create an object named "x" with a value of "24", you can write:
+
+```{webr-r}
+x <- 24
+```
+
+The part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to **R** that the value on the right should be assigned to the object on the left. After executing the command, whenever we use "x", it will be replaced by its value, "24". For instance, if we add "12" to "x", we should expect a result of "36".
+
+```{webr-r}
+x + 12
+```
+
+You can reassign a new value to a object. E.g.,
+
+```{webr-r}
+x <- 18
+```
+
+## Lab Questions
+
+1.  Calculate the following math expressions.
+
+```{=html}
+<!-- -->
+```
+i)  $(23\times 6)+3$.
+ii) $13^3-1100$.
+iii) $\log(23)$ with the natural log.
+iv) $\sqrt{81}/(3^3)$.
+
+```{webr-r}
+## i
+
+## ii
+
+## iii
+
+## iv
+
+```
+
+2.  Please complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: [Give Us Your Input](https://docs.google.com/forms/d/e/1FAIpQLSdbTOq38NTlUTKahr5kGRWgW13nO4pQqgoLad3_0D7jLnbt-Q/viewform?usp=sharing)

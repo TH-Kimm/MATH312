@@ -1,0 +1,137 @@
+---
+title: "Lab 3"
+webr:
+  show-startup-message: true
+---
+
+# Basic **R** Object: Data Frame
+
+A data frame in **R** stores a data set where columns represent variables and rows correspond to individuals. Each element in the data frame is an observation or measurement of a variable for a specific individual. (It’s similar to an Excel sheet.)
+
+A data frame is typically assigned a name, which is used to indicate to **R**'s functions which data set to work with. For example, a built-in data set "mtcars" contains car specification information in 1970's. This data frame has 11 variables and 32 individual cars. The following $\texttt{head()}$ function shows the variables names and first six observations. Also, use $\texttt{help(mtcars)}$ for the variable descriptions.
+
+```{webr-r}
+head(mtcars)
+```
+
+## Subsetting Data Frame
+
+Sometimes, we are interested in extracting one of the variables (columns) from the a data frame for further analysis.
+
+When your data frame has variable names, then this can be easily done by $\texttt{\$}$ command. For example, use $\texttt{mtcars\$hp}$ to extract $\texttt{horsepower}$ variable.
+
+```{webr-r}
+## Subsetting a variable with "$"
+HP <- mtcars$hp
+```
+
+Another way to extract a variable is to use an index with $\texttt{[]}$. Recall that we cal select a specific element in a vector using its index, e.g., $\texttt{HP[2]}$ returns the second element of the $\texttt{HP}$. Similarly, we can use $\texttt{mtcars[,4]}$ to extract the variable in the fourth column, $\texttt{horsepower}$.
+
+```{webr-r}
+## Subsetting a variable with "[]"
+HP2 <- mtcars[,4]
+## Checking the two variables are identical
+identical(HP,HP2)
+```
+
+Note that the first argument is empty because it is used to select a specific row (an individual car). By leaving it empty, we are selecting all rows (cars) of the $\texttt{horsepower}$ variable. Similarly, we can extract the value of a particular variable for a specific car, e.g. $\texttt{mtcars[3,4]}$ retrieves the horsepower of "Datsun 710".
+
+```{webr-r}
+mtcars[3,4]
+```
+
+Lastly, we can simultaneously select or deselect multiple variables and/or observations by combining $\texttt{[]}$, $\texttt{c()}$ and $\texttt{-}$.
+
+```{webr-r}
+## 2nd and 4th variables
+mtcars[,c(2,4)]
+## 2nd and 4th variables of the first five cars
+mtcars[c(1,2,3,4,5),c(2,4)]
+## data set without 5th variables
+mtcars[,-5]
+## data set without 5th and 10th variables
+mtcars[,-c(5,10)]
+```
+
+I believe you can now recognize the patterns. Mastering data subsetting is a crucial skill in data analysis, and we have just covered the fundamental procedures.
+
+#### Example
+
+Consider the $\texttt{mtcars}$ data again.
+
+1.  Extract the weight variable using $\texttt{\$}$ command.
+
+2.  Extract the Miles/gallon of Honda Civic using $\texttt{[]}$ command.\
+    You can check the car names with the $\texttt{rownames(mtcars)}$ command.
+
+3.  Extract the $\texttt{mpg}$ and $\texttt{hp}$ variables using $\texttt{[]}$ command.
+
+4.  Extract the $\texttt{mpg}$ and $\texttt{hp}$ variables except for the $\texttt{Merc}$ cars.
+
+```{webr-r}
+## 1
+
+## 2
+
+## 3
+
+## 4
+
+```
+
+## Measure of Variation
+
+We covered several measures of variation, including "variance", "standard deviation", "range", and "interquartile Range (IQR)". While calculating these by hand can be tedious, **R** offers quick and easy outputs using the functions $\texttt{var()}$, $\texttt{sd()}$, $\texttt{range()}$, and $\texttt{IQR()}$.
+
+```{webr-r}
+var(HP)
+sd(HP)
+range(HP)
+IQR(HP)
+```
+
+## Lab Questions
+
+1.  The famous "iris" data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris.
+
+```{webr-r}
+head(iris)
+```
+
+i)  Extract the $\texttt{Sepal.Length}$ and $\texttt{Petal.Length}$ variables using the $\texttt{\$}$ command, and save those in $\texttt{SL}$ and $\texttt{PL}$, respectively.
+
+ii) Compare the variances of $\texttt{SL}$ and $\texttt{PL}$. Which variable exhibits greater variation in terms of variance?
+
+iii) Extract the $\texttt{Sepal.Width}$ and $\texttt{Petal.Width}$ variables using the $\texttt{[]}$ command, and save those in $\texttt{SW}$ and $\texttt{PW}$, respectively.
+
+iv) Compare the IQRs of $\texttt{SW}$ and $\texttt{PW}$. Which variable exhibits greater variation in terms of IQR?
+
+```{webr-r}
+## i
+
+## ii
+
+## iii
+
+## iv
+
+```
+
+<!-- -->
+
+2.  Let us recall the fomulas for the sample variance.
+
+```{=html}
+<!-- -->
+```
+i)  The sample variance can be computed from the following formula: $$s^2=\frac{1}{n-1}\sum_{i=1}^n\left(x_i-\bar{x}\right)^2,$$ where $x$ is a numerical variable of length $n$. Calculate the variance of $\texttt{SL}$ without using $\texttt{var()}$ function. (You could use $\texttt{mean()}$, $\texttt{sum()}$, and $\texttt{length()}$ functions.) Verify that your result matches the value provided in 1-ii.
+
+```{webr-r}
+
+```
+
+ii) Additionally, we have learned an alternative formula for variance calculation (also known as the 'computing formula'): $$s^2=\frac{1}{n-1}\left\{\sum_{i=1}^nx_i^2-\bar{x}^2\right\}.$$ Similar to the previous case, calculate the variance of $\texttt{PL}$ using this formula, based on the $\texttt{mean()}$, $\texttt{sum()}$, and $\texttt{length()}$ functions. Verify that your result matches the value provided in 1-ii.
+
+```{webr-r}
+
+```

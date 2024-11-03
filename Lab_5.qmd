@@ -1,0 +1,140 @@
+---
+title: "Lab 5"
+webr:
+  show-startup-message: true
+---
+
+```{webr-r}
+#| context: setup
+
+MLB_Data <- structure(list(Team = c("Arizona Diamondbacks", "Atlanta Braves", 
+"Baltimore Orioles", "Boston Red Sox", "Chicago Cubs", "Chicago White Sox", 
+"Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", 
+"Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", 
+"Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", 
+"Minnesota Twins", "New York Mets", "New York Yankees", "Oakland Athletics", 
+"Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", 
+"Seattle Mariners", "San Francisco Giants", "St. Louis Cardinals", 
+"Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"
+), Win_P = c(0.519, 0.642, 0.623, 0.481, 0.512, 0.377, 0.506, 
+0.469, 0.364, 0.481, 0.556, 0.346, 0.451, 0.617, 0.519, 0.568, 
+0.537, 0.463, 0.506, 0.309, 0.556, 0.469, 0.506, 0.543, 0.488, 
+0.438, 0.611, 0.556, 0.549, 0.438)*100, RPG = c(4.6, 5.85, 4.98, 
+4.77, 5.06, 3.96, 4.83, 4.09, 4.45, 4.08, 5.1, 4.17, 4.56, 5.59, 
+4.11, 4.49, 4.8, 4.43, 4.15, 3.61, 4.91, 4.27, 4.64, 4.68, 4.16, 
+4.44, 5.31, 5.44, 4.6, 4.32), BA = c(0.25, 0.276, 0.255, 0.258, 
+0.254, 0.238, 0.249, 0.25, 0.249, 0.236, 0.259, 0.244, 0.245, 
+0.257, 0.259, 0.24, 0.243, 0.238, 0.227, 0.223, 0.256, 0.239, 
+0.244, 0.242, 0.235, 0.25, 0.26, 0.263, 0.256, 0.254), OPS = c(0.73, 
+0.845, 0.742, 0.748, 0.751, 0.675, 0.746, 0.695, 0.715, 0.686, 
+0.768, 0.7, 0.743, 0.795, 0.721, 0.704, 0.753, 0.723, 0.701, 
+0.669, 0.765, 0.707, 0.742, 0.734, 0.695, 0.742, 0.776, 0.79, 
+0.745, 0.709), ORPG = c(4.7, 4.42, 4.19, 4.79, 4.46, 5.19, 5.07, 
+4.3, 5.91, 4.57, 4.31, 5.3, 5.12, 4.31, 4.46, 3.99, 4.07, 4.5, 
+4.31, 5.7, 4.41, 4.88, 4, 4.07, 4.44, 5.12, 4.1, 4.42, 4.14, 
+5.22), ERA = c(4.48, 4.14, 3.89, 4.52, 4.08, 4.87, 4.83, 3.96, 
+5.67, 4.24, 3.94, 5.17, 4.64, 4.06, 4.21, 3.71, 3.87, 4.3, 3.97, 
+5.48, 4.03, 4.6, 3.73, 3.74, 4.02, 4.79, 3.86, 4.28, 3.78, 5.02
+), WHIP = c(1.324, 1.302, 1.243, 1.338, 1.283, 1.415, 1.417, 
+1.306, 1.545, 1.245, 1.279, 1.407, 1.418, 1.202, 1.292, 1.186, 
+1.197, 1.36, 1.236, 1.52, 1.24, 1.382, 1.268, 1.187, 1.253, 1.456, 
+1.177, 1.268, 1.25, 1.473)), row.names = c(NA, -30L), class = c("tbl_df", 
+"tbl", "data.frame"))
+attach(MLB_Data)
+```
+
+# Analyzing Bivariate Data with **R** (I)
+
+There are many situations where we are interested in the relationship between two variables. For the discrete bivariate case, a conditional frequency table can be used. For continuous variables, correlation and linear regression analyses are appropriate. In this lab, we focus on the **correlation** analysis based on a dataset with continuous variables.
+
+## MLB Data: 2023 Regular Season Team Statistics
+
+With MLB wrapping up its 2024 regular season, let's use the complete dataset from the 2023 regular season. As depicted in the movie Moneyball (2011), the use of baseball statistics and analytics to measure player and team performance has become widespread. While numerous baseball analytics are used in the field, we will focus on some of the key statistics that measure the offensive and defensive capabilities of MLB teams:
+
+```{r,eval=FALSE}
+01. Team:  Name of the team 
+02. Win_P: Winning Percentage, "(# of Wins"/ "Total # of games)*100".
+03. RPG:   Runs per Game, the average number of runs a team or player scores in each game. 
+04. BA:    Batting Average, "the # of times a batter hits a ball and reaches the base"/"the # of at bats by a batter".   
+05. OPS:   On-base plus slugging, the sum of on-base percentage and slugging percentage. 
+06. ORPG:  Opponent Runs per Game, the runs per game by the opponent.   
+07. ERA:   Earned Run Average, the number of earned runs a pitcher allows per nine innings.    
+08. WHIP:  Walks And Hits Per Inning Pitched, the statistic shows how well a pitcher has kept runners off the basepaths, one of his main goals.
+
+```
+
+In the data set, the variable $\texttt{Win\_P}$ measures a MLB team's performance throughout the 2023 season. For offensive capability, we can use the variables $\texttt{RPG}$, $\texttt{BA}$, and $\texttt{OPS}$; whereas, for defensive capability, we can use $\texttt{ORPG}$, $\texttt{ERA}$, and $\texttt{WHIP}$.
+
+## Offensive Capability
+
+In baseball, offensive capability is closely tied to the performance of batters. We can expect a positive association between offensive measures and winning percentage. This relationship can be quantified using correlation, which provides a unit-less value between -1 and 1. A value close to 1 or -1 indicates a strong positive or negative association, respectively, while a value near 0 indicates no linear association between the variables. In R, the function $\texttt{cor()}$ can be used to calculate correlation:
+
+```{webr-r}
+cor(BA,Win_P)
+```
+
+Based on the correlation value, we can describe the level of linear association (e.g., a moderately high positive relationship). However, it's also important to visually confirm the actual association, as this helps us better understand the data. For this purpose, we can use the $\texttt{plot()}$ function in R:
+
+```{webr-r}
+plot(BA, Win_P, main="Relationship b/w Batting Average and Winning %")
+```
+
+We can rewrite labels by using the $\texttt{xlab}$ and $\texttt{ylab}$ arguments. 
+```{webr-r}
+plot(BA, Win_P, main="Relationship b/w Batting Average and Winning %",
+     xlab="Batting average",ylab="Winning Percentage")
+```
+
+Also, change the **p**lotting **ch**aracter and **col**ors with the $\texttt{col}$ argument.
+
+![](images/pch-symbols.png){fig-align="center" width=3in}
+
+```{webr-r}
+# Refine labels and change the color: red=2, green=3, blue=3, etc
+plot(BA, Win_P, main="Relationship b/w Batting Average and Winning %",
+     xlab="Batting average",ylab="Winning Percentage",pch=0,col=2)
+# We can also use color options in palette
+plot(BA, Win_P, main="Relationship b/w Batting Average and Winning %",
+     xlab="Batting average",ylab="Winning Percentage",pch=19,col="darkgray")
+## R color palette: Uncomment the next line and run the code
+#colors()
+```
+
+## Defensive Capability
+
+Unlike offensive capability, defensive capability in baseball is closely tied to the performance of pitchers. For defensive measures, smaller values indicate better performance, leading us to expect a negative association with winning percentage. For example, $\texttt{ERA}$ (Earned Run Average) is a classic measure of a pitcher's ability. Let's examine the correlation and create a scatter plot to confirm this relationship.
+```{webr-r}
+cor(ERA,Win_P)
+plot(ERA, Win_P, main="Relationship b/w Batting Average and Winning %",
+     xlab="Batting average",ylab="Winning Percentage",col=3)
+```
+
+## Overall Capability
+
+The variables 'runs per game' and 'opponent runs per game' are valid offensive and defensive metrics in baseball. Let’s examine the correlation and create scatter plots to confirm their relationship.
+```{webr-r}
+
+```
+
+Now, let us want to combine these two analytics to measure the overall capability of a MLB team. The idea is very simple. By subtracting $\texttt{ORPG}$ from $\texttt{RPG}$, we quantify the actual "net runs per game" compared to opponent team: 
+$$\texttt{NRPG}=\texttt{RPG}-\texttt{ORPG}.$$
+Please create the new variable in **R**, and check the correlation and display the scatter plot.
+```{webr-r}
+NRPG
+
+```
+Do you think the created $\texttt{NRPG}$ would be a good overall performance measure?
+
+
+## Lab Questions
+1. Among the six variables, $\texttt{RPG}$, $\texttt{BA}$, $\texttt{OPS}$, $\texttt{ORPG}$, $\texttt{ERA}$, and $\texttt{WHIP}$, we wish to choose the best offensive measure and the best defensive measure, respectively. Please perform correlation analysis and provide your conclusion.  
+```{webr-r}
+
+```
+
+2. Note that the $\texttt{NRPG}$ we have defined is just one way to combine $\texttt{RPG}$ and $\texttt{ORPG}$. We can also consider the "ratio of runs per game" by dividing $\texttt{ORPG}$ from $\texttt{RPG}$. Create a new variable $\texttt{RRPG}$ for the "ratio of runs per game" and compare the result with $\texttt{NRPG}$. Which one would be preferable to measure the overall performance of a MLB team?
+```{webr-r}
+
+```
+
+

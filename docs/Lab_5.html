@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 1 – MATH 012: R-Labs</title>
+<title>Lab 5 – MATH 012: R-Labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -357,7 +391,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-1","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"2 + 2"},{"id":2,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-2","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## subtraction operator: \"-\"\n\n## multiplication operator: \"*\"\n\n## division operator: \"/\""},{"id":3,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-3","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"log(42)"},{"id":4,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-4","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"exp(12)"},{"id":5,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-5","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"sqrt(4)"},{"id":6,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-6","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"4^3"},{"id":7,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-7","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":""},{"id":8,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-8","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 24"},{"id":9,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-9","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x + 12"},{"id":10,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-10","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 18"},{"id":11,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-11","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## i\n\n## ii\n\n## iii\n\n## iv"}];
+globalThis.qwebrCellDetails = [{"code":"MLB_Data <- structure(list(Team = c(\"Arizona Diamondbacks\", \"Atlanta Braves\", \n\"Baltimore Orioles\", \"Boston Red Sox\", \"Chicago Cubs\", \"Chicago White Sox\", \n\"Cincinnati Reds\", \"Cleveland Guardians\", \"Colorado Rockies\", \n\"Detroit Tigers\", \"Houston Astros\", \"Kansas City Royals\", \"Los Angeles Angels\", \n\"Los Angeles Dodgers\", \"Miami Marlins\", \"Milwaukee Brewers\", \n\"Minnesota Twins\", \"New York Mets\", \"New York Yankees\", \"Oakland Athletics\", \n\"Philadelphia Phillies\", \"Pittsburgh Pirates\", \"San Diego Padres\", \n\"Seattle Mariners\", \"San Francisco Giants\", \"St. Louis Cardinals\", \n\"Tampa Bay Rays\", \"Texas Rangers\", \"Toronto Blue Jays\", \"Washington Nationals\"\n), Win_P = c(0.519, 0.642, 0.623, 0.481, 0.512, 0.377, 0.506, \n0.469, 0.364, 0.481, 0.556, 0.346, 0.451, 0.617, 0.519, 0.568, \n0.537, 0.463, 0.506, 0.309, 0.556, 0.469, 0.506, 0.543, 0.488, \n0.438, 0.611, 0.556, 0.549, 0.438)*100, RPG = c(4.6, 5.85, 4.98, \n4.77, 5.06, 3.96, 4.83, 4.09, 4.45, 4.08, 5.1, 4.17, 4.56, 5.59, \n4.11, 4.49, 4.8, 4.43, 4.15, 3.61, 4.91, 4.27, 4.64, 4.68, 4.16, \n4.44, 5.31, 5.44, 4.6, 4.32), BA = c(0.25, 0.276, 0.255, 0.258, \n0.254, 0.238, 0.249, 0.25, 0.249, 0.236, 0.259, 0.244, 0.245, \n0.257, 0.259, 0.24, 0.243, 0.238, 0.227, 0.223, 0.256, 0.239, \n0.244, 0.242, 0.235, 0.25, 0.26, 0.263, 0.256, 0.254), OPS = c(0.73, \n0.845, 0.742, 0.748, 0.751, 0.675, 0.746, 0.695, 0.715, 0.686, \n0.768, 0.7, 0.743, 0.795, 0.721, 0.704, 0.753, 0.723, 0.701, \n0.669, 0.765, 0.707, 0.742, 0.734, 0.695, 0.742, 0.776, 0.79, \n0.745, 0.709), ORPG = c(4.7, 4.42, 4.19, 4.79, 4.46, 5.19, 5.07, \n4.3, 5.91, 4.57, 4.31, 5.3, 5.12, 4.31, 4.46, 3.99, 4.07, 4.5, \n4.31, 5.7, 4.41, 4.88, 4, 4.07, 4.44, 5.12, 4.1, 4.42, 4.14, \n5.22), ERA = c(4.48, 4.14, 3.89, 4.52, 4.08, 4.87, 4.83, 3.96, \n5.67, 4.24, 3.94, 5.17, 4.64, 4.06, 4.21, 3.71, 3.87, 4.3, 3.97, \n5.48, 4.03, 4.6, 3.73, 3.74, 4.02, 4.79, 3.86, 4.28, 3.78, 5.02\n), WHIP = c(1.324, 1.302, 1.243, 1.338, 1.283, 1.415, 1.417, \n1.306, 1.545, 1.245, 1.279, 1.407, 1.418, 1.202, 1.292, 1.186, \n1.197, 1.36, 1.236, 1.52, 1.24, 1.382, 1.268, 1.187, 1.253, 1.456, \n1.177, 1.268, 1.25, 1.473)), row.names = c(NA, -30L), class = c(\"tbl_df\", \n\"tbl\", \"data.frame\"))\nattach(MLB_Data)","id":1,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-1","out-height":"","autorun":"true","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"setup"}},{"code":"cor(BA,Win_P)","id":2,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-2","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"plot(BA, Win_P, main=\"Relationship b/w Batting Average and Winning %\")","id":3,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-3","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"plot(BA, Win_P, main=\"Relationship b/w Batting Average and Winning %\",\n     xlab=\"Batting average\",ylab=\"Winning Percentage\")","id":4,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-4","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"# Refine labels and change the color: red=2, green=3, blue=3, etc\nplot(BA, Win_P, main=\"Relationship b/w Batting Average and Winning %\",\n     xlab=\"Batting average\",ylab=\"Winning Percentage\",pch=0,col=2)\n# We can also use color options in palette\nplot(BA, Win_P, main=\"Relationship b/w Batting Average and Winning %\",\n     xlab=\"Batting average\",ylab=\"Winning Percentage\",pch=19,col=\"darkgray\")\n## R color palette: Uncomment the next line and run the code\n#colors()","id":5,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-5","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"cor(ERA,Win_P)\nplot(ERA, Win_P, main=\"Relationship b/w Batting Average and Winning %\",\n     xlab=\"Batting average\",ylab=\"Winning Percentage\",col=3)","id":6,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-6","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"","id":7,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-7","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"NRPG","id":8,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-8","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"","id":9,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-9","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}},{"code":"","id":10,"options":{"fig-cap":"","editor-font-scale":"1","label":"unnamed-chunk-10","out-height":"","autorun":"false","editor-word-wrap":"true","message":"true","fig-width":7,"editor-max-height":"","warning":"true","results":"markup","output":"true","out-width":"700px","comment":"","read-only":"false","classes":"","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"context":"interactive"}}];
 
 </script>
 <script type="module">
@@ -1661,7 +1695,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_5.html">Lab 5</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1684,7 +1718,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
@@ -1708,7 +1742,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_5.html" class="sidebar-item-text sidebar-link">
+  <a href="./Lab_5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 5</span></a>
   </div>
 </li>
@@ -1748,12 +1782,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-r-i" id="toc-introduction-to-r-i" class="nav-link active" data-scroll-target="#introduction-to-r-i">Introduction to R (I)</a>
+  <li><a href="#analyzing-bivariate-data-with-r-i" id="toc-analyzing-bivariate-data-with-r-i" class="nav-link active" data-scroll-target="#analyzing-bivariate-data-with-r-i">Analyzing Bivariate Data with <strong>R</strong> (I)</a>
   <ul class="collapse">
-  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Command line</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#mathematical-functions" id="toc-mathematical-functions" class="nav-link" data-scroll-target="#mathematical-functions">Mathematical functions</a></li>
-  <li><a href="#defining-objects" id="toc-defining-objects" class="nav-link" data-scroll-target="#defining-objects">Defining objects</a></li>
+  <li><a href="#mlb-data-2023-regular-season-team-statistics" id="toc-mlb-data-2023-regular-season-team-statistics" class="nav-link" data-scroll-target="#mlb-data-2023-regular-season-team-statistics">MLB Data: 2023 Regular Season Team Statistics</a></li>
+  <li><a href="#offensive-capability" id="toc-offensive-capability" class="nav-link" data-scroll-target="#offensive-capability">Offensive Capability</a></li>
+  <li><a href="#defensive-capability" id="toc-defensive-capability" class="nav-link" data-scroll-target="#defensive-capability">Defensive Capability</a></li>
+  <li><a href="#overall-capability" id="toc-overall-capability" class="nav-link" data-scroll-target="#overall-capability">Overall Capability</a></li>
   <li><a href="#lab-questions" id="toc-lab-questions" class="nav-link" data-scroll-target="#lab-questions">Lab Questions</a></li>
   </ul></li>
   </ul>
@@ -2046,9 +2080,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_5.html">Lab 5</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lab 1</h1>
+<h1 class="title">Lab 5</h1>
 </div>
 
 
@@ -2065,76 +2099,75 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="introduction-to-r-i" class="level1">
-<h1>Introduction to R (I)</h1>
-<section id="command-line" class="level2">
-<h2 class="anchored" data-anchor-id="command-line">Command line</h2>
-<p>You can type commands in the “Console”.</p>
-<p>Type “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="analyzing-bivariate-data-with-r-i" class="level1">
+<h1>Analyzing Bivariate Data with <strong>R</strong> (I)</h1>
+<p>There are many situations where we are interested in the relationship between two variables. For the discrete bivariate case, a conditional frequency table can be used. For continuous variables, correlation and linear regression analyses are appropriate. In this lab, we focus on the <strong>correlation</strong> analysis based on a dataset with continuous variables.</p>
+<section id="mlb-data-2023-regular-season-team-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="mlb-data-2023-regular-season-team-statistics">MLB Data: 2023 Regular Season Team Statistics</h2>
+<p>With MLB wrapping up its 2024 regular season, let’s use the complete dataset from the 2023 regular season. As depicted in the movie Moneyball (2011), the use of baseball statistics and analytics to measure player and team performance has become widespread. While numerous baseball analytics are used in the field, we will focus on some of the key statistics that measure the offensive and defensive capabilities of MLB teams:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fl">01.</span> Team<span class="sc">:</span>  Name of the team </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fl">02.</span> Win_P<span class="sc">:</span> Winning Percentage, <span class="st">"(# of Wins"</span><span class="sc">/</span> <span class="st">"Total # of games)*100"</span>.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fl">03.</span> RPG<span class="sc">:</span>   Runs per Game, the average number of runs a team or player scores <span class="cf">in</span> each game. </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fl">04.</span> BA<span class="sc">:</span>    Batting Average, <span class="st">"the # of times a batter hits a ball and reaches the base"</span><span class="sc">/</span><span class="st">"the # of at bats by a batter"</span>.   </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fl">05.</span> OPS<span class="sc">:</span>   On<span class="sc">-</span>base plus slugging, the sum of on<span class="sc">-</span>base percentage and slugging percentage. </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fl">06.</span> ORPG<span class="sc">:</span>  Opponent Runs per Game, the runs per game by the opponent.   </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fl">07.</span> ERA<span class="sc">:</span>   Earned Run Average, the number of earned runs a pitcher allows per nine innings.    </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fl">08.</span> WHIP<span class="sc">:</span>  Walks And Hits Per Inning Pitched, the statistic shows how well a pitcher has kept runners off the basepaths, one of his main goals.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In the data set, the variable <span class="math inline">\(\texttt{Win\_P}\)</span> measures a MLB team’s performance throughout the 2023 season. For offensive capability, we can use the variables <span class="math inline">\(\texttt{RPG}\)</span>, <span class="math inline">\(\texttt{BA}\)</span>, and <span class="math inline">\(\texttt{OPS}\)</span>; whereas, for defensive capability, we can use <span class="math inline">\(\texttt{ORPG}\)</span>, <span class="math inline">\(\texttt{ERA}\)</span>, and <span class="math inline">\(\texttt{WHIP}\)</span>.</p>
 </section>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>In your code scripts, it’s often useful to include text that isn’t evaluated by <strong>R</strong>. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. <strong>R</strong> will ignore everything on that line after the “#”.</p>
-<section id="example" class="level4">
-<h4 class="anchored" data-anchor-id="example">Example</h4>
-<p>Let us try the rest of the fundamental arithmetic operations:</p>
+<section id="offensive-capability" class="level2">
+<h2 class="anchored" data-anchor-id="offensive-capability">Offensive Capability</h2>
+<p>In baseball, offensive capability is closely tied to the performance of batters. We can expect a positive association between offensive measures and winning percentage. This relationship can be quantified using correlation, which provides a unit-less value between -1 and 1. A value close to 1 or -1 indicates a strong positive or negative association, respectively, while a value near 0 indicates no linear association between the variables. In R, the function <span class="math inline">\(\texttt{cor()}\)</span> can be used to calculate correlation:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="mathematical-functions" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-functions">Mathematical functions</h2>
-<p>You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.</p>
+<p>Based on the correlation value, we can describe the level of linear association (e.g., a moderately high positive relationship). However, it’s also important to visually confirm the actual association, as this helps us better understand the data. For this purpose, we can use the <span class="math inline">\(\texttt{plot()}\)</span> function in R:</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Parentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.</p>
-<p>Similarly, we can also use “exp()” for the exponential function.</p>
+<p>We can rewrite labels by using the <span class="math inline">\(\texttt{xlab}\)</span> and <span class="math inline">\(\texttt{ylab}\)</span> arguments.</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Another useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:</p>
+<p>Also, change the <strong>p</strong>lotting <strong>ch</strong>aracter and <strong>col</strong>ors with the <span class="math inline">\(\texttt{col}\)</span> argument.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pch-symbols.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:3in"></p>
+</figure>
+</div>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To calculate a value with an exponent, used the “^” symbol. For example <span class="math inline">\(4^3\)</span> is written as:</p>
+</section>
+<section id="defensive-capability" class="level2">
+<h2 class="anchored" data-anchor-id="defensive-capability">Defensive Capability</h2>
+<p>Unlike offensive capability, defensive capability in baseball is closely tied to the performance of pitchers. For defensive measures, smaller values indicate better performance, leading us to expect a negative association with winning percentage. For example, <span class="math inline">\(\texttt{ERA}\)</span> (Earned Run Average) is a classic measure of a pitcher’s ability. Let’s examine the correlation and create a scatter plot to confirm this relationship.</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="example-1" class="level4">
-<h4 class="anchored" data-anchor-id="example-1">Example</h4>
-<p>Let us compute the following mathematical expression: <span class="math display">\[\frac{1}{\sqrt{2\pi} 0.5}\log\left(\frac{(12-10.8)^2}{0.4}\right).\]</span></p>
+</section>
+<section id="overall-capability" class="level2">
+<h2 class="anchored" data-anchor-id="overall-capability">Overall Capability</h2>
+<p>The variables ‘runs per game’ and ‘opponent runs per game’ are valid offensive and defensive metrics in baseball. Let’s examine the correlation and create scatter plots to confirm their relationship.</p>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="defining-objects" class="level2">
-<h2 class="anchored" data-anchor-id="defining-objects">Defining objects</h2>
-<p>In <strong>R</strong>, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:</p>
+<p>Now, let us want to combine these two analytics to measure the overall capability of a MLB team. The idea is very simple. By subtracting <span class="math inline">\(\texttt{ORPG}\)</span> from <span class="math inline">\(\texttt{RPG}\)</span>, we quantify the actual “net runs per game” compared to opponent team: <span class="math display">\[\texttt{NRPG}=\texttt{RPG}-\texttt{ORPG}.\]</span> Please create the new variable in <strong>R</strong>, and check the correlation and display the scatter plot.</p>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to <strong>R</strong> that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can reassign a new value to a object. E.g.,</p>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Do you think the created <span class="math inline">\(\texttt{NRPG}\)</span> would be a good overall performance measure?</p>
 </section>
 <section id="lab-questions" class="level2">
 <h2 class="anchored" data-anchor-id="lab-questions">Lab Questions</h2>
 <ol type="1">
-<li>Calculate the following math expressions.</li>
+<li>Among the six variables, <span class="math inline">\(\texttt{RPG}\)</span>, <span class="math inline">\(\texttt{BA}\)</span>, <span class="math inline">\(\texttt{OPS}\)</span>, <span class="math inline">\(\texttt{ORPG}\)</span>, <span class="math inline">\(\texttt{ERA}\)</span>, and <span class="math inline">\(\texttt{WHIP}\)</span>, we wish to choose the best offensive measure and the best defensive measure, respectively. Please perform correlation analysis and provide your conclusion.<br>
+</li>
 </ol>
-<!-- -->
-<ol type="i">
-<li><span class="math inline">\((23\times 6)+3\)</span>.</li>
-<li><span class="math inline">\(13^3-1100\)</span>.</li>
-<li><span class="math inline">\(\log(23)\)</span> with the natural log.</li>
-<li><span class="math inline">\(\sqrt{81}/(3^3)\)</span>.</li>
-</ol>
-<div id="qwebr-insertion-location-11"></div>
+<div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <ol start="2" type="1">
-<li>Please complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbTOq38NTlUTKahr5kGRWgW13nO4pQqgoLad3_0D7jLnbt-Q/viewform?usp=sharing">Give Us Your Input</a></li>
+<li>Note that the <span class="math inline">\(\texttt{NRPG}\)</span> we have defined is just one way to combine <span class="math inline">\(\texttt{RPG}\)</span> and <span class="math inline">\(\texttt{ORPG}\)</span>. We can also consider the “ratio of runs per game” by dividing <span class="math inline">\(\texttt{ORPG}\)</span> from <span class="math inline">\(\texttt{RPG}\)</span>. Create a new variable <span class="math inline">\(\texttt{RRPG}\)</span> for the “ratio of runs per game” and compare the result with <span class="math inline">\(\texttt{NRPG}\)</span>. Which one would be preferable to measure the overall performance of a MLB team?</li>
 </ol>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 </section>

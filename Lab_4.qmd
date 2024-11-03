@@ -1,0 +1,387 @@
+---
+title: "Lab 4"
+webr:
+  show-startup-message: true
+---
+
+
+```{webr-r}
+#| context: setup
+Survey_Data<-structure(list(Sports = c("MLB", "NFL", "NHL", "Other", "NBA", 
+"NHL", "NBA", "NFL", "NBA", "MLB", "NHL", "Other", "NBA", "Other", 
+"NBA", "MLB", "NBA", "NFL", "MLB", "NFL", "NBA", "Other", "MLB", 
+"Other", "Other", "NFL", "NFL", "NFL", "NHL", "Other", "NFL", 
+"Other", "MLB", "NBA", "MLB", "NBA", "NBA", "Other", "NHL", "MLB", 
+"NFL", "Other", "NFL", "NBA", "NFL", "Other", "NFL", "Other", 
+"MLB", "NFL", "NFL", "Other", "NBA", "MLB", "Other", "NBA", "Other", 
+"Other", "NBA", "Other", "NHL", "NBA", "NFL", "NFL", "Other", 
+"Other", "MLB", "NFL", "NBA", "NBA", "Other", "NBA", "NBA", "NHL", 
+"Other", "NFL", "Other", "NFL", "NFL", "NBA", "NBA", "Other", 
+"NHL", "NFL", "MLB", "NBA", "NFL", "Other", "NHL", "MLB", "NHL", 
+"NBA", "NHL", "Other", "Other", "NFL", "NBA", "NBA", "MLB", "MLB", 
+"NHL", "MLB", "NBA", "NFL", "NFL", "NFL", "Other", "Other", "Other", 
+"Other", "NBA", "Other", "NFL", "NBA", "NHL", "Other", "MLB", 
+"NFL", "NBA", "Other", "NFL", "NBA", "NFL", "Other", "Other", 
+"NFL", "NFL", "NBA", "NBA", "NFL", "Other", "NBA", "NBA", "NFL", 
+"MLB", "NHL"), States = c(23L, 20L, 3L, 9L, 11L, 20L, 15L, 13L, 
+20L, 15L, 10L, 15L, 12L, 6L, 16L, 17L, 20L, 9L, 15L, 17L, 12L, 
+7L, 12L, 9L, 14L, 15L, 6L, 18L, 17L, 15L, 5L, 10L, 16L, 27L, 
+13L, 15L, 30L, 5L, 15L, 14L, 13L, NA, 30L, 18L, 23L, 8L, 18L, 
+20L, 18L, 15L, 14L, 16L, 24L, 13L, 28L, 3L, 13L, 19L, 18L, 7L, 
+36L, 3L, 10L, 26L, 12L, 8L, 18L, 10L, 6L, 18L, 18L, 20L, 20L, 
+10L, 26L, 5L, 8L, 7L, 20L, 6L, 22L, 10L, 15L, 15L, 25L, 5L, 12L, 
+5L, 10L, 11L, 4L, 6L, 9L, 7L, 5L, 10L, 15L, 14L, 19L, 15L, 12L, 
+11L, 3L, 6L, 15L, 6L, 15L, 5L, 12L, 13L, 4L, 1L, 15L, 35L, 8L, 
+9L, 17L, 5L, 5L, 8L, 3L, 2L, 10L, 15L, 17L, 12L, 13L, 5L, 12L, 
+15L, 2L, 8L, 13L, 27L, 1L, 16L), Cat_Dog = c("Dog", "Dog", "Dog", 
+"Cat", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Other", "Cat", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Cat", "Dog", "Cat", "Dog", 
+"Dog", "Other", "Dog", "Dog", "Dog", "Dog", "Cat", "Cat", "Dog", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Cat", 
+"Dog", "Cat", "Dog", "Cat", "Dog", "Dog", "Cat", "Cat", "Cat", 
+"Dog", "Dog", "Cat", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", 
+"Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Cat", "Dog", "Dog", "Dog", 
+"Dog", "Dog", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Cat", "Dog", "Dog", "Dog", "Dog", "Cat", "Dog", "Dog", "Cat", 
+"Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Other", "Other", "Cat", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Cat", "Cat", "Dog", "Dog", "Dog", "Dog"), Pets = c(1L, 
+1L, 1L, 0L, 0L, 2L, 1L, 1L, 2L, 0L, 1L, 1L, 0L, 0L, 0L, 1L, 1L, 
+0L, 0L, 1L, 2L, 4L, 1L, 4L, 1L, 1L, 1L, 2L, 3L, 0L, 2L, 1L, 0L, 
+2L, 1L, 2L, 1L, 3L, 1L, 2L, 1L, 2L, 6L, 3L, 1L, 1L, 1L, 0L, 1L, 
+1L, 1L, 0L, 0L, 2L, 8L, 1L, 2L, 1L, 0L, 0L, 3L, 2L, 0L, 1L, 1L, 
+4L, 0L, 1L, 2L, 1L, 3L, 1L, 0L, 0L, 2L, 1L, 1L, 1L, 0L, 1L, 2L, 
+1L, 2L, 1L, 1L, 1L, 2L, 0L, 1L, 0L, 2L, 1L, 4L, 3L, 1L, 0L, 2L, 
+1L, 1L, 0L, 2L, 2L, 2L, 3L, 3L, 2L, 0L, 2L, 2L, 1L, 0L, 2L, 1L, 
+1L, 7L, 0L, 1L, 0L, 0L, 0L, 0L, 1L, 1L, 3L, 2L, 1L, 1L, 1L, 1L, 
+0L, 0L, 0L, 1L, 1L, 1L, 0L), Gender = c("Female", "Female", "Male", 
+"Male", "Female", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Female", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", "Female", 
+"Male", "Female", "Female", "Male", NA, "Male", "Male", "Female", 
+"Female", "Female", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", NA, 
+"Female", "Female", "Female", "Female", "Female", "Female", "Female", 
+"Male", "Male", "Male", "Female", NA, "Female", "Female", "Female", 
+"Male", "Female", "Female", "Male", "Male", "Female", "Male", 
+"Female", "Female", "Female", "Female", "Male", "Male", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Male", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Male", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", "Male", 
+"Female", "Male", "Female", "Male", "Male", "Male", "Female", 
+"Male", "Male", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Female", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Female", "Female", 
+"Male", "Female", "Male", "Female", "Male"), Browser = c("Safari", 
+"Chrome", "Chrome", "Safari", "Safari", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Edge", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Safari", "Safari", "Firefox", "Chrome", "Chrome", "Safari", 
+"Chrome", "Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Safari", "Chrome", "Chrome", "Safari", "Safari", "Chrome", "Safari", 
+"Safari", "Safari", "Chrome", "Safari", "Chrome", "Firefox", 
+"Safari", "Chrome", "Safari", "Chrome", "Safari", "Chrome", "Chrome", 
+"Safari", "Safari", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Other", 
+"Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", "Safari", 
+"Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Safari", "Chrome", 
+"Chrome", "Chrome", "Chrome", "Chrome", "Other", "Chrome", "Safari", 
+"Chrome", "Chrome", "Chrome", "Safari", "Edge", "Chrome", "Chrome", 
+"Safari", "Safari", "Chrome", "Safari", "Safari", "Edge", "Safari", 
+"Chrome", "Chrome", "Other", "Firefox", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Chrome", "Chrome", "Safari", "Chrome", "Chrome", "Safari", 
+"Safari", "Chrome", "Chrome", "Safari", "Chrome", "Safari", "Safari", 
+"Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Chrome", "Edge", "Chrome"), Shoes = c(8L, 10L, 4L, 
+7L, 25L, 30L, 8L, 9L, 17L, 11L, 30L, NA, 6L, 10L, 12L, 12L, 10L, 
+8L, 6L, 10L, 8L, NA, 4L, 12L, 3L, 10L, 20L, 6L, 8L, 6L, 11L, 
+11L, 13L, 10L, 6L, 5L, 12L, 6L, 10L, 5L, 5L, 23L, 15L, 20L, 8L, 
+10L, 8L, 5L, 20L, 10L, 8L, 7L, 13L, 8L, 5L, 6L, 15L, 6L, 17L, 
+4L, 9L, 10L, 3L, 25L, 15L, 4L, NA, 13L, 5L, 5L, 6L, 8L, 8L, 10L, 
+18L, 12L, 20L, 35L, 10L, 3L, 4L, 4L, 21L, 15L, 2L, 6L, 15L, 5L, 
+6L, 9L, 8L, 3L, 7L, 10L, 4L, 20L, 6L, 20L, 9L, 10L, 15L, 8L, 
+9L, 10L, 8L, 8L, 3L, 2L, 3L, 10L, 3L, 5L, 5L, 14L, 4L, 9L, 10L, 
+6L, 6L, 9L, 9L, 5L, 6L, 7L, 10L, 15L, 8L, 20L, 20L, 7L, NA, 5L, 
+71L, 18L, 5L, 10L), Height = c(62L, 62L, 70L, 72L, 66L, 70L, 
+64L, 69L, 64L, 67L, 61L, 64L, 73L, 66L, 63L, 67L, 65L, 64L, 75L, 
+61L, 66L, 61L, NA, NA, 70L, 66L, 62L, 66L, 64L, 65L, 68L, 65L, 
+65L, 66L, 65L, NA, 70L, 60L, 63L, 70L, 74L, 63L, 64L, 68L, 68L, 
+64L, 61L, 70L, 62L, 67L, 64L, 61L, 70L, 64L, 65L, NA, NA, 69L, 
+65L, 66L, 71L, 72L, 69L, 70L, 64L, 67L, 63L, 66L, 71L, 64L, 63L, 
+70L, 72L, 69L, 72L, 60L, 68L, 62L, 67L, 67L, 72L, 65L, 65L, 66L, 
+70L, 66L, 63L, 66L, 65L, 63L, 63L, 67L, 69L, 65L, 72L, 65L, 67L, 
+NA, 65L, 64L, 63L, 61L, 68L, 63L, 72L, 62L, 73L, 69L, 71L, 68L, 
+73L, 73L, 63L, 68L, 63L, 67L, 62L, 65L, 65L, 63L, 61L, 63L, 66L, 
+63L, 62L, 64L, 64L, 66L, 63L, 63L, NA, 69L, 63L, 73L, 60L, 72L
+), MO_Height = c(62L, 64L, 64L, 64L, 66L, 65L, 62L, 65L, 64L, 
+65L, 64L, 66L, 64L, 64L, 61L, 67L, 69L, 67L, 67L, 59L, 66L, NA, 
+NA, NA, 65L, 65L, 67L, 60L, 65L, 60L, 67L, 62L, 65L, 66L, 64L, 
+NA, 62L, 62L, 64L, 66L, 68L, 60L, 61L, 65L, 66L, 61L, 64L, 65L, 
+62L, 63L, 65L, 59L, 69L, 62L, 63L, NA, NA, 68L, 68L, 65L, 61L, 
+67L, 62L, 68L, 64L, NA, 67L, 66L, 64L, 62L, 67L, 64L, 60L, 67L, 
+65L, 60L, 66L, 63L, 66L, 59L, 65L, NA, 68L, 65L, 61L, 67L, 65L, 
+64L, 65L, 65L, 62L, 59L, 64L, 64L, 67L, 67L, 69L, NA, 65L, 62L, 
+68L, 64L, 65L, 61L, 67L, 64L, 68L, NA, 65L, 64L, NA, NA, 61L, 
+65L, 60L, 65L, 59L, 64L, 64L, 63L, 59L, 54L, 67L, 65L, 65L, 65L, 
+63L, 62L, 61L, 64L, NA, 67L, 65L, 66L, 63L, 63L), FA_Height = c(70L, 
+67L, 66L, 69L, 70L, 76L, 69L, 70L, 70L, 74L, 69L, 74L, 68L, 67L, 
+68L, 72L, 74L, 70L, 72L, 74L, 74L, NA, NA, NA, 71L, 76L, 71L, 
+64L, 73L, 69L, 70L, 70L, 71L, 70L, 64L, NA, 68L, 67L, 69L, 73L, 
+60L, 70L, 68L, 62L, 71L, 68L, 69L, 69L, 70L, 71L, 71L, 65L, 67L, 
+68L, 67L, NA, NA, 71L, 71L, 73L, 65L, 67L, 68L, 76L, 70L, NA, 
+70L, 72L, 64L, 71L, 70L, 72L, 74L, 70L, 70L, NA, 67L, 70L, 70L, 
+67L, 75L, 70L, 71L, 71L, 72L, 62L, 74L, 65L, 72L, 70L, 69L, 67L, 
+71L, 67L, 70L, 74L, 71L, NA, 73L, 71L, 71L, 68L, 68L, NA, 72L, 
+67L, 70L, NA, 72L, 78L, NA, NA, 65L, 69L, 65L, 69L, 66L, 64L, 
+64L, 68L, 70L, 58L, 71L, 71L, 67L, 71L, 69L, 71L, 70L, 71L, NA, 
+68L, 74L, 68L, 65L, 70L), Arrival = c(7L, 150L, 10L, 25L, 11L, 
+10L, 15L, 8L, NA, 4L, 20L, 15L, 5L, 10L, 15L, 10L, 10L, 15L, 
+NA, 7L, 10L, NA, 7L, 15L, 5L, 17L, 15L, 15L, 6L, 10L, 10L, 10L, 
+12L, 10L, NA, 15L, 10L, 5L, 5L, 5L, 10L, 20L, 9L, 10L, 7L, 6L, 
+10L, 30L, 10L, 10L, 7L, 9L, 10L, 16L, NA, 10L, 9L, 8L, 7L, 20L, 
+4L, 30L, 15L, 5L, 10L, 15L, 5L, 10L, 15L, 15L, 10L, 9L, 8L, 7L, 
+10L, 15L, 7L, 13L, 25L, 20L, 7L, 10L, 5L, 10L, 10L, 5L, 10L, 
+9L, 10L, 15L, 9L, 20L, 13L, 10L, 7L, 3L, NA, 10L, 7L, 10L, 8L, 
+8L, 15L, 5L, 10L, 10L, 10L, 30L, 10L, 5L, 10L, 13L, 8L, 10L, 
+NA, 10L, 10L, 8L, 8L, NA, 12L, 3L, 6L, 10L, 10L, 10L, 10L, 7L, 
+15L, 15L, 60L, 7L, 15L, 6L, 15L, 10L), Sleep = c(9.5, 9, 8, 7.5, 
+5.5, 7, 8, 4, 8, 8, 8.5, 6.5, 5, 5, 7.5, 8.5, 7, 7.5, 6, 8, 6.5, 
+8, 5.5, 6, 8, 7.5, 8.5, 6, 5.5, 8, 7, 6.5, 8, 6.5, 7.5, 6, 6, 
+8.5, 7, 7, 8, 9, 6, 8, 8, 6, 6.5, 10, 7, 10, 10, 6, 7, 9, 8.5, 
+NA, 7, 8, 7.5, 7.5, 6.5, 8, 8, 9, 5, 6, 7.5, 8, 7, 8, 9, 6, 8, 
+9, 7, 7, 8, 6, 8, 6, 8, 9, 10, 7.5, 7, 8, 8, 7, 8, 5, 8, 6, 7.5, 
+7, 8, 7.5, 3, 8, 7, 7, 6, 7.5, 7.5, 8.5, 4, 8, 7, 9, 7, 5, 9, 
+8, 7, 8.5, 8, 8, 8, 8, 8, 5, 5.5, 6, 8, 6.5, 9.5, 8, 8, 8, 8, 
+5, 6, 8, 8, 9, 8, 6.5), Number = c(3L, 7L, 7L, 4L, 1L, 7L, 4L, 
+2L, 4L, 3L, 7L, 6L, 4L, 8L, 8L, 4L, 4L, 7L, 7L, 8L, 2L, 10L, 
+6L, 3L, 3L, 6L, 6L, 7L, 4L, 7L, 7L, 4L, 9L, 7L, 7L, 5L, 2L, 4L, 
+9L, 4L, 1L, 2L, 8L, 3L, 2L, 2L, 8L, 3L, 5L, 6L, 3L, 3L, 3L, 6L, 
+8L, 1L, 7L, 8L, 7L, 4L, 5L, 9L, 3L, 8L, 8L, 8L, 7L, 2L, 7L, 8L, 
+6L, 10L, 7L, 9L, 7L, 4L, 5L, 7L, 2L, 2L, 2L, 3L, 7L, 3L, 10L, 
+10L, 7L, 5L, 6L, 8L, 7L, 2L, 7L, 8L, 8L, 7L, 9L, 1L, 2L, 5L, 
+7L, 5L, 7L, 3L, 6L, 10L, 4L, 3L, 7L, 4L, 7L, 4L, 5L, 2L, 7L, 
+5L, 6L, 5L, 5L, 7L, 8L, 7L, 4L, 8L, 5L, 5L, 3L, 2L, 4L, 7L, 7L, 
+5L, 4L, 4L, 7L, 7L), Hand = c("Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Ambidextrous", 
+"Right", "Right", "Right", "Left", "Right", "Right", "Left", 
+"Right", "Right", "Right", "Right", "Left", "Right", "Right", 
+"Right", "Right", "Left", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Left", "Right", 
+"Right", "Right", "Left", "Right", "Right", "Left", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Left", "Right", "Right", 
+"Ambidextrous", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Left", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", NA, "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Left", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Ambidextrous"), 
+    Credit = c(9, 16, 17, 4, 16, 16, 16, 16, 16, 16, 16, 18, 
+    16, 15, 17, 18, 17, 15, 14, 15, 16, 17, 16, 16, 18, 16, 15, 
+    16, 17, 17, 16, 15, 15, 16, 15, 15, 15, 18, 16, 16, 12, 16, 
+    16, 14, 12, 16, 17, 13, 15, 17, 15, 15, 17, 16, NA, 16, 14, 
+    16, 15, 15, 18, 9, 13, 16, 13, 14, 17, 16, 14, 15, 18, 15, 
+    14, 16, 18, 17, 16, 16, 17, 7, 18, 15, 15, 15, 15, 15, 17, 
+    17, 16, 16, 15, 6, 15, 18, 15, 15, 18, 15, 15, 17, 13, 15, 
+    16, 15, 18, 12, 17, 18, 16, 18, 15, 13, 12, 18, 16, 18, 15, 
+    14, 14, 12, 14.5, 15, 15, 16, 16, 16, 16, 15, 16, 17, 16, 
+    14, 15, 16, 16, 15.5)), class = "data.frame", row.names = c(NA, 
+-136L))
+attach(Survey_Data)
+```
+
+
+# Basic Graphics in **R**
+
+**R** offers a variety of options for creating visual displays in statistics. While base **R** itself provides sufficient quality for many plots, additional packages like $\texttt{ggplot2}$ or $\texttt{lattice}$ to produce "publishable" quality graphics. In our lab sessions, we will focus on the basic **R** graphics.
+
+## Beginning Semester Survey Data
+
+For illustrations, we will use our beginning semester survey data. It contains 136 observations and 16 variables as follows:
+
+```{r,eval=FALSE}
+01. Sports:    What is your favorite professional sport? 
+02. States:    How many states in the US have you traveled to? 
+03. Cat_Dog:   Are you more of a cat person or a dog person? 
+04. Pets:      What is the number of pets you and your family currently have? 
+05. Gender:    What is your gender? 
+06. Browser:   What is your preferred internet browser? 
+08. Shoes:     How many pairs of shoes do you have? 
+09. Height:    How tall are you (inch)? 
+10. MO_Height: What is your mothers height (inch)? 
+11. FA_Height: What is your fathers height (inch)? 
+12. Arrival:   How many minutes does it take for you to reach the recitation classroom from your residence? 
+13. Sleep:     How many HOURS did you sleep last night, to the nearest half-hour? 
+14. Number:    What is your favorite whole number between 1 and 10? 
+15. Hand:      Are you right- or left-handed? 
+16. Credit:    How many credits are you taking this semester? 
+```
+
+Let us check the variable name and the first six observations by using the function $\texttt{head()}$:
+
+```{webr-r}
+
+head(Survey_Data)
+```
+
+## Frequency Tables
+
+As we discussed in class, a frequency table summarizes the information from the corresponding data set. It also serves as an important intermediate step for creating visual displays such as pie charts, bar plots, histograms, and more.
+
+Let us create a frequency table of a categorical variable $\texttt{Hand}$ using the function $\texttt{table()}$.
+
+```{webr-r}
+FTBL1<-table(Sports)
+FTBL1
+```
+
+We can also create a 2-by-2 (relative) frequency table (or contingency table) with two categorical variables.
+
+```{webr-r}
+## Frequency table
+FTBL2<-table(Gender,Sports)
+FTBL2
+## Relative Frequency table
+Rel_FTBL2<-prop.table(FTBL2)
+Rel_FTBL2
+## Round to the hundredths place
+round(Rel_FTBL2,2)
+```
+
+Now, we can finally created conditional frequency table.
+
+```{webr-r}
+## Condition with respect to Gender
+Con_FTBL2<-prop.table(FTBL2,margin=1)
+Con_FTBL2
+## Round to the hundredths place
+round(Con_FTBL2,2)
+```
+
+Based on the results of conditional frequency table, we can answer questions such as: Which gender prefers MLB? Which gender prefers NBA?
+
+## Bar Plot
+
+A bar plot is highly useful for displaying categorical data, regardless of the number of categories. To create a bar plot, we can use the $\texttt{barplot()}$ function. Note that the function accepts the $\texttt{table}$ object that we created earlier.
+
+```{webr-r}
+## Barplot
+barplot(FTBL1)
+```
+
+```{webr-r}
+## Side-by-side conditional barplot
+## Female is in darkgray; male is in lightgray.
+barplot(Con_FTBL2,beside=TRUE)
+```
+
+For any plotting functions, the $\texttt{main}$ argument can be used to add a "title" to the plot.
+
+```{webr-r}
+barplot(FTBL1,main="Favorite Sports")
+barplot(Con_FTBL2,beside=TRUE,main="Favorite Sports: Gender Comparison")
+```
+
+#### Example
+
+Select a single categorical variable from the data set, and create a bar plot with an appropriate title. (We will address bivariate categorical variables in a lab question.)
+
+```{webr-r}
+
+```
+
+## Histogram
+
+Histogram is a versatile graphical display for a single numerical variable (data). It directly accepts a numerical vector as its first argument. Let us create a histogram for the $\texttt{Height}$ variable.
+
+```{webr-r}
+## Use Freq=FALSE to get a relative frequency table.
+hist(Height,freq=FALSE)
+## Let us refine the title 
+hist(Height,main="Height: MATH 012 Students",freq=FALSE)
+```
+
+The histogram reveals that the distribution of the $\texttt{Height}$ variable is right-skewed.
+
+#### Example
+
+Select a single numerical variable from the data set, and create a histogram with an appropriate title. What is the shape of the distribution?
+
+```{webr-r}
+
+```
+
+## Box Plot
+
+Although the histogram is typically our go-to choice for a single numerical variable, there are situations where a box plot is preferable. For instance, if we want to display $\texttt{Height}$ by $\texttt{Gender}$, a box plot would be more appropriate.
+
+```{webr-r}
+## First, a boxplot for Height
+boxplot(Height)
+## Now, a side-by-side boxplot for Height with respect to Gender
+boxplot(Height~Gender)
+## We can have horizontal orientation
+boxplot(Height~Gender,horizontal=TRUE)
+## Please add a relevant title!
+
+```
+
+This graphical representation makes it easy to compare the differences in $\texttt{Height}$ between genders. As demonstrated, a box plot is a clear and intuitive choice when we have one numerical variable and one categorical variable.
+
+## Lab Questions
+
+1.  Let us consider $\texttt{Browser}$ variable in relation to $\texttt{Cat\_Dog}$.
+
+<!-- -->
+
+i)  Create a frequency table for the $\texttt{Browser}$ variable.
+
+```{webr-r}
+
+```
+
+ii) Create a bar plot using the table object in (i).
+
+```{webr-r}
+
+```
+
+iii) Create a conditional frequency table for $\texttt{Browser}$ with respect to $\texttt{Cat\_Dog}$.
+
+```{webr-r}
+
+```
+
+iv) Create a conditional frequency barplot for $\texttt{Browser}$ with respect to $\texttt{Cat\_Dog}$. Discuss the percentages of Edge and Safari with respect to the personality.
+
+```{webr-r}
+
+```
+
+2.  Let us consider $\texttt{Shoes}$ variable in relation to $\texttt{Gender}$. Note that we have one numerical and one categorical variable.
+
+<!-- -->
+
+i) Choose a relevant graphical display to summarize the information of $\texttt{Shoes}$, and provide the plot.
+```{webr-r}
+
+```
+i)  Choose a relevant graphical display to summarize the information of $\texttt{Shoes}$ in terms of $\texttt{Gender}$, and provide the plot.
+
+```{webr-r}
+
+```
+
+ii) Which gender has a higher central value for $\texttt{Shoes}$? Which gender shows greater variability? What can we infer about the number of pairs of shoes with respect to gender?
+```{webr-r}
+
+```

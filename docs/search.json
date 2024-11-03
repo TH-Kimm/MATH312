@@ -1,0 +1,821 @@
+[
+  {
+    "objectID": "index.html#what-is-r",
+    "href": "index.html#what-is-r",
+    "title": "MATH 012: R-Labs",
+    "section": "What is R?",
+    "text": "What is R?\nR is a versatile computer program that enables a wide range of statistical calculations and data analysis. Developed and maintained largely through voluntary contributions from statisticians globally, R is a free and open-source tool available on most operating systems, including Windows, Mac OS, and Linux.\nBeyond statistical analysis, R also excels in creating graphics and functions as a full-fledged programming language. In this series of labs, we will only begin to explore the extensive capabilities that R offers."
+  },
+  {
+    "objectID": "index.html#how-can-we-run-r",
+    "href": "index.html#how-can-we-run-r",
+    "title": "MATH 012: R-Labs",
+    "section": "How can we run R?",
+    "text": "How can we run R?\nThe base R environment is always accessible, but most users prefer to work with an Integrated Development Environment (IDE) for a more user-friendly interface. RStudio, for example, is one of the most popular IDEs today.\n\n\n\n\n\nAlthough you can download and run R locally on your system, it’s not necessary for our labs, as they can be completed directly within self-contained webpages. We recommend sticking to the content provided on the lab webpages to familiarize yourself with the syntax. Once you feel comfortable with the language, you can easily run R on your laptop."
+  },
+  {
+    "objectID": "index.html#r-lab-procedure-during-recitations",
+    "href": "index.html#r-lab-procedure-during-recitations",
+    "title": "MATH 012: R-Labs",
+    "section": "R-Lab procedure during recitations",
+    "text": "R-Lab procedure during recitations\nIn most recitation sessions, we will dedicate about 20 minutes to a lab focused on R programming and data analysis.\n\nEach lab includes a brief tutorial that you can easily follow.\nAt the end of each lab, you’ll find a few questions that you can answer based on the lab materials.\nFinally, complete the Gradescope lab quiz, which is directly based on the lab questions.\n\nWhile lab topics are often closely related to class content, they may diverge, especially around the middle of the semester. Feel free to discuss the questions with fellow students, and don’t hesitate to ask the TA for help!"
+  },
+  {
+    "objectID": "Lab_2.html",
+    "href": "Lab_2.html",
+    "title": "Lab 2",
+    "section": "",
+    "text": "While defining variables (objects), the significance of variable naming in programming is immense. Selecting clear and descriptive names for variables is vital for several reasons:\n\nReadability and Understandability: Clear and descriptive variable names enhance the readability and comprehension of your code.\nMaintainability and Debugging: Thoughtfully named variables simplify code maintenance and debugging processes.\nCollaboration: In a team setting, consistent and clear variable naming conventions are crucial for effective collaboration.\nSelf-Documentation: Meaningful variable names serve as self-documentation, making the code more intuitive.\nCode Reusability: Adopting good variable naming practices supports greater code reusability.\n\nSometimes, clear naming requires using multiple words in a variable name, but spaces are not allowed. A common approach is to separate words with underscores, as demonstrated previously, such as \\(\\texttt{morning\\_temperature\\_august}\\).\n\n\nLet us assign relevant names to the following variables:\n\n\n\n#\nFeature\nValue\n\n\n\n\n1\nBody temperature in Fahrenheit\n98\n\n\n2\nNumber of shoes for Sam\n11\n\n\n3\nWeight of a elephant in pounds\n12,050\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nA vector is a sequence of finite elements and serves as the basic object in R. For example, a single number like “3” is considered a vector of length 1. To create a vector, we use the \\(\\texttt{c()}\\) function, where the name is an abbreviation of “combine.”\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAs learned, we can assign a descriptive variable name to the vector:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nOne of the powerful features of vectors in R is the ability to perform the same calculation on every element with a single command, i.e., element-wise operation. For example, when converting weights from pounds to kilograms, we can multiply 0.454. This operation can be applied to all the numbers in a vector simultaneously:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo access a specific number in a vector, you add square brackets after the vector name and place the index of the desired element inside the brackets. The “index” refers to the position of the item within the vector, with the first element having an index of 1, and so on. For example, the third element of the vector \\(\\texttt{weight\\_kg}\\) is:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nAs we discussed in class, we can use the “mean” and “median” to measure the central tendency of our data, with the mode also being an option in some cases. In R, the functions \\(\\texttt{mean()}\\) and \\(\\texttt{median()}\\) can be used to obtain the mean and median of a vector, respectively.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can also easily calculate the summation and length of a vector by using the functions, \\(\\texttt{sum()}\\) and \\(\\texttt{length()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCompute the mean of \\(\\texttt{weight\\_kg}\\) by using \\(\\texttt{sum()}\\) and \\(\\texttt{length()}\\) functions. (Do not use \\(\\texttt{mean()}\\) function.)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nBMI is a measurement of a person’s leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height and it is defined by: \\[\\textbf{BMI}=703\\times \\frac{\\text{weight (lb)}}{ \\text{(height (in)})^2}\\] Suppose the variable \\(\\texttt{weight\\_pound}\\) is the weights of seven Lehigh students. Also, the corresponding height observations in inches are \\[70,\\;72,\\;72.5,\\;66,\\;74,\\;66.5,\\;72.\\]\n\n\n\nSave the height observations in a variable by using a descriptive name. (Uncomment and use the data.)\nCalculate the BMIs of the seven students.\nCompute the mean and median of the BMIs .\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPeople often underreport how frequently they engage in antisocial behaviors like peeing in swimming pools. Urine, beyond being unpleasant, reacts with chlorine to produce toxic chemicals like trichloramine, a common cause of skin irritation for swimmers. Researchers found that the artificial sweetener ACE, which passes through the body unmetabolized and in consistent amounts, can be used to measure the amount of urine in a pool by analyzing ACE concentrations. Below is a list of ACE concentrations (measured in ng/L) from 15 different pools in the US: \\[ 438,  211,  640,   85,   83,  350,  138,   49,  465,  489,55, 1086,   71, 1058,  247.\\]\n\n\n\nIn R, create a vector of these data and give it an appropriate name. (Uncomment and use the data.)\nWhat is the mean ACE concentration in these 15 pools?\nSince urine contains an average ACE of 4000 ng/ml, we can obtain the urin concentration (ml/L) by dividing each value by 4000 from the ACE concentration data. Compute the urin concentration and it a suitable name.\nWhat is the mean urine concentration (in ml) per liter?\nUse R to calculate the average amount of urine (in ml) in a 500,000 L pool.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Lab_1.html",
+    "href": "Lab_1.html",
+    "title": "Lab 1",
+    "section": "",
+    "text": "You can type commands in the “Console”.\nType “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nIn your code scripts, it’s often useful to include text that isn’t evaluated by R. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. R will ignore everything on that line after the “#”.\n\n\nLet us try the rest of the fundamental arithmetic operations:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nYou can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nParentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.\nSimilarly, we can also use “exp()” for the exponential function.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo calculate a value with an exponent, used the “^” symbol. For example \\(4^3\\) is written as:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLet us compute the following mathematical expression: \\[\\frac{1}{\\sqrt{2\\pi} 0.5}\\log\\left(\\frac{(12-10.8)^2}{0.4}\\right).\\]\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nIn R, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to R that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can reassign a new value to a object. E.g.,\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nCalculate the following math expressions.\n\n\n\n\\((23\\times 6)+3\\).\n\\(13^3-1100\\).\n\\(\\log(23)\\) with the natural log.\n\\(\\sqrt{81}/(3^3)\\).\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: Give Us Your Input",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "Lab_1.html#command-line",
+    "href": "Lab_1.html#command-line",
+    "title": "Lab 1",
+    "section": "",
+    "text": "You can type commands in the “Console”.\nType “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "Lab_1.html#comments",
+    "href": "Lab_1.html#comments",
+    "title": "Lab 1",
+    "section": "",
+    "text": "In your code scripts, it’s often useful to include text that isn’t evaluated by R. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. R will ignore everything on that line after the “#”.\n\n\nLet us try the rest of the fundamental arithmetic operations:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "Lab_1.html#mathematical-functions",
+    "href": "Lab_1.html#mathematical-functions",
+    "title": "Lab 1",
+    "section": "",
+    "text": "You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nParentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.\nSimilarly, we can also use “exp()” for the exponential function.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo calculate a value with an exponent, used the “^” symbol. For example \\(4^3\\) is written as:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLet us compute the following mathematical expression: \\[\\frac{1}{\\sqrt{2\\pi} 0.5}\\log\\left(\\frac{(12-10.8)^2}{0.4}\\right).\\]\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "Lab_1.html#defining-objects",
+    "href": "Lab_1.html#defining-objects",
+    "title": "Lab 1",
+    "section": "",
+    "text": "In R, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to R that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can reassign a new value to a object. E.g.,\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "Lab_1.html#lab-questions",
+    "href": "Lab_1.html#lab-questions",
+    "title": "Lab 1",
+    "section": "",
+    "text": "Calculate the following math expressions.\n\n\n\n\\((23\\times 6)+3\\).\n\\(13^3-1100\\).\n\\(\\log(23)\\) with the natural log.\n\\(\\sqrt{81}/(3^3)\\).\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: Give Us Your Input",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 1"
+    ]
+  },
+  {
+    "objectID": "Lab_2.html#variable-names",
+    "href": "Lab_2.html#variable-names",
+    "title": "Lab 2",
+    "section": "",
+    "text": "While defining variables (objects), the significance of variable naming in programming is immense. Selecting clear and descriptive names for variables is vital for several reasons:\n\nReadability and Understandability: Clear and descriptive variable names enhance the readability and comprehension of your code.\nMaintainability and Debugging: Thoughtfully named variables simplify code maintenance and debugging processes.\nCollaboration: In a team setting, consistent and clear variable naming conventions are crucial for effective collaboration.\nSelf-Documentation: Meaningful variable names serve as self-documentation, making the code more intuitive.\nCode Reusability: Adopting good variable naming practices supports greater code reusability.\n\nSometimes, clear naming requires using multiple words in a variable name, but spaces are not allowed. A common approach is to separate words with underscores, as demonstrated previously, such as \\(\\texttt{morning\\_temperature\\_august}\\).\n\n\nLet us assign relevant names to the following variables:\n\n\n\n#\nFeature\nValue\n\n\n\n\n1\nBody temperature in Fahrenheit\n98\n\n\n2\nNumber of shoes for Sam\n11\n\n\n3\nWeight of a elephant in pounds\n12,050\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "Lab_2.html#basic-r-object-vector",
+    "href": "Lab_2.html#basic-r-object-vector",
+    "title": "Lab 2",
+    "section": "",
+    "text": "A vector is a sequence of finite elements and serves as the basic object in R. For example, a single number like “3” is considered a vector of length 1. To create a vector, we use the \\(\\texttt{c()}\\) function, where the name is an abbreviation of “combine.”\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAs learned, we can assign a descriptive variable name to the vector:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nOne of the powerful features of vectors in R is the ability to perform the same calculation on every element with a single command, i.e., element-wise operation. For example, when converting weights from pounds to kilograms, we can multiply 0.454. This operation can be applied to all the numbers in a vector simultaneously:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo access a specific number in a vector, you add square brackets after the vector name and place the index of the desired element inside the brackets. The “index” refers to the position of the item within the vector, with the first element having an index of 1, and so on. For example, the third element of the vector \\(\\texttt{weight\\_kg}\\) is:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "Lab_2.html#measure-of-center",
+    "href": "Lab_2.html#measure-of-center",
+    "title": "Lab 2",
+    "section": "",
+    "text": "As we discussed in class, we can use the “mean” and “median” to measure the central tendency of our data, with the mode also being an option in some cases. In R, the functions \\(\\texttt{mean()}\\) and \\(\\texttt{median()}\\) can be used to obtain the mean and median of a vector, respectively.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "Lab_2.html#summation-and-length",
+    "href": "Lab_2.html#summation-and-length",
+    "title": "Lab 2",
+    "section": "",
+    "text": "We can also easily calculate the summation and length of a vector by using the functions, \\(\\texttt{sum()}\\) and \\(\\texttt{length()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nCompute the mean of \\(\\texttt{weight\\_kg}\\) by using \\(\\texttt{sum()}\\) and \\(\\texttt{length()}\\) functions. (Do not use \\(\\texttt{mean()}\\) function.)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "Lab_2.html#lab-questions",
+    "href": "Lab_2.html#lab-questions",
+    "title": "Lab 2",
+    "section": "",
+    "text": "BMI is a measurement of a person’s leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height and it is defined by: \\[\\textbf{BMI}=703\\times \\frac{\\text{weight (lb)}}{ \\text{(height (in)})^2}\\] Suppose the variable \\(\\texttt{weight\\_pound}\\) is the weights of seven Lehigh students. Also, the corresponding height observations in inches are \\[70,\\;72,\\;72.5,\\;66,\\;74,\\;66.5,\\;72.\\]\n\n\n\nSave the height observations in a variable by using a descriptive name. (Uncomment and use the data.)\nCalculate the BMIs of the seven students.\nCompute the mean and median of the BMIs .\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPeople often underreport how frequently they engage in antisocial behaviors like peeing in swimming pools. Urine, beyond being unpleasant, reacts with chlorine to produce toxic chemicals like trichloramine, a common cause of skin irritation for swimmers. Researchers found that the artificial sweetener ACE, which passes through the body unmetabolized and in consistent amounts, can be used to measure the amount of urine in a pool by analyzing ACE concentrations. Below is a list of ACE concentrations (measured in ng/L) from 15 different pools in the US: \\[ 438,  211,  640,   85,   83,  350,  138,   49,  465,  489,55, 1086,   71, 1058,  247.\\]\n\n\n\nIn R, create a vector of these data and give it an appropriate name. (Uncomment and use the data.)\nWhat is the mean ACE concentration in these 15 pools?\nSince urine contains an average ACE of 4000 ng/ml, we can obtain the urin concentration (ml/L) by dividing each value by 4000 from the ACE concentration data. Compute the urin concentration and it a suitable name.\nWhat is the mean urine concentration (in ml) per liter?\nUse R to calculate the average amount of urine (in ml) in a 500,000 L pool.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "Lab_3.html",
+    "href": "Lab_3.html",
+    "title": "Lab 3",
+    "section": "",
+    "text": "A data frame in R stores a data set where columns represent variables and rows correspond to individuals. Each element in the data frame is an observation or measurement of a variable for a specific individual. (It’s similar to an Excel sheet.)\nA data frame is typically assigned a name, which is used to indicate to R’s functions which data set to work with. For example, a built-in data set “mtcars” contains car specification information in 1970’s. This data frame has 11 variables and 32 individual cars. The following \\(\\texttt{head()}\\) function shows the variables names and first six observations. Also, use \\(\\texttt{help(mtcars)}\\) for the variable descriptions.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nSometimes, we are interested in extracting one of the variables (columns) from the a data frame for further analysis.\nWhen your data frame has variable names, then this can be easily done by \\(\\texttt{\\$}\\) command. For example, use \\(\\texttt{mtcars\\$hp}\\) to extract \\(\\texttt{horsepower}\\) variable.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother way to extract a variable is to use an index with \\(\\texttt{[]}\\). Recall that we cal select a specific element in a vector using its index, e.g., \\(\\texttt{HP[2]}\\) returns the second element of the \\(\\texttt{HP}\\). Similarly, we can use \\(\\texttt{mtcars[,4]}\\) to extract the variable in the fourth column, \\(\\texttt{horsepower}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that the first argument is empty because it is used to select a specific row (an individual car). By leaving it empty, we are selecting all rows (cars) of the \\(\\texttt{horsepower}\\) variable. Similarly, we can extract the value of a particular variable for a specific car, e.g. \\(\\texttt{mtcars[3,4]}\\) retrieves the horsepower of “Datsun 710”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLastly, we can simultaneously select or deselect multiple variables and/or observations by combining \\(\\texttt{[]}\\), \\(\\texttt{c()}\\) and \\(\\texttt{-}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI believe you can now recognize the patterns. Mastering data subsetting is a crucial skill in data analysis, and we have just covered the fundamental procedures.\n\n\nConsider the \\(\\texttt{mtcars}\\) data again.\n\nExtract the weight variable using \\(\\texttt{\\$}\\) command.\nExtract the Miles/gallon of Honda Civic using \\(\\texttt{[]}\\) command.\nYou can check the car names with the \\(\\texttt{rownames(mtcars)}\\) command.\nExtract the \\(\\texttt{mpg}\\) and \\(\\texttt{hp}\\) variables using \\(\\texttt{[]}\\) command.\nExtract the \\(\\texttt{mpg}\\) and \\(\\texttt{hp}\\) variables except for the \\(\\texttt{Merc}\\) cars.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nWe covered several measures of variation, including “variance”, “standard deviation”, “range”, and “interquartile Range (IQR)”. While calculating these by hand can be tedious, R offers quick and easy outputs using the functions \\(\\texttt{var()}\\), \\(\\texttt{sd()}\\), \\(\\texttt{range()}\\), and \\(\\texttt{IQR()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nThe famous “iris” data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nExtract the \\(\\texttt{Sepal.Length}\\) and \\(\\texttt{Petal.Length}\\) variables using the \\(\\texttt{\\$}\\) command, and save those in \\(\\texttt{SL}\\) and \\(\\texttt{PL}\\), respectively.\nCompare the variances of \\(\\texttt{SL}\\) and \\(\\texttt{PL}\\). Which variable exhibits greater variation in terms of variance?\nExtract the \\(\\texttt{Sepal.Width}\\) and \\(\\texttt{Petal.Width}\\) variables using the \\(\\texttt{[]}\\) command, and save those in \\(\\texttt{SW}\\) and \\(\\texttt{PW}\\), respectively.\nCompare the IQRs of \\(\\texttt{SW}\\) and \\(\\texttt{PW}\\). Which variable exhibits greater variation in terms of IQR?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLet us recall the fomulas for the sample variance.\n\n\n\nThe sample variance can be computed from the following formula: \\[s^2=\\frac{1}{n-1}\\sum_{i=1}^n\\left(x_i-\\bar{x}\\right)^2,\\] where \\(x\\) is a numerical variable of length \\(n\\). Calculate the variance of \\(\\texttt{SL}\\) without using \\(\\texttt{var()}\\) function. (You could use \\(\\texttt{mean()}\\), \\(\\texttt{sum()}\\), and \\(\\texttt{length()}\\) functions.) Verify that your result matches the value provided in 1-ii.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nAdditionally, we have learned an alternative formula for variance calculation (also known as the ‘computing formula’): \\[s^2=\\frac{1}{n-1}\\left\\{\\sum_{i=1}^nx_i^2-\\bar{x}^2\\right\\}.\\] Similar to the previous case, calculate the variance of \\(\\texttt{PL}\\) using this formula, based on the \\(\\texttt{mean()}\\), \\(\\texttt{sum()}\\), and \\(\\texttt{length()}\\) functions. Verify that your result matches the value provided in 1-ii.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "Lab_3.html#basic-r-object-data-frame",
+    "href": "Lab_3.html#basic-r-object-data-frame",
+    "title": "Lab 3",
+    "section": "",
+    "text": "A data frame in R stores a data set where columns represent variables and rows correspond to individuals. Each element in the data frame is an observation or measurement of a variable for a specific individual. (It’s similar to an Excel sheet.)\nA data frame is typically assigned a name, which is used to indicate to R’s functions which data set to work with. For example, a built-in data set “mtcars” contains car specification information in 1970’s. This data frame has 11 variables and 32 individual cars. The following \\(\\texttt{head()}\\) function shows the variables names and first six observations. Also, use \\(\\texttt{help(mtcars)}\\) for the variable descriptions.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "Lab_3.html#subsetting-data",
+    "href": "Lab_3.html#subsetting-data",
+    "title": "Lab 3",
+    "section": "Subsetting Data",
+    "text": "Subsetting Data\nSometimes, we are interested in a particular variables in a data set. Then, it becomes necessary to extract one of the variables (columns) from the a data frame for further analysis.\nWhen your data frame has variable names, then this can be easily done by \\(\\texttt{\\$}\\) command. For example, use \\(\\texttt{mtcars\\$hp}\\) to extract \\(\\texttt{horse power}\\) variable."
+  },
+  {
+    "objectID": "Lab_3.html#subsetting-data-frame",
+    "href": "Lab_3.html#subsetting-data-frame",
+    "title": "Lab 3",
+    "section": "",
+    "text": "Sometimes, we are interested in extracting one of the variables (columns) from the a data frame for further analysis.\nWhen your data frame has variable names, then this can be easily done by \\(\\texttt{\\$}\\) command. For example, use \\(\\texttt{mtcars\\$hp}\\) to extract \\(\\texttt{horsepower}\\) variable.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAnother way to extract a variable is to use an index with \\(\\texttt{[]}\\). Recall that we cal select a specific element in a vector using its index, e.g., \\(\\texttt{HP[2]}\\) returns the second element of the \\(\\texttt{HP}\\). Similarly, we can use \\(\\texttt{mtcars[,4]}\\) to extract the variable in the fourth column, \\(\\texttt{horsepower}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that the first argument is empty because it is used to select a specific row (an individual car). By leaving it empty, we are selecting all rows (cars) of the \\(\\texttt{horsepower}\\) variable. Similarly, we can extract the value of a particular variable for a specific car, e.g. \\(\\texttt{mtcars[3,4]}\\) retrieves the horsepower of “Datsun 710”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLastly, we can simultaneously select or deselect multiple variables and/or observations by combining \\(\\texttt{[]}\\), \\(\\texttt{c()}\\) and \\(\\texttt{-}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nI believe you can now recognize the patterns. Mastering data subsetting is a crucial skill in data analysis, and we have just covered the fundamental procedures.\n\n\nConsider the \\(\\texttt{mtcars}\\) data again.\n\nExtract the weight variable using \\(\\texttt{\\$}\\) command.\nExtract the Miles/gallon of Honda Civic using \\(\\texttt{[]}\\) command.\nYou can check the car names with the \\(\\texttt{rownames(mtcars)}\\) command.\nExtract the \\(\\texttt{mpg}\\) and \\(\\texttt{hp}\\) variables using \\(\\texttt{[]}\\) command.\nExtract the \\(\\texttt{mpg}\\) and \\(\\texttt{hp}\\) variables except for the \\(\\texttt{Merc}\\) cars.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "Lab_3.html#measure-of-variation",
+    "href": "Lab_3.html#measure-of-variation",
+    "title": "Lab 3",
+    "section": "",
+    "text": "We covered several measures of variation, including “variance”, “standard deviation”, “range”, and “interquartile Range (IQR)”. While calculating these by hand can be tedious, R offers quick and easy outputs using the functions \\(\\texttt{var()}\\), \\(\\texttt{sd()}\\), \\(\\texttt{range()}\\), and \\(\\texttt{IQR()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "Lab_3.html#lab-questions",
+    "href": "Lab_3.html#lab-questions",
+    "title": "Lab 3",
+    "section": "",
+    "text": "The famous “iris” data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nExtract the \\(\\texttt{Sepal.Length}\\) and \\(\\texttt{Petal.Length}\\) variables using the \\(\\texttt{\\$}\\) command, and save those in \\(\\texttt{SL}\\) and \\(\\texttt{PL}\\), respectively.\nCompare the variances of \\(\\texttt{SL}\\) and \\(\\texttt{PL}\\). Which variable exhibits greater variation in terms of variance?\nExtract the \\(\\texttt{Sepal.Width}\\) and \\(\\texttt{Petal.Width}\\) variables using the \\(\\texttt{[]}\\) command, and save those in \\(\\texttt{SW}\\) and \\(\\texttt{PW}\\), respectively.\nCompare the IQRs of \\(\\texttt{SW}\\) and \\(\\texttt{PW}\\). Which variable exhibits greater variation in terms of IQR?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLet us recall the fomulas for the sample variance.\n\n\n\nThe sample variance can be computed from the following formula: \\[s^2=\\frac{1}{n-1}\\sum_{i=1}^n\\left(x_i-\\bar{x}\\right)^2,\\] where \\(x\\) is a numerical variable of length \\(n\\). Calculate the variance of \\(\\texttt{SL}\\) without using \\(\\texttt{var()}\\) function. (You could use \\(\\texttt{mean()}\\), \\(\\texttt{sum()}\\), and \\(\\texttt{length()}\\) functions.) Verify that your result matches the value provided in 1-ii.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nAdditionally, we have learned an alternative formula for variance calculation (also known as the ‘computing formula’): \\[s^2=\\frac{1}{n-1}\\left\\{\\sum_{i=1}^nx_i^2-\\bar{x}^2\\right\\}.\\] Similar to the previous case, calculate the variance of \\(\\texttt{PL}\\) using this formula, based on the \\(\\texttt{mean()}\\), \\(\\texttt{sum()}\\), and \\(\\texttt{length()}\\) functions. Verify that your result matches the value provided in 1-ii.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 3"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html",
+    "href": "Lab_4.html",
+    "title": "Lab 4",
+    "section": "",
+    "text": "AA&lt;-1:10",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#basic-graphics-in-r",
+    "href": "Lab_4.html#basic-graphics-in-r",
+    "title": "Lab 4",
+    "section": "Basic Graphics in R",
+    "text": "Basic Graphics in R\nR offers a variety of options for creating visual displays in statistics. While base R itself provides sufficient quality for many plots, additional packages like \\(\\texttt{ggplot2}\\) or \\(\\texttt{lattice}\\) to produce “publishable” quality graphics. In our lab sessions, we will focus on the basic R graphics.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#frequency-tables",
+    "href": "Lab_4.html#frequency-tables",
+    "title": "Lab 4",
+    "section": "Frequency Tables",
+    "text": "Frequency Tables\nAs we discussed in class, a frequency table summarizes the information from the corresponding data set. It also serves as an important intermediate step for creating visual displays such as pie charts, bar plots, histograms, and more.\nLet us create a frequency table of a categorical variable \\(\\texttt{Hand}\\) using the function \\(\\texttt{table()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also create a 2-by-2 (relative) frequency table (or contingency table) with two categorical variables.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, we can finally created conditional frequency table.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBased on the results of conditional frequency table, we can answer questions such as: Which gender prefers MLB? Which gender prefers NBA?",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#beginning-semester-survey-data",
+    "href": "Lab_4.html#beginning-semester-survey-data",
+    "title": "Lab 4",
+    "section": "Beginning Semester Survey Data",
+    "text": "Beginning Semester Survey Data\nFor illustrations, we will use our beginning semester survey data. It contains 136 observations and 16 variables as follows:\n\n01. Sports:    What is your favorite professional sport? \n02. States:    How many states in the US have you traveled to? \n03. Cat_Dog:   Are you more of a cat person or a dog person? \n04. Pets:      What is the number of pets you and your family currently have? \n05. Gender:    What is your gender? \n06. Browser:   What is your preferred internet browser? \n08. Shoes:     How many pairs of shoes do you have? \n09. Height:    How tall are you (inch)? \n10. MO_Height: What is your mothers height (inch)? \n11. FA_Height: What is your fathers height (inch)? \n12. Arrival:   How many minutes does it take for you to reach the recitation classroom from your residence? \n13. Sleep:     How many HOURS did you sleep last night, to the nearest half-hour? \n14. Number:    What is your favorite whole number between 1 and 10? \n15. Hand:      Are you right- or left-handed? \n16. Credit:    How many credits are you taking this semester? \n\nLet us check the variable name and the first six observations by using the function \\(\\texttt{head()}\\):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#bar-plots",
+    "href": "Lab_4.html#bar-plots",
+    "title": "Lab 4",
+    "section": "Bar plots",
+    "text": "Bar plots\nBar plot is a very useful for any categorical variables, regardless the # of categories. To create a bar plot, we can use the function \\(\\texttt{barplot()}\\). Note that the function accepts a \\(\\texttt{table}\\) object that we created above.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Lab_4.html#bar-plot",
+    "href": "Lab_4.html#bar-plot",
+    "title": "Lab 4",
+    "section": "Bar Plot",
+    "text": "Bar Plot\nA bar plot is highly useful for displaying categorical data, regardless of the number of categories. To create a bar plot, we can use the \\(\\texttt{barplot()}\\) function. Note that the function accepts the \\(\\texttt{table}\\) object that we created earlier.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFor any plotting functions, the \\(\\texttt{main}\\) argument can be used to add a “title” to the plot.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nExample\nSelect a single categorical variable from the data set, and create a bar plot with an appropriate title. (We will address bivariate categorical variables in a lab question.)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#histogram",
+    "href": "Lab_4.html#histogram",
+    "title": "Lab 4",
+    "section": "Histogram",
+    "text": "Histogram\nHistogram is a versatile graphical display for a single numerical variable (data). It directly accepts a numerical vector as its first argument. Let us create a histogram for the \\(\\texttt{Height}\\) variable.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe histogram reveals that the distribution of the \\(\\texttt{Height}\\) variable is right-skewed.\n\nExample\nSelect a single numerical variable from the data set, and create a histogram with an appropriate title. What is the shape of the distribution?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#box-plot",
+    "href": "Lab_4.html#box-plot",
+    "title": "Lab 4",
+    "section": "Box Plot",
+    "text": "Box Plot\nAlthough the histogram is typically our go-to choice for a single numerical variable, there are situations where a box plot is preferable. For instance, if we want to display \\(\\texttt{Height}\\) by \\(\\texttt{Gender}\\), a box plot would be more appropriate.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis graphical representation makes it easy to compare the differences in \\(\\texttt{Height}\\) between genders. As demonstrated, a box plot is a clear and intuitive choice when we have one numerical variable and one categorical variable.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_4.html#lab-questions",
+    "href": "Lab_4.html#lab-questions",
+    "title": "Lab 4",
+    "section": "Lab Questions",
+    "text": "Lab Questions\n\nLet us consider \\(\\texttt{Browser}\\) variable in relation to \\(\\texttt{Cat\\_Dog}\\).\n\n\n\nCreate a frequency table for the \\(\\texttt{Browser}\\) variable.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCreate a bar plot using the table object in (i).\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCreate a conditional frequency table for \\(\\texttt{Browser}\\) with respect to \\(\\texttt{Cat\\_Dog}\\).\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCreate a conditional frequency barplot for \\(\\texttt{Browser}\\) with respect to \\(\\texttt{Cat\\_Dog}\\). Discuss the percentages of Edge and Safari with respect to the personality.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nLet us consider \\(\\texttt{Shoes}\\) variable in relation to \\(\\texttt{Gender}\\). Note that we have one numerical and one categorical variable.\n\n\n\nChoose a relevant graphical display to summarize the information of \\(\\texttt{Shoes}\\), and provide the plot.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nChoose a relevant graphical display to summarize the information of \\(\\texttt{Shoes}\\) in terms of \\(\\texttt{Gender}\\), and provide the plot.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWhich gender has a higher central value for \\(\\texttt{Shoes}\\)? Which gender shows greater variability? What can we infer about the number of pairs of shoes with respect to gender?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 4"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html",
+    "href": "Lab_5.html",
+    "title": "Lab 5",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#analyzing-bivariate-data-with-r",
+    "href": "Lab_5.html#analyzing-bivariate-data-with-r",
+    "title": "Lab 5",
+    "section": "Analyzing Bivariate Data with R",
+    "text": "Analyzing Bivariate Data with R\nThere are many situations where we are interested in the relationship between two variables. For the discrete bivariate case, a conditional frequency table can be used. For continuous variables, correlation and linear regression analyses are appropriate. In this lab, we focus on the correlation analysis based on a dataset with continuous variables.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#mlb-data-2023-regular-season-team-statistics",
+    "href": "Lab_5.html#mlb-data-2023-regular-season-team-statistics",
+    "title": "Lab 5",
+    "section": "MLB Data: 2023 Regular Season Team Statistics",
+    "text": "MLB Data: 2023 Regular Season Team Statistics\nWith MLB wrapping up its 2024 regular season, let’s use the complete dataset from the 2023 regular season. As depicted in the movie Moneyball (2011), the use of baseball statistics and analytics to measure player and team performance has become widespread. While numerous baseball analytics are used in the field, we will focus on some of the key statistics that measure the offensive and defensive capabilities of MLB teams:\n\n01. Team:  Name of the team \n02. Win_P: Winning Percentage, \"(# of Wins\"/ \"Total # of games)*100\".\n03. RPG:   Runs per Game, the average number of runs a team or player scores in each game. \n04. BA:    Batting Average, \"the # of times a batter hits a ball and reaches the base\"/\"the # of at bats by a batter\".   \n05. OPS:   On-base plus slugging, the sum of on-base percentage and slugging percentage. \n06. ORPG:  Opponent Runs per Game, the runs per game by the opponent.   \n07. ERA:   Earned Run Average, the number of earned runs a pitcher allows per nine innings.    \n08. WHIP:  Walks And Hits Per Inning Pitched, the statistic shows how well a pitcher has kept runners off the basepaths, one of his main goals.\n\nIn the data set, the variable \\(\\texttt{Win\\_P}\\) measures a MLB team’s performance throughout the 2023 season. For offensive capability, we can use the variables \\(\\texttt{RPG}\\), \\(\\texttt{BA}\\), and \\(\\texttt{OPS}\\); whereas, for defensive capability, we can use \\(\\texttt{ORPG}\\), \\(\\texttt{ERA}\\), and \\(\\texttt{WHIP}\\).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#offensive-capability",
+    "href": "Lab_5.html#offensive-capability",
+    "title": "Lab 5",
+    "section": "Offensive Capability",
+    "text": "Offensive Capability\nIn baseball, offensive capability is closely tied to the performance of batters. We can expect a positive association between offensive measures and winning percentage. This relationship can be quantified using correlation, which provides a unit-less value between -1 and 1. A value close to 1 or -1 indicates a strong positive or negative association, respectively, while a value near 0 indicates no linear association between the variables. In R, the function \\(\\texttt{cor()}\\) can be used to calculate correlation:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBased on the correlation value, we can describe the level of linear association (e.g., a moderately high positive relationship). However, it’s also important to visually confirm the actual association, as this helps us better understand the data. For this purpose, we can use the \\(\\texttt{plot()}\\) function in R:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can rewrite labels by using the \\(\\texttt{xlab}\\) and \\(\\texttt{ylab}\\) arguments.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlso, change the plotting character and colors with the \\(\\texttt{col}\\) argument.\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#defensive-capability",
+    "href": "Lab_5.html#defensive-capability",
+    "title": "Lab 5",
+    "section": "Defensive Capability",
+    "text": "Defensive Capability\nUnlike offensive capability, defensive capability in baseball is closely tied to the performance of pitchers. For defensive measures, smaller values indicate better performance, leading us to expect a negative association with winning percentage. For example, \\(\\texttt{ERA}\\) (Earned Run Average) is a classic measure of a pitcher’s ability. Let’s examine the correlation and create a scatter plot to confirm this relationship.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#overall-capability",
+    "href": "Lab_5.html#overall-capability",
+    "title": "Lab 5",
+    "section": "Overall Capability",
+    "text": "Overall Capability\nThe variables ‘runs per game’ and ‘opponent runs per game’ are valid offensive and defensive metrics in baseball. Let’s examine the correlation and create scatter plots to confirm their relationship.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, let us want to combine these two analytics to measure the overall capability of a MLB team. The idea is very simple. By subtracting \\(\\texttt{ORPG}\\) from \\(\\texttt{RPG}\\), we quantify the actual “net runs per game” compared to opponent team: \\[\\texttt{NRPG}=\\texttt{RPG}-\\texttt{ORPG}.\\] Please create the new variable in R, and check the correlation and display the scatter plot.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo you think the created \\(\\texttt{NRPG}\\) would be a good overall performance measure?",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#lab-questions",
+    "href": "Lab_5.html#lab-questions",
+    "title": "Lab 5",
+    "section": "Lab Questions",
+    "text": "Lab Questions\n\nAmong the six variables, \\(\\texttt{RPG}\\), \\(\\texttt{BA}\\), \\(\\texttt{OPS}\\), \\(\\texttt{ORPG}\\), \\(\\texttt{ERA}\\), and \\(\\texttt{WHIP}\\), we wish to choose the best offensive measure and the best defensive measure, respectively. Please perform correlation analysis and provide your conclusion.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNote that the \\(\\texttt{NRPG}\\) we have defined is just one way to combine \\(\\texttt{RPG}\\) and \\(\\texttt{ORPG}\\). We can also consider the “ratio of runs per game” by dividing \\(\\texttt{ORPG}\\) from \\(\\texttt{RPG}\\). Create a new variable \\(\\texttt{RRPG}\\) for the “ratio of runs per game” and compare the result with \\(\\texttt{NRPG}\\). Which one would be preferable to measure the overall performance of a MLB team?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#analyzing-bivariate-data-with-r-i",
+    "href": "Lab_5.html#analyzing-bivariate-data-with-r-i",
+    "title": "Lab 5",
+    "section": "Analyzing Bivariate Data with R (I)",
+    "text": "Analyzing Bivariate Data with R (I)\nThere are many situations where we are interested in the relationship between two variables. For the discrete bivariate case, a conditional frequency table can be used. For continuous variables, correlation and linear regression analyses are appropriate. In this lab, we focus on the correlation analysis based on a dataset with continuous variables.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#from-correlation-analysis-to-regression-analysis",
+    "href": "Lab_5.html#from-correlation-analysis-to-regression-analysis",
+    "title": "Lab 5",
+    "section": "From correlation analysis to regression analysis",
+    "text": "From correlation analysis to regression analysis\nOne of the biggest differences between correlation and regression analyses is the treatment of two continuous variables. While we treat the two variables equally in correlation analysis, we strictly distinguish independent (explanatory) variable and dependent (response) variable. Put it in another way, we manage two variables symmetrically in correlation analysis, but asymetrically in regression analysis. For example, given the MLB data set, our goal is to predict or explain the response variable, \\(\\texttt{Winning Percentage}\\) based on a explanatory variable chosen among the measures of defensive, offensive, or combined capability.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_5.html#regression-equation",
+    "href": "Lab_5.html#regression-equation",
+    "title": "Lab 5",
+    "section": "Regression equation",
+    "text": "Regression equation\nWe have learned the fomula for the regression analysis: \\[\\begin{align*}\n  \\hat{y}\\;=&\\; a+bx;\\\\ \\text{such that}&\\begin{cases}\n  b\\;=& \\frac{\\sum (x-\\bar{x})(y-\\bar{y})}{\\sum (x-\\bar{x})^2};\\\\\n  a\\;=& \\bar{y}-b\\bar{x},\\end{cases}\n\\end{align*}\\] where \\(y\\) is the response variable and \\(x\\) is the explanatory variable. Now, consider the \\(\\texttt{Batting Average}\\) as our explanatory variable with the response variable \\(\\texttt{Winning Percentage}\\). Then, we can use \\(\\textbf{R}\\) to calculate the coefficients, a and b:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can rewrite labels by using the \\(\\texttt{xlab}\\) and \\(\\texttt{ylab}\\) arguments.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlso, change the plotting character and colors with the \\(\\texttt{col}\\) argument.\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 5"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#analyzing-bivariate-data-with-r-ii",
+    "href": "Lab_6.html#analyzing-bivariate-data-with-r-ii",
+    "title": "Lab 6",
+    "section": "Analyzing Bivariate Data with R (II)",
+    "text": "Analyzing Bivariate Data with R (II)\nWe continue our discussion of bivariate data analysis. In particular, we focus on linear regression analysis using a dataset with continuous variables in this lab.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#mlb-data-2023-regular-season-team-statistics",
+    "href": "Lab_6.html#mlb-data-2023-regular-season-team-statistics",
+    "title": "Lab 6",
+    "section": "MLB Data: 2023 Regular Season Team Statistics",
+    "text": "MLB Data: 2023 Regular Season Team Statistics\nWe again use the dataset of the MLB 2023 regular season, as follows:\n\n01. Team:  Name of the team \n02. Win_P: Winning Percentage, \"(# of Wins\"/ \"Total # of games)*100\".\n03. RPG:   Runs per Game, the average number of runs a team or player scores in each game. \n04. BA:    Batting Average, \"the # of times a batter hits a ball and reaches the base\"/\"the # of at bats by a batter\".   \n05. OPS:   On-base plus slugging, the sum of on-base percentage and slugging percentage. \n06. ORPG:  Opponent Runs per Game, the runs per game by the opponent.   \n07. ERA:   Earned Run Average, the number of earned runs a pitcher allows per nine innings.    \n08. WHIP:  Walks And Hits Per Inning Pitched, the statistic shows how well a pitcher has kept runners off the basepaths, one of his main goals.\n\nIn the data set, the variable \\(\\texttt{Win\\_P}\\) measures a MLB team’s performance throughout the 2023 season. For offensive capability, we can use the variables \\(\\texttt{RPG}\\), \\(\\texttt{BA}\\), and \\(\\texttt{OPS}\\); whereas, for defensive capability, we can use \\(\\texttt{ORPG}\\), \\(\\texttt{ERA}\\), and \\(\\texttt{WHIP}\\).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#offensive-capability",
+    "href": "Lab_6.html#offensive-capability",
+    "title": "Lab 6",
+    "section": "Offensive Capability",
+    "text": "Offensive Capability\nIn baseball, offensive capability is closely tied to the performance of batters. We can expect a positive association between offensive measures and winning percentage. This relationship can be quantified using correlation, which provides a unit-less value between -1 and 1. A value close to 1 or -1 indicates a strong positive or negative association, respectively, while a value near 0 indicates no linear association between the variables. In R, the function \\(\\texttt{cor()}\\) can be used to calculate correlation:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBased on the correlation value, we can describe the level of linear association (e.g., a moderately high positive relationship). However, it’s also important to visually confirm the actual association, as this helps us better understand the data. For this purpose, we can use the \\(\\texttt{plot()}\\) function in R:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can rewrite labels by using the \\(\\texttt{xlab}\\) and \\(\\texttt{ylab}\\) arguments.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlso, change the plotting character and colors with the \\(\\texttt{col}\\) argument.\n\n\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#defensive-capability",
+    "href": "Lab_6.html#defensive-capability",
+    "title": "Lab 6",
+    "section": "Defensive Capability",
+    "text": "Defensive Capability\nUnlike offensive capability, defensive capability in baseball is closely tied to the performance of pitchers. For defensive measures, smaller values indicate better performance, leading us to expect a negative association with winning percentage. For example, \\(\\texttt{ERA}\\) (Earned Run Average) is a classic measure of a pitcher’s ability. Let’s examine the correlation and create a scatter plot to confirm this relationship.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#overall-capability",
+    "href": "Lab_6.html#overall-capability",
+    "title": "Lab 6",
+    "section": "Overall Capability",
+    "text": "Overall Capability\nThe variables ‘runs per game’ and ‘opponent runs per game’ are valid offensive and defensive metrics in baseball. Let’s examine the correlation and create scatter plots to confirm their relationship.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, let us want to combine these two analytics to measure the overall capability of a MLB team. The idea is very simple. By subtracting \\(\\texttt{ORPG}\\) from \\(\\texttt{RPG}\\), we quantify the actual “net runs per game” compared to opponent team: \\[\\texttt{NRPG}=\\texttt{RPG}-\\texttt{ORPG}.\\] Please create the new variable in R, and check the correlation and display the scatter plot.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo you think the created \\(\\texttt{NRPG}\\) would be a good overall performance measure?",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#lab-questions",
+    "href": "Lab_6.html#lab-questions",
+    "title": "Lab 6",
+    "section": "Lab Questions",
+    "text": "Lab Questions\nIn the previous lab, we considered the “net runs per game” variable as a measure of MLB team’s overall capability:\n\\[\\texttt{NRPG}=\\texttt{RPG}-\\texttt{ORPG}.\\]\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nLet us perform a linear regression analysis to predict the winning percentage based on the NRPG. Derive the slope and intercept coefficients, respectively.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPredict the winning percentage of the IronPigs when their hypothesitcal NRPG is -3.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nChoose relevant interpretations for the slope and intercept coefficients.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#from-correlation-analysis-to-regression-analysis",
+    "href": "Lab_6.html#from-correlation-analysis-to-regression-analysis",
+    "title": "Lab 6",
+    "section": "From correlation analysis to regression analysis",
+    "text": "From correlation analysis to regression analysis\nOne of the key differences between correlation and regression analysis lies in how we handle two continuous variables. In correlation analysis, both variables are treated equally, whereas in regression analysis, we distinctly classify one variable as explanatory (independent) and the other as response (dependent). In other words, correlation treats the two variables symmetrically, while regression treats them asymmetrically. For example, in the context of regression analysis with the MLB dataset, our goal is to predict or explain the response variable, \\(\\texttt{Winning Percentage}\\), based on an explanatory variable chosen from measures of defensive, offensive, or combined capability.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#regression-equation",
+    "href": "Lab_6.html#regression-equation",
+    "title": "Lab 6",
+    "section": "Regression equation",
+    "text": "Regression equation\nWe have learned the fomulas for the regression analysis: \\[\\begin{align*}\n  \\hat{y}\\;=&\\; a+bx;\\\\ \\text{such that}&\\begin{cases}\n  b\\;=& \\frac{\\sum (x-\\bar{x})(y-\\bar{y})}{\\sum (x-\\bar{x})^2};\\\\\n  a\\;=& \\bar{y}-b\\bar{x},\\end{cases}\n\\end{align*}\\] where \\(y\\) is the response variable and \\(x\\) is the explanatory variable.\nNow, consider the \\(\\texttt{Batting Average}\\) as our explanatory variable with the corresponding response variable \\(\\texttt{Winning Percentage}\\). Then, we can use \\(\\textbf{R}\\) to calculate the coefficients, a and b:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html#example",
+    "href": "Lab_6.html#example",
+    "title": "Lab 6",
+    "section": "Example",
+    "text": "Example\nLet us instead of use \\(\\texttt{ERA}\\) (Earned Run Average) as a explanatory variable. Derive the regression equation and visualize the regression line with corresponding scatter plot.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSuppose the IronPigs have a team ERA of 7 if they were playing in the MLB. What would their expected winning percentage be?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_6.html",
+    "href": "Lab_6.html",
+    "title": "Lab 6",
+    "section": "",
+    "text": "Loading required package: MASS",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 6"
+    ]
+  },
+  {
+    "objectID": "Lab_7.html#basic-graphics-in-r",
+    "href": "Lab_7.html#basic-graphics-in-r",
+    "title": "Lab 7",
+    "section": "Basic Graphics in R",
+    "text": "Basic Graphics in R\nR offers a variety of options for creating visual displays in statistics. While base R itself provides sufficient quality for many plots, additional packages like \\(\\texttt{ggplot2}\\) or \\(\\texttt{lattice}\\) to produce “publishable” quality graphics. In our lab sessions, we will focus on the basic R graphics."
+  },
+  {
+    "objectID": "Lab_7.html#beginning-semester-survey-data",
+    "href": "Lab_7.html#beginning-semester-survey-data",
+    "title": "Lab 7",
+    "section": "Beginning Semester Survey Data",
+    "text": "Beginning Semester Survey Data\nThe original data contains 136 observations and 15 variables. But, we omit the observations with a missing value, so the final data dimension becomes \\(108\\times 15\\).\n\n01. Sports:    What is your favorite professional sport? \n02. States:    How many states in the US have you traveled to? \n03. Cat_Dog:   Are you more of a cat person or a dog person? \n04. Pets:      What is the number of pets you and your family currently have? \n05. Gender:    What is your gender? \n06. Browser:   What is your preferred internet browser? \n07. Shoes:     How many pairs of shoes do you have? \n08. Height:    How tall are you (inch)? \n09. MO_Height: What is your mothers height (inch)? \n10. FA_Height: What is your fathers height (inch)? \n11. Arrival:   How many minutes does it take for you to reach the recitation classroom from your residence? \n12. Sleep:     How many HOURS did you sleep last night, to the nearest half-hour? \n13. Number:    What is your favorite whole number between 1 and 10? \n14. Hand:      Are you right- or left-handed? \n15. Credit:    How many credits are you taking this semester? \n\nNote that the survey dataset is recorded in “SURVEY”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "Lab_7.html#analyzing-bivariate-data-with-r-iii",
+    "href": "Lab_7.html#analyzing-bivariate-data-with-r-iii",
+    "title": "Lab 7",
+    "section": "Analyzing Bivariate Data with R (III)",
+    "text": "Analyzing Bivariate Data with R (III)\nWe finalize our discussion of bivariate data analysis. In particular, we focus on linear regression analysis using our survey dataset with continuous variables.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "Lab_7.html#relationship-between-parents-height",
+    "href": "Lab_7.html#relationship-between-parents-height",
+    "title": "Lab 7",
+    "section": "Relationship between parents height",
+    "text": "Relationship between parents height\nWould there be any relationship between the heights between husband and wife? Let us\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Lab_7.html#heights-relationship-between-parents-and-children",
+    "href": "Lab_7.html#heights-relationship-between-parents-and-children",
+    "title": "Lab 7",
+    "section": "Heights relationship between parents and children",
+    "text": "Heights relationship between parents and children\nDo you believe your height is inherited from your father or mother? If your answer is YES, it might make sense to predict a child’s height based on one parent’s height using linear regression. Let’s explore this idea with our survey dataset.\nOur first step is to examine the correlation and scatter plots. We’ll create these for the mother’s and father’s height variables, respectively.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo you think the variables exhibit sufficient linear associations to justify proceeding with linear regression? Based on the results, the answer seems to be ‘NO.’ A common rule of thumb is that a correlation of around 0.7 (or at least 0.6) is recommended. So, should we stop our analysis here?",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "Lab_7.html#searching-for-the-relationship-for-subsets.",
+    "href": "Lab_7.html#searching-for-the-relationship-for-subsets.",
+    "title": "Lab 7",
+    "section": "Searching for the relationship for subsets.",
+    "text": "Searching for the relationship for subsets.\nThis type of issue is quite common in data analysis. However, we can still proceed by find out meaningful relationship within particular subsets. A common subset can be define by the gender variable. So, let us subset the data. In this lab, we will try the \\(\\texttt{subset()}\\) function to achieve our goal.\n\nSubsetting with \\(\\texttt{subset()}\\)\nThe \\(\\texttt{subset()}\\) function accepts three arguments. The first argument is the dataset we want to subset, the second argument is the condition to select observations, and the third argument is the variables we want to select. For example,\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Lab_7.html#searching-for-the-relationship-within-subsets.",
+    "href": "Lab_7.html#searching-for-the-relationship-within-subsets.",
+    "title": "Lab 7",
+    "section": "Searching for the relationship within subsets.",
+    "text": "Searching for the relationship within subsets.\nThis type of issue is quite common in data analysis. However, we can still move forward by identifying meaningful relationships within specific subsets. In this lab, we will use the \\(\\texttt{subset()}\\) function to accomplish this.”\n\nExample: Subsetting with \\(\\texttt{subset()}\\)\nThe \\(\\texttt{subset()}\\) function takes three arguments: the first is the dataset to subset, the second is the condition for selecting observations, and the third specifies the variables to retain. For example, using the \\(\\texttt{mtcars}\\) dataset:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, let us subset our data for analysis. A common way for the subset would be through the gender variable. So,\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThen, let us check the correlations for two datasets.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBased on the result, we can confirm a reasonable level of correlation between \\(\\texttt{Height}\\) and \\(\\texttt{MO\\_Height}\\) within the male group. So, let us use it for the linear regression analysis.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "Lab_7.html#regression-analysis-with-the-textttlm-built-in-function",
+    "href": "Lab_7.html#regression-analysis-with-the-textttlm-built-in-function",
+    "title": "Lab 7",
+    "section": "Regression analysis with the \\(\\texttt{lm()}\\) built-in function",
+    "text": "Regression analysis with the \\(\\texttt{lm()}\\) built-in function\nIn the previous lab, we calculated the regression coefficients manually using formulas. While that approach was informative, it’s not practical to repeat every time. Here, we’ll use the built-in \\(\\texttt{lm()}\\) function for convenience. With \\(\\texttt{lm()}\\), we use a “tilde” to link the response variable (\\(\\texttt{Height}\\)) with the explanatory variable (\\(\\texttt{MO\\_Height}\\)).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s focus on the R-squared value from the regression summary. This coefficient of determination (\\(\\mathbf{R}^2\\)), as we discussed in class, represents the proportion of variation in a student’s height explained by the mother’s height. Currently, the R-squared value is not particularly high, indicating that the model’s predictive power is limited.\nWhat if we use both the mother’s height (MO_Height) and the father’s height (FA_Height) for prediction, even though we haven’t covered this yet? This approach is known as multiple regression analysis. It can be easily implemented as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLastly, let’s make predictions. Since we are using data from male students, all interpretations should be limited to this subset.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "Lab_7.html#lab-questions",
+    "href": "Lab_7.html#lab-questions",
+    "title": "Lab 7",
+    "section": "Lab Questions",
+    "text": "Lab Questions\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLarger animals tend to have larger brains, but is the increase in brain size proportional to the increase in body size? Allison and Cicchetti (1976) compiled data on the body and brain sizes of 62 mammal species, available in the dataset \\(\\texttt{Mammal}\\). This dataset includes columns for the species name, average body mass (in kg), and average brain size (in g). Since both variables are highly right-skewed, we apply a log transformation for analysis.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCalculate the correlation between the log body mass and log brain size.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPerform the linear regression analysis for log brain size based on the log average body mass, using the \\(\\texttt{lm()}\\) function.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPredict the log brain size when the log body mass is 3.12.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 7"
+    ]
+  },
+  {
+    "objectID": "Lab_8.html",
+    "href": "Lab_8.html",
+    "title": "Lab 8",
+    "section": "",
+    "text": "A “random variable” can be viewed as a numerical variable with known possible values, though the actual value remains unknown until the corresponding experiment is completed. Since numerical variables can be either discrete or continuous, random variables can also be classified as discrete or continuous.\n\n\n\nA discrete random variable can take on countably distinct values. For example, it might yield an integer between 1 and 6 (as in the outcome of rolling a die) or an integer from 1 to infinity (such as the number of car accidents in the U.S. in a given year).\n\n\nA box model is a useful way to model an experiment with a discrete random variable. Suppose we have a box containing three balls marked with 1, five balls marked with 2, and two balls marked with 3. We draw a ball with replacement, meaning:\n\nExtract a ball.\nCheck the number on it.\nPut the ball back into the box.\nRepeat the process.\n\nDue to this “replacement” condition, the theoretical probability of drawing a 1, 2, or 3 remains constant throughout the experiment. If we define the random variable \\(X\\) as the number marked on the drawn ball, the corresponding discrete probability distribution is:\n\n\n\nx\n1\n2\n3\nTotal\n\n\n\n\np(x)\n3/10\n5/10\n2/10\n10/10=1\n\n\n\nThe shape of the distribution can be illustrated:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, we can use the \\(\\texttt{sample()}\\) function in \\(\\textbf{R}\\) to implement the experiment using the box model. This means we assume the model and simulate the process of drawing balls from the box.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that each time you run the code, the set of drawn balls will differ due to the randomness of the experiment. Now, we can summarize the sample data using a frequency table for the observed numbers as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that the frequency table closely aligns with the theoretical probability distribution. This illustrates the concept of long-run probability—the idea that the relative frequency of an event (e.g., \\(X=1\\), \\(X=2\\), or \\(X=3\\)) converges toward the theoretical probability with repeated trials. We can further verify this by examining the trajectories of relative frequencies:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nAs learned, the mean and variance of a discrete probability distribution can be calculated by: \\[\\begin{align*}\n  \\mu =& \\sum x p(x)\\\\\n  \\sigma^2 = & \\sum (x-\\mu)^2p(x),\n\\end{align*}\\] where the summation is taken over all possible values of \\(X\\). Using R, we can easily compute these quantities. For example, with our box model:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also calculate these values empirically using the data we generated.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nThe binomial probability distribution is one of the most widely used discrete distributions. Consider an experiment with two possible outcomes: success or failure, each with a fixed probability of success \\(p\\). If this experiment is repeated \\(n\\) times, the total number of successes can be modeled as a binomial random variable \\(X\\), which can take any integer value from 0 (no success) to \\(n\\) (all successes).\nRecall that the probability of observing exactly \\(x\\) successes is given by: \\[\np(x)=\\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x}.\n\\]\n\n\nStephen Curry is renowned for his three-point shooting, but he also holds the highest career free-throw percentage in NBA history (91%). Suppose we expect him to attempt 7 free throws in the Warriors’ season opener against the Trail Blazers on 10/23.\nWe can model this scenario using the binomial probability distribution with \\(p=0.91\\) (success probability) and \\(n=7\\) (number of attempts). The probability that he makes exactly 5 out of 7 free throws can be calculated as:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWhile this direct computation is doable in R, it may not be convenient to write out all the steps manually. Instead, we can use the built-in function \\(\\texttt{dbinom()}\\) to simplify the process.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn addition, we can calculate the probability of achieving five or fewer successful shots using the function\\(\\texttt{pbinom()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTherefore, the probability the number of successes is more than five shots becomes:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also check the shape of the distribution as well:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFor a binomial distribution, we can easily determine the mean and variance using the two parameters \\(n\\) and \\(p\\): \\[\n\\mu=np\\text{ and }\\sigma^2=np(1-p).\n\\]\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nShaquille O’Neal is a legendary NBA player, renowned for being one of the most dominant forces in the history of the league, particularly due to his impact on the game and his prowess in the paint. However, he was also infamous for his low free throw percentage of 52.7% throughout his career. Opposing teams often resorted to intentionally fouling him to give him more free throw attempts, a strategy known as “Hack-a-Shaq.” For the following questions, suppose he attempted 10 free throws in a game.\n\nWhat are the two parameters \\(n\\) and \\(p\\)?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWhat is the probability that O’Neal made 7 free throws among 10 attempts?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWhat is the probability that O’Neal made at least 7 free throws among 10 attempts?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCalculate the mean and variance of the number of successful shots among 10 attempts.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 8"
+    ]
+  },
+  {
+    "objectID": "Lab_8.html#random-variable",
+    "href": "Lab_8.html#random-variable",
+    "title": "Lab 8",
+    "section": "",
+    "text": "A “random variable” can be viewed as a numerical variable with known possible values, though the actual value remains unknown until the corresponding experiment is completed. Since numerical variables can be either discrete or continuous, random variables can also be classified as discrete or continuous.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 8"
+    ]
+  },
+  {
+    "objectID": "Lab_8.html#discrete-random-variable",
+    "href": "Lab_8.html#discrete-random-variable",
+    "title": "Lab 8",
+    "section": "",
+    "text": "A discrete random variable can take on countably distinct values. For example, it might yield an integer between 1 and 6 (as in the outcome of rolling a die) or an integer from 1 to infinity (such as the number of car accidents in the U.S. in a given year).\n\n\nA box model is a useful way to model an experiment with a discrete random variable. Suppose we have a box containing three balls marked with 1, five balls marked with 2, and two balls marked with 3. We draw a ball with replacement, meaning:\n\nExtract a ball.\nCheck the number on it.\nPut the ball back into the box.\nRepeat the process.\n\nDue to this “replacement” condition, the theoretical probability of drawing a 1, 2, or 3 remains constant throughout the experiment. If we define the random variable \\(X\\) as the number marked on the drawn ball, the corresponding discrete probability distribution is:\n\n\n\nx\n1\n2\n3\nTotal\n\n\n\n\np(x)\n3/10\n5/10\n2/10\n10/10=1\n\n\n\nThe shape of the distribution can be illustrated:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, we can use the \\(\\texttt{sample()}\\) function in \\(\\textbf{R}\\) to implement the experiment using the box model. This means we assume the model and simulate the process of drawing balls from the box.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that each time you run the code, the set of drawn balls will differ due to the randomness of the experiment. Now, we can summarize the sample data using a frequency table for the observed numbers as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that the frequency table closely aligns with the theoretical probability distribution. This illustrates the concept of long-run probability—the idea that the relative frequency of an event (e.g., \\(X=1\\), \\(X=2\\), or \\(X=3\\)) converges toward the theoretical probability with repeated trials. We can further verify this by examining the trajectories of relative frequencies:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nAs learned, the mean and variance of a discrete probability distribution can be calculated by: \\[\\begin{align*}\n  \\mu =& \\sum x p(x)\\\\\n  \\sigma^2 = & \\sum (x-\\mu)^2p(x),\n\\end{align*}\\] where the summation is taken over all possible values of \\(X\\). Using R, we can easily compute these quantities. For example, with our box model:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also calculate these values empirically using the data we generated.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 8"
+    ]
+  },
+  {
+    "objectID": "Lab_8.html#binomial-distribution",
+    "href": "Lab_8.html#binomial-distribution",
+    "title": "Lab 8",
+    "section": "",
+    "text": "The binomial probability distribution is one of the most widely used discrete distributions. Consider an experiment with two possible outcomes: success or failure, each with a fixed probability of success \\(p\\). If this experiment is repeated \\(n\\) times, the total number of successes can be modeled as a binomial random variable \\(X\\), which can take any integer value from 0 (no success) to \\(n\\) (all successes).\nRecall that the probability of observing exactly \\(x\\) successes is given by: \\[\np(x)=\\frac{n!}{x!(n-x)!}p^x(1-p)^{n-x}.\n\\]\n\n\nStephen Curry is renowned for his three-point shooting, but he also holds the highest career free-throw percentage in NBA history (91%). Suppose we expect him to attempt 7 free throws in the Warriors’ season opener against the Trail Blazers on 10/23.\nWe can model this scenario using the binomial probability distribution with \\(p=0.91\\) (success probability) and \\(n=7\\) (number of attempts). The probability that he makes exactly 5 out of 7 free throws can be calculated as:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWhile this direct computation is doable in R, it may not be convenient to write out all the steps manually. Instead, we can use the built-in function \\(\\texttt{dbinom()}\\) to simplify the process.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn addition, we can calculate the probability of achieving five or fewer successful shots using the function\\(\\texttt{pbinom()}\\).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTherefore, the probability the number of successes is more than five shots becomes:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also check the shape of the distribution as well:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nFor a binomial distribution, we can easily determine the mean and variance using the two parameters \\(n\\) and \\(p\\): \\[\n\\mu=np\\text{ and }\\sigma^2=np(1-p).\n\\]\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 8"
+    ]
+  },
+  {
+    "objectID": "Lab_8.html#lab-questions",
+    "href": "Lab_8.html#lab-questions",
+    "title": "Lab 8",
+    "section": "",
+    "text": "Shaquille O’Neal is a legendary NBA player, renowned for being one of the most dominant forces in the history of the league, particularly due to his impact on the game and his prowess in the paint. However, he was also infamous for his low free throw percentage of 52.7% throughout his career. Opposing teams often resorted to intentionally fouling him to give him more free throw attempts, a strategy known as “Hack-a-Shaq.” For the following questions, suppose he attempted 10 free throws in a game.\n\nWhat are the two parameters \\(n\\) and \\(p\\)?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWhat is the probability that O’Neal made 7 free throws among 10 attempts?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWhat is the probability that O’Neal made at least 7 free throws among 10 attempts?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nCalculate the mean and variance of the number of successful shots among 10 attempts.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 8"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html",
+    "href": "Lab_9.html",
+    "title": "Lab 9",
+    "section": "",
+    "text": "A continuos random variable can take on any values within its variable range. For example, it might yield a value between 10 and 120 (as in the daily high temperature in the US) or any value from 0 to infinity (such as a failure time of a particular device in minutes).\n\n\n\nA continuous probability distribution can be expressed as a curve \\(f(x)\\) that covers up the possible values of a random variable. It can be any shapes based on the variable of interest with the following properties:\n\nThe total area under the probability density curve is 1.\n\\(P[ a\\le X\\le b ]\\) is the area under the probability density curve between \\(a\\) and \\(b\\).\n\\(f(x)\\ge 0\\) for all \\(x\\).\n\n\n\n\n\n\n\n\n\nIn our class, we focus on the normal distribution because:\n\nAll manner of things appear to be distributed normally: people’s height, IQ scores, examination grades, sizes of snowflakes, errors in measurements, lifetimes of lightbulbs, and so on;\nCentral Limit Theorem;\nEasy to deal with.\n\nA normal distribution can be characterized by two parameters: the mean \\(\\mu\\) and the variance \\(\\sigma^2\\) (or equivalently, the standard deviation \\(\\sigma\\)).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html#continuous-random-variable-rv",
+    "href": "Lab_9.html#continuous-random-variable-rv",
+    "title": "Lab 9",
+    "section": "Continuous Random Variable (RV)",
+    "text": "Continuous Random Variable (RV)\nA continuous random variable can take any value within its range. For example, it might yield a value between 10 and 120 (such as the daily high temperature in the U.S.) or any value from 0 to infinity (such as the failure time of a particular device in minutes).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html#probability-distribution-of-continuous-rv",
+    "href": "Lab_9.html#probability-distribution-of-continuous-rv",
+    "title": "Lab 9",
+    "section": "Probability Distribution of Continuous RV",
+    "text": "Probability Distribution of Continuous RV\nA continuous probability distribution can be represented as a curve \\(f(x)\\) that spans the possible values of a random variable. Its shape can vary depending on the variable of interest, but it has the following properties: 1. The total area under the probability density curve is 1. 2. \\(P[ a\\le X\\le b ]\\) is the area under the probability density curve between \\(a\\) and \\(b\\). 3. \\(f(x)\\ge 0\\) for all \\(x\\).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html#the-normal-distribution",
+    "href": "Lab_9.html#the-normal-distribution",
+    "title": "Lab 9",
+    "section": "The Normal Distribution",
+    "text": "The Normal Distribution\nIn our class, we focus on the normal distribution because: 1. All manner of things appear to be distributed normally: people’s height, IQ scores, examination grades, sizes of snowflakes, errors in measurements, lifetimes of lightbulbs, and so on; 2. Central Limit Theorem; 3. Easy to deal with.\nA normal distribution can be characterized by two parameters: the mean \\(\\mu\\) and the variance \\(\\sigma^2\\) (or equivalently, the standard deviation \\(\\sigma\\)).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html#example",
+    "href": "Lab_9.html#example",
+    "title": "Lab 9",
+    "section": "Example",
+    "text": "Example\nLet \\(Y\\) be the # of beer cans consumed by a male college student in a year. It is assumed to be normally distributed with the mean 640 and standard deviation 60. What proportion of male students drink more than 595 beer cans per year?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html#sampling-distribution-for-sample-mean",
+    "href": "Lab_9.html#sampling-distribution-for-sample-mean",
+    "title": "Lab 9",
+    "section": "Sampling Distribution for Sample Mean",
+    "text": "Sampling Distribution for Sample Mean\nThe sampling distribution provides all the information about a statistic of interest. When examining the behavior of a sample mean randomly drawn from a population, we first consider the following properties:\n\nThe mean of “the sampling distribution for the sample mean” will always equal the population mean \\(\\mu\\): \\[\\mu_\\bar{X}=E[\\bar{X}]=\\mu.\\]\nThe standard deviation of “the sampling distribution for the sample mean” will equal the population standard deviation \\(\\sigma\\) over the square root of the sample size \\(n\\): \\[\\sigma_\\bar{X}=SD[\\bar{X}]=\\frac{\\sigma}{\\sqrt{n}}.\\]\n\nThen, the shape of the sampling distribution can be described as follows:\n\nIf population distribution is a normal distribution, then the sampling distribution for sample mean would resemble the shape of the population distribution. So, the sampling distribution also follows a normal distribution with the above mean and standard deviation.\nIf population distribution is unknown, then the sampling distribution for sample mean would still follow a normal distribution with the above mean and standard deviation when we have sufficiently large sample size, e.g., \\(n\\ge 30\\).\n\nIn particular, we call the second result the central limit theorem (C.L.T).",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  },
+  {
+    "objectID": "Lab_9.html#lab-questions",
+    "href": "Lab_9.html#lab-questions",
+    "title": "Lab 9",
+    "section": "Lab Questions",
+    "text": "Lab Questions\n\nA survey indicates that the average American family produces 17.2 pounds of glass waste per year, with a population standard deviation of 2.5 pounds. Calculate the probability that the sample mean for a group of 55 families will fall between 17 and 18 pounds.\n\n\nCan we use the C.L.T. for the probability calculation?\nTrue / False\nCalculate the probability.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nThe average teacher’s salary in New Jersey is $62,174, assuming a normal distribution with a standard deviation of $8,500.\n\n\nWhat is the probability that a randomly selected teacher makes less than $60,000 per year?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nIf we sample 100 teachers’ salaries, what is the probability that the sample mean is less than $60,000 per year?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWhy is the probability in part (i) higher than the probability in part (ii)?",
+    "crumbs": [
+      "Home",
+      "Lab Sessions",
+      "Lab 9"
+    ]
+  }
+]

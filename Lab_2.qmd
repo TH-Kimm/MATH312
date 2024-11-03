@@ -1,0 +1,147 @@
+---
+title: "Lab 2"
+webr:
+  show-startup-message: true
+---
+
+# Introduction to R (II)
+
+## Variable Names
+
+While defining variables (objects), the significance of variable naming in programming is immense. Selecting clear and descriptive names for variables is vital for several reasons:
+
+-   **Readability and Understandability**: Clear and descriptive variable names enhance the readability and comprehension of your code.
+
+-   **Maintainability and Debugging**: Thoughtfully named variables simplify code maintenance and debugging processes.
+
+-   **Collaboration**: In a team setting, consistent and clear variable naming conventions are crucial for effective collaboration.
+
+-   **Self-Documentation**: Meaningful variable names serve as self-documentation, making the code more intuitive.
+
+-   **Code Reusability**: Adopting good variable naming practices supports greater code reusability.
+
+Sometimes, clear naming requires using multiple words in a variable name, but spaces are not allowed. A common approach is to separate words with underscores, as demonstrated previously, such as $\texttt{morning\_temperature\_august}$.
+
+#### Example
+
+Let us assign relevant names to the following variables:
+
+| \#  |            Feature             | Value  |
+|:---:|:------------------------------:|:------:|
+|  1  | Body temperature in Fahrenheit |   98   |
+|  2  |    Number of shoes for Sam     |   11   |
+|  3  | Weight of a elephant in pounds  | 12,050 |
+
+```{webr-r}
+# 1
+
+# 2
+
+# 3
+```
+
+## Basic **R** Object: Vector
+
+A vector is a sequence of finite elements and serves as the basic object in **R**. For example, a single number like "3" is considered a vector of length 1. To create a vector, we use the $\texttt{c()}$ function, where the name is an abbreviation of "combine."
+
+```{webr-r}
+c(150.2,178.6,190,144.3,202.2,165,163.5)
+```
+
+As learned, we can assign a descriptive variable name to the vector:
+
+```{webr-r}
+weight_pound <- c(150.2,178.6,190,144.3,202.2,165,163.5)
+weight_pound
+```
+
+One of the powerful features of vectors in **R** is the ability to perform the same calculation on every element with a single command, i.e., element-wise operation. For example, when converting weights from pounds to kilograms, we can multiply 0.454. This operation can be applied to all the numbers in a vector simultaneously:
+
+```{webr-r}
+weight_kg <- weight_pound * 0.454
+weight_kg
+```
+
+To access a specific number in a vector, you add square brackets after the vector name and place the index of the desired element inside the brackets. The "index" refers to the position of the item within the vector, with the first element having an index of 1, and so on. For example, the third element of the vector $\texttt{weight\_kg}$ is:
+
+```{webr-r}
+weight_kg[3]
+```
+
+## Measure of Center
+
+As we discussed in class, we can use the "mean" and "median" to measure the central tendency of our data, with the mode also being an option in some cases. In **R**, the functions $\texttt{mean()}$ and $\texttt{median()}$ can be used to obtain the mean and median of a vector, respectively.
+
+```{webr-r}
+mean(weight_pound)
+median(weight_pound)
+```
+
+## Summation and Length
+
+We can also easily calculate the summation and length of a vector by using the functions, $\texttt{sum()}$ and $\texttt{length()}$.
+
+```{webr-r}
+sum(weight_pound)
+length(weight_pound)
+```
+
+#### Example
+
+Compute the mean of $\texttt{weight\_kg}$ by using $\texttt{sum()}$ and $\texttt{length()}$ functions. (Do not use $\texttt{mean()}$ function.)
+
+```{webr-r}
+# mean weight in kilograms
+
+```
+
+## Lab Questions
+
+1.  BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height and it is defined by: $$\textbf{BMI}=703\times \frac{\text{weight (lb)}}{ \text{(height (in)})^2}$$ Suppose the variable $\texttt{weight\_pound}$ is the weights of seven Lehigh students. Also, the corresponding height observations in inches are $$70,\;72,\;72.5,\;66,\;74,\;66.5,\;72.$$
+
+
+<!-- -->
+
+i)  Save the height observations in a variable by using a descriptive name. (Uncomment and use the data.)
+ii) Calculate the BMIs of the seven students.
+iii) Compute the mean and median of the BMIs .
+
+```{webr-r}
+## i
+# 70,72,72.5,66,74,66.5,72
+## ii
+
+## iii
+
+```
+
+2. People often underreport how frequently they engage in antisocial behaviors like peeing in swimming pools. Urine, beyond being unpleasant, reacts with chlorine to produce toxic chemicals like trichloramine, a common cause of skin irritation for swimmers. Researchers found that the artificial sweetener ACE, which passes through the body unmetabolized and in consistent amounts, can be used to measure the amount of urine in a pool by analyzing ACE concentrations.
+Below is a list of ACE concentrations (measured in ng/L) from 15 different pools in the US:
+$$ 438,  211,  640,   85,   83,  350,  138,   49,  465,  489,55, 1086,   71, 1058,  247.$$
+
+<!-- -->
+
+i) In **R**, create a vector of these data and give it an appropriate name. (Uncomment and use the data.)
+
+ii) What is the mean ACE concentration in these 15 pools?
+
+iii) Since urine contains an average ACE of 4000 ng/ml, we can obtain the urin concentration (ml/L) by dividing each value by 4000 from the ACE concentration data. Compute the urin concentration and it a suitable name.
+
+iv) What is the mean urine concentration (in ml) per liter? 
+
+v) Use R to calculate the average amount of urine (in ml) in a 500,000 L pool.
+
+```{webr-r}
+## i
+# 438,211,640,85,83,350,138,49,465,489,55,1086,71,1058,247
+
+## ii
+
+## iii
+
+## iv
+
+## v
+
+```
+

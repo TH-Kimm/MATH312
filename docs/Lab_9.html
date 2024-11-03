@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 1 – MATH 012: R-Labs</title>
+<title>Lab 9 – MATH 012: R-Labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -357,7 +357,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-1","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"2 + 2"},{"id":2,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-2","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## subtraction operator: \"-\"\n\n## multiplication operator: \"*\"\n\n## division operator: \"/\""},{"id":3,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-3","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"log(42)"},{"id":4,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-4","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"exp(12)"},{"id":5,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-5","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"sqrt(4)"},{"id":6,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-6","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"4^3"},{"id":7,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-7","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":""},{"id":8,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-8","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 24"},{"id":9,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-9","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x + 12"},{"id":10,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-10","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 18"},{"id":11,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-11","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## i\n\n## ii\n\n## iii\n\n## iv"}];
+globalThis.qwebrCellDetails = [{"code":"library(fastGraph)","id":1,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-1","fig-height":5,"warning":"true","context":"setup","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"true","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"# Given information\nx <- 400\nmu <- 360\nsigma <- 80\n# z-score\nz <- (x-mu)/sigma\n\n# Probability calculation\npnorm(z)\n\n# Graphical Illustration\nx <- -1000:1000/300\ny <- dnorm(x)\nshadeDist(z,\"dnorm\",0,1,col=c(\"black\",\"brown\"),main=\"Area under Standard Normal Curve\",xmin=-3.5,xmax=3.5)","id":2,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-2","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"# Given information\nx <- 400\nmu <- 360\nsigma <- 80\n# Probability calculation\npnorm(x,mu,sigma)\n\n# Graphical Illustration\nx <- 360+(-1000:1000)/30\ny <- dnorm(x)\nshadeDist(400,\"dnorm\",360,80,col=c(\"black\",\"brown\"),main=\"Area under Standard Normal Curve\")","id":3,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-3","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"y <-\nmu <-\nsigma <-","id":4,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-4","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"# Given information\nmu <- 78\nsigma <- 10\nn<-35\nx <- 82\n\n# the mean and standard deviation of the sampling distribution\nmu_xbar <- mu\nsigma_xbar <- 10/sqrt(35)\n\n#Probability calculation based on the C.L.T.\n1 - pnorm(x,mu_xbar,sigma_xbar)","id":5,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-5","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"## C.L.T. Simulation for exponential population distributions\nset.seed(2024)\nm<-500\nx<-1:10000/500\n\nplot(x,dexp(x,1/9),lwd=3,type=\"l\",main=\"Population distribution: Highly Skewed Version\")\nabline(v=9,col=\"blue\",lwd=3)\nlegend(\"topright\",legend=c(\"true mean\"),lwd=2,col=c(\"blue\"))\n\nsam_dist_mean_exp<-function(N=30)\n{\nsample_means<-NULL\nfor(i in 1:m)\n  sample_means[i]<-mean(rexp(N,1/9))\nhist(sample_means,probability=TRUE,lwd=2,col=\"brown\",main=paste(\"Sampling Dist'n of sample mean: n=\",N),xlim=c(0,20))\n\nabline(v=9,col=\"blue\",lwd=2)\ncurve(dnorm(x,9,9/sqrt(N)),add=TRUE,lwd=2)\n}\npar(mfrow=c(2,2))\nsam_dist_mean_exp(2)\nsam_dist_mean_exp(5)\nsam_dist_mean_exp(15)\nsam_dist_mean_exp(30)\npar(mfrow=c(1,1))","id":6,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-6","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"","id":7,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-7","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"","id":8,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-8","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}},{"code":"","id":9,"options":{"message":"true","output":"true","dpi":72,"fig-cap":"","label":"unnamed-chunk-9","fig-height":5,"warning":"true","context":"interactive","editor-max-height":"","results":"markup","read-only":"false","editor-word-wrap":"true","out-width":"700px","classes":"","comment":"","editor-quick-suggestions":"false","autorun":"false","fig-width":7,"editor-font-scale":"1","out-height":""}}];
 
 </script>
 <script type="module">
@@ -1661,7 +1661,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_9.html">Lab 9</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1684,7 +1684,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
@@ -1732,7 +1732,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_9.html" class="sidebar-item-text sidebar-link">
+  <a href="./Lab_9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 9</span></a>
   </div>
 </li>
@@ -1748,12 +1748,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-r-i" id="toc-introduction-to-r-i" class="nav-link active" data-scroll-target="#introduction-to-r-i">Introduction to R (I)</a>
+  <li><a href="#probability-ii" id="toc-probability-ii" class="nav-link active" data-scroll-target="#probability-ii">Probability (II)</a>
   <ul class="collapse">
-  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Command line</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#mathematical-functions" id="toc-mathematical-functions" class="nav-link" data-scroll-target="#mathematical-functions">Mathematical functions</a></li>
-  <li><a href="#defining-objects" id="toc-defining-objects" class="nav-link" data-scroll-target="#defining-objects">Defining objects</a></li>
+  <li><a href="#continuous-random-variable-rv" id="toc-continuous-random-variable-rv" class="nav-link" data-scroll-target="#continuous-random-variable-rv">Continuous Random Variable (RV)</a></li>
+  <li><a href="#probability-distribution-of-continuous-rv" id="toc-probability-distribution-of-continuous-rv" class="nav-link" data-scroll-target="#probability-distribution-of-continuous-rv">Probability Distribution of Continuous RV</a></li>
+  <li><a href="#the-normal-distribution" id="toc-the-normal-distribution" class="nav-link" data-scroll-target="#the-normal-distribution">The Normal Distribution</a></li>
+  </ul></li>
+  <li><a href="#probability-calculation" id="toc-probability-calculation" class="nav-link" data-scroll-target="#probability-calculation">Probability calculation</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#sampling-distribution-for-sample-mean" id="toc-sampling-distribution-for-sample-mean" class="nav-link" data-scroll-target="#sampling-distribution-for-sample-mean">Sampling Distribution for Sample Mean</a></li>
+  </ul></li>
+  <li><a href="#probability-calculation-1" id="toc-probability-calculation-1" class="nav-link" data-scroll-target="#probability-calculation-1">Probability calculation</a></li>
+  <li><a href="#verification-of-c.l.t.-through-a-simulation" id="toc-verification-of-c.l.t.-through-a-simulation" class="nav-link" data-scroll-target="#verification-of-c.l.t.-through-a-simulation">Verification of C.L.T. through a simulation</a>
+  <ul class="collapse">
   <li><a href="#lab-questions" id="toc-lab-questions" class="nav-link" data-scroll-target="#lab-questions">Lab Questions</a></li>
   </ul></li>
   </ul>
@@ -2046,9 +2054,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_9.html">Lab 9</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lab 1</h1>
+<h1 class="title">Lab 9</h1>
 </div>
 
 
@@ -2065,75 +2073,103 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="introduction-to-r-i" class="level1">
-<h1>Introduction to R (I)</h1>
-<section id="command-line" class="level2">
-<h2 class="anchored" data-anchor-id="command-line">Command line</h2>
-<p>You can type commands in the “Console”.</p>
-<p>Type “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="probability-ii" class="level1">
+<h1>Probability (II)</h1>
+<section id="continuous-random-variable-rv" class="level2">
+<h2 class="anchored" data-anchor-id="continuous-random-variable-rv">Continuous Random Variable (RV)</h2>
+<p>A continuous random variable can take any value within its range. For example, it might yield a value between 10 and 120 (such as the daily high temperature in the U.S.) or any value from 0 to infinity (such as the failure time of a particular device in minutes).</p>
 </section>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>In your code scripts, it’s often useful to include text that isn’t evaluated by <strong>R</strong>. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. <strong>R</strong> will ignore everything on that line after the “#”.</p>
-<section id="example" class="level4">
-<h4 class="anchored" data-anchor-id="example">Example</h4>
-<p>Let us try the rest of the fundamental arithmetic operations:</p>
+<section id="probability-distribution-of-continuous-rv" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distribution-of-continuous-rv">Probability Distribution of Continuous RV</h2>
+<p>A continuous probability distribution can be represented as a curve <span class="math inline">\(f(x)\)</span> that spans the possible values of a random variable. Its shape can vary depending on the variable of interest, but it has the following properties: 1. The total area under the probability density curve is 1. 2. <span class="math inline">\(P[ a\le X\le b ]\)</span> is the area under the probability density curve between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. 3. <span class="math inline">\(f(x)\ge 0\)</span> for all <span class="math inline">\(x\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/density.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="the-normal-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="the-normal-distribution">The Normal Distribution</h2>
+<p>In our class, we focus on the normal distribution because: 1. All manner of things appear to be distributed normally: people’s height, IQ scores, examination grades, sizes of snowflakes, errors in measurements, lifetimes of lightbulbs, and so on; 2. Central Limit Theorem; 3. Easy to deal with.</p>
+<p>A normal distribution can be characterized by two parameters: the mean <span class="math inline">\(\mu\)</span> and the variance <span class="math inline">\(\sigma^2\)</span> (or equivalently, the standard deviation <span class="math inline">\(\sigma\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/normal.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="probability-calculation" class="level1">
+<h1>Probability calculation</h1>
+<p>Probability calculations under a normal distribution can be easily performed using the function <span class="math inline">\(\texttt{pnorm(c)}\)</span>. Similar to using a <span class="math inline">\(z\)</span>-table, this function provides the left-tail probability based on a cutoff value of <span class="math inline">\(c\)</span>.</p>
+<p>Suppose <span class="math inline">\(X\)</span> to be the # of beer cans consumed by a female college student in a year. It is assumed to be normally distributed with the mean 360 and standard deviation 80. What proportion of female students drink less than 400 beer cans per year?</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="mathematical-functions" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-functions">Mathematical functions</h2>
-<p>You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.</p>
+<p>This approach precisely emulates how we typically perform probability calculations using the <span class="math inline">\(z\)</span>-table. Now, we can simplify the process by using the second and third arguments of the <span class="math inline">\(\texttt{pnorm()}\)</span> function, which allow us to specify the mean and standard deviation of the distribution directly.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Parentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.</p>
-<p>Similarly, we can also use “exp()” for the exponential function.</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Let <span class="math inline">\(Y\)</span> be the # of beer cans consumed by a male college student in a year. It is assumed to be normally distributed with the mean 640 and standard deviation 60. What proportion of male students drink more than 595 beer cans per year?</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Another useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:</p>
+</section>
+<section id="sampling-distribution-for-sample-mean" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-distribution-for-sample-mean">Sampling Distribution for Sample Mean</h2>
+<p>The sampling distribution provides all the information about a statistic of interest. When examining the behavior of a sample mean randomly drawn from a population, we first consider the following properties:</p>
+<ul>
+<li>The mean of “the sampling distribution for the sample mean” will always equal the population mean <span class="math inline">\(\mu\)</span>: <span class="math display">\[\mu_\bar{X}=E[\bar{X}]=\mu.\]</span></li>
+<li>The standard deviation of “the sampling distribution for the sample mean” will equal the population standard deviation <span class="math inline">\(\sigma\)</span> over the square root of the sample size <span class="math inline">\(n\)</span>: <span class="math display">\[\sigma_\bar{X}=SD[\bar{X}]=\frac{\sigma}{\sqrt{n}}.\]</span></li>
+</ul>
+<p>Then, the shape of the sampling distribution can be described as follows:</p>
+<ol type="1">
+<li><p>If population distribution is a normal distribution, then the sampling distribution for sample mean would resemble the shape of the population distribution. So, the sampling distribution also follows a normal distribution with the above mean and standard deviation.</p></li>
+<li><p>If population distribution is unknown, then the sampling distribution for sample mean would still follow a normal distribution with the above mean and standard deviation when we have sufficiently large sample size, e.g., <span class="math inline">\(n\ge 30\)</span>.</p></li>
+</ol>
+<p>In particular, we call the second result <strong>the central limit theorem (C.L.T)</strong>.</p>
+</section>
+</section>
+<section id="probability-calculation-1" class="level1">
+<h1>Probability calculation</h1>
+<p>Suppose a test score has the mean value 78 and standard deviation 10. We don’t have any information regarding the population distribution. Suppose we are interested in the probability that a sample mean with the sample size <span class="math inline">\(n=32\)</span> is greater than 82.</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To calculate a value with an exponent, used the “^” symbol. For example <span class="math inline">\(4^3\)</span> is written as:</p>
+</section>
+<section id="verification-of-c.l.t.-through-a-simulation" class="level1">
+<h1>Verification of C.L.T. through a simulation</h1>
+<p>Lastly, let us verify the central limit theorem through a short simulation. Here, we assume the population distribution is highly skewed to the right.</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="example-1" class="level4">
-<h4 class="anchored" data-anchor-id="example-1">Example</h4>
-<p>Let us compute the following mathematical expression: <span class="math display">\[\frac{1}{\sqrt{2\pi} 0.5}\log\left(\frac{(12-10.8)^2}{0.4}\right).\]</span></p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="defining-objects" class="level2">
-<h2 class="anchored" data-anchor-id="defining-objects">Defining objects</h2>
-<p>In <strong>R</strong>, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to <strong>R</strong> that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can reassign a new value to a object. E.g.,</p>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
+<p>Note that the shape of the histogram (the empirical sample mean distribution) converges toward the theoretical sampling distribution (represented by the black curve) as the sample size increases from <span class="math inline">\(n=2\)</span> to <span class="math inline">\(n=30\)</span>.</p>
 <section id="lab-questions" class="level2">
 <h2 class="anchored" data-anchor-id="lab-questions">Lab Questions</h2>
 <ol type="1">
-<li>Calculate the following math expressions.</li>
+<li>A survey indicates that the average American family produces 17.2 pounds of glass waste per year, with a population standard deviation of 2.5 pounds. Calculate the probability that the sample mean for a group of 55 families will fall between 17 and 18 pounds.</li>
 </ol>
-<!-- -->
 <ol type="i">
-<li><span class="math inline">\((23\times 6)+3\)</span>.</li>
-<li><span class="math inline">\(13^3-1100\)</span>.</li>
-<li><span class="math inline">\(\log(23)\)</span> with the natural log.</li>
-<li><span class="math inline">\(\sqrt{81}/(3^3)\)</span>.</li>
+<li><p>Can we use the C.L.T. for the probability calculation?<br>
+True / False</p></li>
+<li><p>Calculate the probability.</p></li>
 </ol>
-<div id="qwebr-insertion-location-11"></div>
+<div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <ol start="2" type="1">
-<li>Please complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbTOq38NTlUTKahr5kGRWgW13nO4pQqgoLad3_0D7jLnbt-Q/viewform?usp=sharing">Give Us Your Input</a></li>
+<li>The average teacher’s salary in New Jersey is $62,174, assuming a normal distribution with a standard deviation of $8,500.</li>
+</ol>
+<ol type="i">
+<li>What is the probability that a randomly selected teacher makes less than $60,000 per year?</li>
+</ol>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="2" type="i">
+<li>If we sample 100 teachers’ salaries, what is the probability that the sample mean is less than $60,000 per year?</li>
+</ol>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="3" type="i">
+<li>Why is the probability in part (i) higher than the probability in part (ii)?</li>
 </ol>
 
 

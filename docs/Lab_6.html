@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 1 – MATH 012: R-Labs</title>
+<title>Lab 6 – MATH 012: R-Labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -357,7 +391,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-1","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"2 + 2"},{"id":2,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-2","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## subtraction operator: \"-\"\n\n## multiplication operator: \"*\"\n\n## division operator: \"/\""},{"id":3,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-3","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"log(42)"},{"id":4,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-4","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"exp(12)"},{"id":5,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-5","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"sqrt(4)"},{"id":6,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-6","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"4^3"},{"id":7,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-7","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":""},{"id":8,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-8","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 24"},{"id":9,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-9","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x + 12"},{"id":10,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-10","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 18"},{"id":11,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-11","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## i\n\n## ii\n\n## iii\n\n## iv"}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"library(calibrate)\nMLB_Data <- structure(list(Team = c(\"ARI\", \"ATL\",\"BAL\", \"BOS\", \"CHC\", \"CHW\", \n\"CIN\", \"CLE\", \"COL\", \"DET\", \"HOU\", \"KAN\", \"LAA\", \"LAD\", \"FLA\", \"MIL\", \n\"MIN\", \"NYM\", \"NYY\", \"OAK\", \"PHI\", \"PIT\", \"SD\", \n\"SEA\", \"SF\", \"STL\", \"TB\", \"TEX\", \"TOR\", \"WAS\"\n), Win_P = c(0.519, 0.642, 0.623, 0.481, 0.512, 0.377, 0.506, \n0.469, 0.364, 0.481, 0.556, 0.346, 0.451, 0.617, 0.519, 0.568, \n0.537, 0.463, 0.506, 0.309, 0.556, 0.469, 0.506, 0.543, 0.488, \n0.438, 0.611, 0.556, 0.549, 0.438)*100, RPG = c(4.6, 5.85, 4.98, \n4.77, 5.06, 3.96, 4.83, 4.09, 4.45, 4.08, 5.1, 4.17, 4.56, 5.59, \n4.11, 4.49, 4.8, 4.43, 4.15, 3.61, 4.91, 4.27, 4.64, 4.68, 4.16, \n4.44, 5.31, 5.44, 4.6, 4.32), BA = c(0.25, 0.276, 0.255, 0.258, \n0.254, 0.238, 0.249, 0.25, 0.249, 0.236, 0.259, 0.244, 0.245, \n0.257, 0.259, 0.24, 0.243, 0.238, 0.227, 0.223, 0.256, 0.239, \n0.244, 0.242, 0.235, 0.25, 0.26, 0.263, 0.256, 0.254), OPS = c(0.73, \n0.845, 0.742, 0.748, 0.751, 0.675, 0.746, 0.695, 0.715, 0.686, \n0.768, 0.7, 0.743, 0.795, 0.721, 0.704, 0.753, 0.723, 0.701, \n0.669, 0.765, 0.707, 0.742, 0.734, 0.695, 0.742, 0.776, 0.79, \n0.745, 0.709), ORPG = c(4.7, 4.42, 4.19, 4.79, 4.46, 5.19, 5.07, \n4.3, 5.91, 4.57, 4.31, 5.3, 5.12, 4.31, 4.46, 3.99, 4.07, 4.5, \n4.31, 5.7, 4.41, 4.88, 4, 4.07, 4.44, 5.12, 4.1, 4.42, 4.14, \n5.22), ERA = c(4.48, 4.14, 3.89, 4.52, 4.08, 4.87, 4.83, 3.96, \n5.67, 4.24, 3.94, 5.17, 4.64, 4.06, 4.21, 3.71, 3.87, 4.3, 3.97, \n5.48, 4.03, 4.6, 3.73, 3.74, 4.02, 4.79, 3.86, 4.28, 3.78, 5.02\n), WHIP = c(1.324, 1.302, 1.243, 1.338, 1.283, 1.415, 1.417, \n1.306, 1.545, 1.245, 1.279, 1.407, 1.418, 1.202, 1.292, 1.186, \n1.197, 1.36, 1.236, 1.52, 1.24, 1.382, 1.268, 1.187, 1.253, 1.456, \n1.177, 1.268, 1.25, 1.473)), row.names = c(NA, -30L), class = c(\"tbl_df\", \n\"tbl\", \"data.frame\"))\nattach(MLB_Data)","options":{"autorun":"true","editor-quick-suggestions":"false","read-only":"false","context":"setup","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-1","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":2,"code":"y <- Win_P \n# Here we are offset the unit issue by multiplying 100 to the batting average.\nx <- BA*100\nNumer <- sum((x-mean(x))*(y-mean(y)))\nDenom <- sum((x-mean(x))^2)\n\nb <- Numer / Denom\na <- mean(y)-b*mean(x)\na;b","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-2","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":3,"code":"plot(BA*100,Win_P,main=\"Linear Regression Line\",xlim=c(22,28.5))\ntextxy(BA*100,Win_P,labs=Team,cex=1,col=\"black\")\ncurve(a+b*x,col=2,lwd=2,add=TRUE)","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-3","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":4,"code":"# Again multiplying 100 to resolve the unit issue.\nPigs <- a+b*(0.18*100)\nPigs","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-4","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":5,"code":"y <- \n# ERA has no unit issues, so it can be used as is.\nx <- \nNumer <- sum((x-mean(x))*(y-mean(y)))\nDenom <- sum((x-mean(x))^2)\n\nb <- Numer / Denom\na <- mean(y)-b*mean(x)\na;b\n\nplot(  ,Win_P,main=\"Linear Regression Line\",xlim=c(3.5,6))\ntextxy(  ,Win_P,labs=Team,cex=1,col=\"black\")\ncurve(a+b*x,col=2,lwd=2,add=TRUE)","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-5","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":6,"code":"","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-6","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":7,"code":"NRPG<-RPG-ORPG\nplot(NRPG  ,Win_P,main=\"Relationship between NRPG and Win_P\",xlim=c(-2.5,2))\ntextxy(NRPG  ,Win_P,labs=Team,cex=1,col=\"black\")  ","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-7","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":8,"code":"","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-8","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}},{"id":9,"code":"","options":{"autorun":"false","editor-quick-suggestions":"false","read-only":"false","context":"interactive","results":"markup","message":"true","fig-width":7,"fig-cap":"","editor-max-height":"","classes":"","label":"unnamed-chunk-9","fig-height":5,"dpi":72,"out-height":"","warning":"true","output":"true","comment":"","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px"}}];
 
 </script>
 <script type="module">
@@ -1661,7 +1695,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_6.html">Lab 6</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1684,7 +1718,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
@@ -1714,7 +1748,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_6.html" class="sidebar-item-text sidebar-link">
+  <a href="./Lab_6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 6</span></a>
   </div>
 </li>
@@ -1748,12 +1782,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-r-i" id="toc-introduction-to-r-i" class="nav-link active" data-scroll-target="#introduction-to-r-i">Introduction to R (I)</a>
+  <li><a href="#analyzing-bivariate-data-with-r-ii" id="toc-analyzing-bivariate-data-with-r-ii" class="nav-link active" data-scroll-target="#analyzing-bivariate-data-with-r-ii">Analyzing Bivariate Data with <strong>R (II)</strong></a>
   <ul class="collapse">
-  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Command line</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#mathematical-functions" id="toc-mathematical-functions" class="nav-link" data-scroll-target="#mathematical-functions">Mathematical functions</a></li>
-  <li><a href="#defining-objects" id="toc-defining-objects" class="nav-link" data-scroll-target="#defining-objects">Defining objects</a></li>
+  <li><a href="#mlb-data-2023-regular-season-team-statistics" id="toc-mlb-data-2023-regular-season-team-statistics" class="nav-link" data-scroll-target="#mlb-data-2023-regular-season-team-statistics">MLB Data: 2023 Regular Season Team Statistics</a></li>
+  <li><a href="#from-correlation-analysis-to-regression-analysis" id="toc-from-correlation-analysis-to-regression-analysis" class="nav-link" data-scroll-target="#from-correlation-analysis-to-regression-analysis">From correlation analysis to regression analysis</a></li>
+  <li><a href="#regression-equation" id="toc-regression-equation" class="nav-link" data-scroll-target="#regression-equation">Regression equation</a></li>
+  </ul></li>
+  <li><a href="#interpretation-of-coefficients" id="toc-interpretation-of-coefficients" class="nav-link" data-scroll-target="#interpretation-of-coefficients">Interpretation of coefficients</a></li>
+  <li><a href="#visualization-of-regression-line" id="toc-visualization-of-regression-line" class="nav-link" data-scroll-target="#visualization-of-regression-line">Visualization of regression line</a></li>
+  <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a>
+  <ul class="collapse">
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   <li><a href="#lab-questions" id="toc-lab-questions" class="nav-link" data-scroll-target="#lab-questions">Lab Questions</a></li>
   </ul></li>
   </ul>
@@ -2046,9 +2085,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_6.html">Lab 6</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lab 1</h1>
+<h1 class="title">Lab 6</h1>
 </div>
 
 
@@ -2065,75 +2104,91 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="introduction-to-r-i" class="level1">
-<h1>Introduction to R (I)</h1>
-<section id="command-line" class="level2">
-<h2 class="anchored" data-anchor-id="command-line">Command line</h2>
-<p>You can type commands in the “Console”.</p>
-<p>Type “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="analyzing-bivariate-data-with-r-ii" class="level1">
+<h1>Analyzing Bivariate Data with <strong>R (II)</strong></h1>
+<p>We continue our discussion of bivariate data analysis. In particular, we focus on <strong>linear regression</strong> analysis using a dataset with continuous variables in this lab.</p>
+<section id="mlb-data-2023-regular-season-team-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="mlb-data-2023-regular-season-team-statistics">MLB Data: 2023 Regular Season Team Statistics</h2>
+<p>We again use the dataset of the MLB 2023 regular season, as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fl">01.</span> Team<span class="sc">:</span>  Name of the team </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fl">02.</span> Win_P<span class="sc">:</span> Winning Percentage, <span class="st">"(# of Wins"</span><span class="sc">/</span> <span class="st">"Total # of games)*100"</span>.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fl">03.</span> RPG<span class="sc">:</span>   Runs per Game, the average number of runs a team or player scores <span class="cf">in</span> each game. </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fl">04.</span> BA<span class="sc">:</span>    Batting Average, <span class="st">"the # of times a batter hits a ball and reaches the base"</span><span class="sc">/</span><span class="st">"the # of at bats by a batter"</span>.   </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fl">05.</span> OPS<span class="sc">:</span>   On<span class="sc">-</span>base plus slugging, the sum of on<span class="sc">-</span>base percentage and slugging percentage. </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fl">06.</span> ORPG<span class="sc">:</span>  Opponent Runs per Game, the runs per game by the opponent.   </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fl">07.</span> ERA<span class="sc">:</span>   Earned Run Average, the number of earned runs a pitcher allows per nine innings.    </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fl">08.</span> WHIP<span class="sc">:</span>  Walks And Hits Per Inning Pitched, the statistic shows how well a pitcher has kept runners off the basepaths, one of his main goals.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In the data set, the variable <span class="math inline">\(\texttt{Win\_P}\)</span> measures a MLB team’s performance throughout the 2023 season. For offensive capability, we can use the variables <span class="math inline">\(\texttt{RPG}\)</span>, <span class="math inline">\(\texttt{BA}\)</span>, and <span class="math inline">\(\texttt{OPS}\)</span>; whereas, for defensive capability, we can use <span class="math inline">\(\texttt{ORPG}\)</span>, <span class="math inline">\(\texttt{ERA}\)</span>, and <span class="math inline">\(\texttt{WHIP}\)</span>.</p>
 </section>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>In your code scripts, it’s often useful to include text that isn’t evaluated by <strong>R</strong>. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. <strong>R</strong> will ignore everything on that line after the “#”.</p>
-<section id="example" class="level4">
-<h4 class="anchored" data-anchor-id="example">Example</h4>
-<p>Let us try the rest of the fundamental arithmetic operations:</p>
+<section id="from-correlation-analysis-to-regression-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="from-correlation-analysis-to-regression-analysis">From correlation analysis to regression analysis</h2>
+<p>One of the key differences between correlation and regression analysis lies in how we handle two continuous variables. In correlation analysis, both variables are treated equally, whereas in regression analysis, we distinctly classify one variable as explanatory (independent) and the other as response (dependent). In other words, correlation treats the two variables symmetrically, while regression treats them asymmetrically. For example, in the context of regression analysis with the MLB dataset, our goal is to predict or explain the response variable, <span class="math inline">\(\texttt{Winning Percentage}\)</span>, based on an explanatory variable chosen from measures of defensive, offensive, or combined capability.</p>
+</section>
+<section id="regression-equation" class="level2">
+<h2 class="anchored" data-anchor-id="regression-equation">Regression equation</h2>
+<p>We have learned the fomulas for the regression analysis: <span class="math display">\[\begin{align*}
+  \hat{y}\;=&amp;\; a+bx;\\ \text{such that}&amp;\begin{cases}
+  b\;=&amp; \frac{\sum (x-\bar{x})(y-\bar{y})}{\sum (x-\bar{x})^2};\\
+  a\;=&amp; \bar{y}-b\bar{x},\end{cases}
+\end{align*}\]</span> where <span class="math inline">\(y\)</span> is the response variable and <span class="math inline">\(x\)</span> is the explanatory variable.<br>
+Now, consider the <span class="math inline">\(\texttt{Batting Average}\)</span> as our explanatory variable with the corresponding response variable <span class="math inline">\(\texttt{Winning Percentage}\)</span>. Then, we can use <span class="math inline">\(\textbf{R}\)</span> to calculate the coefficients, <em>a</em> and <em>b</em>:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 </section>
-<section id="mathematical-functions" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-functions">Mathematical functions</h2>
-<p>You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.</p>
+<section id="interpretation-of-coefficients" class="level1">
+<h1>Interpretation of coefficients</h1>
+<p>As emphasized in class, it is crucial to understand how to interpret the slope and intercept coefficients correctly. Below is the general interpretations:</p>
+<ul>
+<li>Slope coefficient (<strong>b</strong>): As the explanatory (<span class="math inline">\(x\)</span>) variable increases by one unit, the response variable (<span class="math inline">\(y\)</span>) increases/decreases by <span class="math inline">\(b\)</span> units <strong>on average</strong>.</li>
+<li>Intercept (<strong>a</strong>): When the explanatory (<span class="math inline">\(x\)</span>) is zero, the the response variable variable is <span class="math inline">\(a\)</span> <strong>on average</strong>.</li>
+</ul>
+<p>Please note that regression analysis describes average behavior, and the interpretations reflect this. In our example, the intercept is not of interest because we do not observe a batting average of 0 for any team. For the slope, we interpret it as follows:<br>
+<strong>“As Batting Average increases by one unit for a MLB team, the Winning Percentage increases by 4.27% on average.”</strong></p>
+</section>
+<section id="visualization-of-regression-line" class="level1">
+<h1>Visualization of regression line</h1>
+<p>Let’s visualize the regression line by overlaying it on the corresponding scatter plot:</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Parentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.</p>
-<p>Similarly, we can also use “exp()” for the exponential function.</p>
+</section>
+<section id="prediction" class="level1">
+<h1>Prediction</h1>
+<p>Now it’s time for prediction. We can simply substitute the value of the explanatory variable into the regression formula. Suppose the Lehigh Valley IronPigs would have a team batting average of 0.18 if they play in the MLB regular league. What would their expected winning percentage be?</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Another useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:</p>
+<p>(In principle, this is not a recommended prediction due to extrapolation.)</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Let us instead of use <span class="math inline">\(\texttt{ERA}\)</span> (Earned Run Average) as a explanatory variable. Derive the regression equation and visualize the regression line with corresponding scatter plot.</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To calculate a value with an exponent, used the “^” symbol. For example <span class="math inline">\(4^3\)</span> is written as:</p>
+<p>Suppose the IronPigs have a team ERA of 7 if they were playing in the MLB. What would their expected winning percentage be?</p>
 <div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="example-1" class="level4">
-<h4 class="anchored" data-anchor-id="example-1">Example</h4>
-<p>Let us compute the following mathematical expression: <span class="math display">\[\frac{1}{\sqrt{2\pi} 0.5}\log\left(\frac{(12-10.8)^2}{0.4}\right).\]</span></p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="defining-objects" class="level2">
-<h2 class="anchored" data-anchor-id="defining-objects">Defining objects</h2>
-<p>In <strong>R</strong>, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to <strong>R</strong> that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can reassign a new value to a object. E.g.,</p>
-<div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="lab-questions" class="level2">
 <h2 class="anchored" data-anchor-id="lab-questions">Lab Questions</h2>
+<p>In the previous lab, we considered the “net runs per game” variable as a measure of MLB team’s overall capability:<br>
+<span class="math display">\[\texttt{NRPG}=\texttt{RPG}-\texttt{ORPG}.\]</span></p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <ol type="1">
-<li>Calculate the following math expressions.</li>
+<li>Let us perform a linear regression analysis to predict the winning percentage based on the NRPG. Derive the slope and intercept coefficients, respectively.</li>
 </ol>
-<!-- -->
-<ol type="i">
-<li><span class="math inline">\((23\times 6)+3\)</span>.</li>
-<li><span class="math inline">\(13^3-1100\)</span>.</li>
-<li><span class="math inline">\(\log(23)\)</span> with the natural log.</li>
-<li><span class="math inline">\(\sqrt{81}/(3^3)\)</span>.</li>
-</ol>
-<div id="qwebr-insertion-location-11"></div>
+<div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <ol start="2" type="1">
-<li>Please complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbTOq38NTlUTKahr5kGRWgW13nO4pQqgoLad3_0D7jLnbt-Q/viewform?usp=sharing">Give Us Your Input</a></li>
+<li>Predict the winning percentage of the IronPigs when their hypothesitcal NRPG is -3.</li>
+</ol>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="3" type="1">
+<li>Choose relevant interpretations for the slope and intercept coefficients.</li>
 </ol>
 
 

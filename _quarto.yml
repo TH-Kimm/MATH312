@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "MATH 012: R-Labs"
+  search: true
+  reader-mode: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: Lab_1.qmd
+        text: Lab 1
+      - href: Lab_2.qmd
+        text: Lab 2
+      - href: Lab_3.qmd
+        text: Lab 3
+      - href: Lab_4.qmd
+        text: Lab 4
+      - href: Lab_5.qmd
+        text: Lab 5
+      - href: Lab_6.qmd
+        text: Lab 6
+      - href: Lab_7.qmd
+        text: Lab 7
+      - href: Lab_8.qmd
+        text: Lab 8
+      - href: Lab_9.qmd
+        text: Lab 9
+        
+  favicon: lehigh-icon.ico
+        
+  sidebar: 
+    - style: "floating"
+      contents: 
+        - section: "Lab Sessions"
+          contents:
+            - Lab_1.qmd
+            - Lab_2.qmd
+            - Lab_3.qmd
+            - Lab_4.qmd
+            - Lab_5.qmd
+            - Lab_6.qmd
+            - Lab_7.qmd
+            - Lab_8.qmd
+            - Lab_9.qmd
+            
+filters:
+  - webr
+      
+format:
+  html:
+    toc: true
+    css: styles.css
+    theme: sketchy
+
+editor: visual
+

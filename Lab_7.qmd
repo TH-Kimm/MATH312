@@ -1,0 +1,389 @@
+---
+title: "Lab 7"
+webr:
+  show-startup-message: true
+---
+
+```{webr-r}
+#| context: setup
+
+
+
+Survey_Data<-structure(list(Sports = c("MLB", "NFL", "NHL", "Other", "NBA", 
+"NHL", "NBA", "NFL", "NBA", "MLB", "NHL", "Other", "NBA", "Other", 
+"NBA", "MLB", "NBA", "NFL", "MLB", "NFL", "NBA", "Other", "MLB", 
+"Other", "Other", "NFL", "NFL", "NFL", "NHL", "Other", "NFL", 
+"Other", "MLB", "NBA", "MLB", "NBA", "NBA", "Other", "NHL", "MLB", 
+"NFL", "Other", "NFL", "NBA", "NFL", "Other", "NFL", "Other", 
+"MLB", "NFL", "NFL", "Other", "NBA", "MLB", "Other", "NBA", "Other", 
+"Other", "NBA", "Other", "NHL", "NBA", "NFL", "NFL", "Other", 
+"Other", "MLB", "NFL", "NBA", "NBA", "Other", "NBA", "NBA", "NHL", 
+"Other", "NFL", "Other", "NFL", "NFL", "NBA", "NBA", "Other", 
+"NHL", "NFL", "MLB", "NBA", "NFL", "Other", "NHL", "MLB", "NHL", 
+"NBA", "NHL", "Other", "Other", "NFL", "NBA", "NBA", "MLB", "MLB", 
+"NHL", "MLB", "NBA", "NFL", "NFL", "NFL", "Other", "Other", "Other", 
+"Other", "NBA", "Other", "NFL", "NBA", "NHL", "Other", "MLB", 
+"NFL", "NBA", "Other", "NFL", "NBA", "NFL", "Other", "Other", 
+"NFL", "NFL", "NBA", "NBA", "NFL", "Other", "NBA", "NBA", "NFL", 
+"MLB", "NHL"), States = c(23L, 20L, 3L, 9L, 11L, 20L, 15L, 13L, 
+20L, 15L, 10L, 15L, 12L, 6L, 16L, 17L, 20L, 9L, 15L, 17L, 12L, 
+7L, 12L, 9L, 14L, 15L, 6L, 18L, 17L, 15L, 5L, 10L, 16L, 27L, 
+13L, 15L, 30L, 5L, 15L, 14L, 13L, NA, 30L, 18L, 23L, 8L, 18L, 
+20L, 18L, 15L, 14L, 16L, 24L, 13L, 28L, 3L, 13L, 19L, 18L, 7L, 
+36L, 3L, 10L, 26L, 12L, 8L, 18L, 10L, 6L, 18L, 18L, 20L, 20L, 
+10L, 26L, 5L, 8L, 7L, 20L, 6L, 22L, 10L, 15L, 15L, 25L, 5L, 12L, 
+5L, 10L, 11L, 4L, 6L, 9L, 7L, 5L, 10L, 15L, 14L, 19L, 15L, 12L, 
+11L, 3L, 6L, 15L, 6L, 15L, 5L, 12L, 13L, 4L, 1L, 15L, 35L, 8L, 
+9L, 17L, 5L, 5L, 8L, 3L, 2L, 10L, 15L, 17L, 12L, 13L, 5L, 12L, 
+15L, 2L, 8L, 13L, 27L, 1L, 16L), Cat_Dog = c("Dog", "Dog", "Dog", 
+"Cat", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Other", "Cat", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Cat", "Dog", "Cat", "Dog", 
+"Dog", "Other", "Dog", "Dog", "Dog", "Dog", "Cat", "Cat", "Dog", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Cat", 
+"Dog", "Cat", "Dog", "Cat", "Dog", "Dog", "Cat", "Cat", "Cat", 
+"Dog", "Dog", "Cat", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", 
+"Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Cat", "Dog", "Dog", "Dog", 
+"Dog", "Dog", "Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Cat", "Dog", "Dog", "Dog", "Dog", "Cat", "Dog", "Dog", "Cat", 
+"Cat", "Dog", "Dog", "Dog", "Dog", "Dog", "Other", "Other", "Cat", 
+"Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", "Dog", 
+"Dog", "Cat", "Cat", "Dog", "Dog", "Dog", "Dog"), Pets = c(1L, 
+1L, 1L, 0L, 0L, 2L, 1L, 1L, 2L, 0L, 1L, 1L, 0L, 0L, 0L, 1L, 1L, 
+0L, 0L, 1L, 2L, 4L, 1L, 4L, 1L, 1L, 1L, 2L, 3L, 0L, 2L, 1L, 0L, 
+2L, 1L, 2L, 1L, 3L, 1L, 2L, 1L, 2L, 6L, 3L, 1L, 1L, 1L, 0L, 1L, 
+1L, 1L, 0L, 0L, 2L, 8L, 1L, 2L, 1L, 0L, 0L, 3L, 2L, 0L, 1L, 1L, 
+4L, 0L, 1L, 2L, 1L, 3L, 1L, 0L, 0L, 2L, 1L, 1L, 1L, 0L, 1L, 2L, 
+1L, 2L, 1L, 1L, 1L, 2L, 0L, 1L, 0L, 2L, 1L, 4L, 3L, 1L, 0L, 2L, 
+1L, 1L, 0L, 2L, 2L, 2L, 3L, 3L, 2L, 0L, 2L, 2L, 1L, 0L, 2L, 1L, 
+1L, 7L, 0L, 1L, 0L, 0L, 0L, 0L, 1L, 1L, 3L, 2L, 1L, 1L, 1L, 1L, 
+0L, 0L, 0L, 1L, 1L, 1L, 0L), Gender = c("Female", "Female", "Male", 
+"Male", "Female", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Female", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", "Female", 
+"Male", "Female", "Female", "Male", NA, "Male", "Male", "Female", 
+"Female", "Female", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", NA, 
+"Female", "Female", "Female", "Female", "Female", "Female", "Female", 
+"Male", "Male", "Male", "Female", NA, "Female", "Female", "Female", 
+"Male", "Female", "Female", "Male", "Male", "Female", "Male", 
+"Female", "Female", "Female", "Female", "Male", "Male", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Male", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Male", "Female", 
+"Female", "Male", "Female", "Female", "Female", "Female", "Male", 
+"Female", "Male", "Female", "Male", "Male", "Male", "Female", 
+"Male", "Male", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Female", "Female", "Female", "Male", "Female", "Female", 
+"Female", "Female", "Male", "Female", "Female", "Female", "Female", 
+"Male", "Female", "Male", "Female", "Male"), Browser = c("Safari", 
+"Chrome", "Chrome", "Safari", "Safari", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Edge", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Safari", "Safari", "Firefox", "Chrome", "Chrome", "Safari", 
+"Chrome", "Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Safari", "Chrome", "Chrome", "Safari", "Safari", "Chrome", "Safari", 
+"Safari", "Safari", "Chrome", "Safari", "Chrome", "Firefox", 
+"Safari", "Chrome", "Safari", "Chrome", "Safari", "Chrome", "Chrome", 
+"Safari", "Safari", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Other", 
+"Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Chrome", "Safari", 
+"Chrome", "Safari", "Chrome", "Chrome", "Chrome", "Safari", "Chrome", 
+"Chrome", "Chrome", "Chrome", "Chrome", "Other", "Chrome", "Safari", 
+"Chrome", "Chrome", "Chrome", "Safari", "Edge", "Chrome", "Chrome", 
+"Safari", "Safari", "Chrome", "Safari", "Safari", "Edge", "Safari", 
+"Chrome", "Chrome", "Other", "Firefox", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Chrome", "Chrome", "Safari", "Chrome", "Chrome", "Safari", 
+"Safari", "Chrome", "Chrome", "Safari", "Chrome", "Safari", "Safari", 
+"Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", "Chrome", 
+"Chrome", "Chrome", "Edge", "Chrome"), Shoes = c(8L, 10L, 4L, 
+7L, 25L, 30L, 8L, 9L, 17L, 11L, 30L, NA, 6L, 10L, 12L, 12L, 10L, 
+8L, 6L, 10L, 8L, NA, 4L, 12L, 3L, 10L, 20L, 6L, 8L, 6L, 11L, 
+11L, 13L, 10L, 6L, 5L, 12L, 6L, 10L, 5L, 5L, 23L, 15L, 20L, 8L, 
+10L, 8L, 5L, 20L, 10L, 8L, 7L, 13L, 8L, 5L, 6L, 15L, 6L, 17L, 
+4L, 9L, 10L, 3L, 25L, 15L, 4L, NA, 13L, 5L, 5L, 6L, 8L, 8L, 10L, 
+18L, 12L, 20L, 35L, 10L, 3L, 4L, 4L, 21L, 15L, 2L, 6L, 15L, 5L, 
+6L, 9L, 8L, 3L, 7L, 10L, 4L, 20L, 6L, 20L, 9L, 10L, 15L, 8L, 
+9L, 10L, 8L, 8L, 3L, 2L, 3L, 10L, 3L, 5L, 5L, 14L, 4L, 9L, 10L, 
+6L, 6L, 9L, 9L, 5L, 6L, 7L, 10L, 15L, 8L, 20L, 20L, 7L, NA, 5L, 
+71L, 18L, 5L, 10L), Height = c(62L, 62L, 70L, 72L, 66L, 70L, 
+64L, 69L, 64L, 67L, 61L, 64L, 73L, 66L, 63L, 67L, 65L, 64L, 75L, 
+61L, 66L, 61L, NA, NA, 70L, 66L, 62L, 66L, 64L, 65L, 68L, 65L, 
+65L, 66L, 65L, NA, 70L, 60L, 63L, 70L, 74L, 63L, 64L, 68L, 68L, 
+64L, 61L, 70L, 62L, 67L, 64L, 61L, 70L, 64L, 65L, NA, NA, 69L, 
+65L, 66L, 71L, 72L, 69L, 70L, 64L, 67L, 63L, 66L, 71L, 64L, 63L, 
+70L, 72L, 69L, 72L, 60L, 68L, 62L, 67L, 67L, 72L, 65L, 65L, 66L, 
+70L, 66L, 63L, 66L, 65L, 63L, 63L, 67L, 69L, 65L, 72L, 65L, 67L, 
+NA, 65L, 64L, 63L, 61L, 68L, 63L, 72L, 62L, 73L, 69L, 71L, 68L, 
+73L, 73L, 63L, 68L, 63L, 67L, 62L, 65L, 65L, 63L, 61L, 63L, 66L, 
+63L, 62L, 64L, 64L, 66L, 63L, 63L, NA, 69L, 63L, 73L, 60L, 72L
+), MO_Height = c(62L, 64L, 64L, 64L, 66L, 65L, 62L, 65L, 64L, 
+65L, 64L, 66L, 64L, 64L, 61L, 67L, 69L, 67L, 67L, 59L, 66L, NA, 
+NA, NA, 65L, 65L, 67L, 60L, 65L, 60L, 67L, 62L, 65L, 66L, 64L, 
+NA, 62L, 62L, 64L, 66L, 68L, 60L, 61L, 65L, 66L, 61L, 64L, 65L, 
+62L, 63L, 65L, 59L, 69L, 62L, 63L, NA, NA, 68L, 68L, 65L, 61L, 
+67L, 62L, 68L, 64L, NA, 67L, 66L, 64L, 62L, 67L, 64L, 60L, 67L, 
+65L, 60L, 66L, 63L, 66L, 59L, 65L, NA, 68L, 65L, 61L, 67L, 65L, 
+64L, 65L, 65L, 62L, 59L, 64L, 64L, 67L, 67L, 69L, NA, 65L, 62L, 
+68L, 64L, 65L, 61L, 67L, 64L, 68L, NA, 65L, 64L, NA, NA, 61L, 
+65L, 60L, 65L, 59L, 64L, 64L, 63L, 59L, 54L, 67L, 65L, 65L, 65L, 
+63L, 62L, 61L, 64L, NA, 67L, 65L, 66L, 63L, 63L), FA_Height = c(70L, 
+67L, 66L, 69L, 70L, 76L, 69L, 70L, 70L, 74L, 69L, 74L, 68L, 67L, 
+68L, 72L, 74L, 70L, 72L, 74L, 74L, NA, NA, NA, 71L, 76L, 71L, 
+64L, 73L, 69L, 70L, 70L, 71L, 70L, 64L, NA, 68L, 67L, 69L, 73L, 
+60L, 70L, 68L, 62L, 71L, 68L, 69L, 69L, 70L, 71L, 71L, 65L, 67L, 
+68L, 67L, NA, NA, 71L, 71L, 73L, 65L, 67L, 68L, 76L, 70L, NA, 
+70L, 72L, 64L, 71L, 70L, 72L, 74L, 70L, 70L, NA, 67L, 70L, 70L, 
+67L, 75L, 70L, 71L, 71L, 72L, 62L, 74L, 65L, 72L, 70L, 69L, 67L, 
+71L, 67L, 70L, 74L, 71L, NA, 73L, 71L, 71L, 68L, 68L, NA, 72L, 
+67L, 70L, NA, 72L, 78L, NA, NA, 65L, 69L, 65L, 69L, 66L, 64L, 
+64L, 68L, 70L, 58L, 71L, 71L, 67L, 71L, 69L, 71L, 70L, 71L, NA, 
+68L, 74L, 68L, 65L, 70L), Arrival = c(7L, 150L, 10L, 25L, 11L, 
+10L, 15L, 8L, NA, 4L, 20L, 15L, 5L, 10L, 15L, 10L, 10L, 15L, 
+NA, 7L, 10L, NA, 7L, 15L, 5L, 17L, 15L, 15L, 6L, 10L, 10L, 10L, 
+12L, 10L, NA, 15L, 10L, 5L, 5L, 5L, 10L, 20L, 9L, 10L, 7L, 6L, 
+10L, 30L, 10L, 10L, 7L, 9L, 10L, 16L, NA, 10L, 9L, 8L, 7L, 20L, 
+4L, 30L, 15L, 5L, 10L, 15L, 5L, 10L, 15L, 15L, 10L, 9L, 8L, 7L, 
+10L, 15L, 7L, 13L, 25L, 20L, 7L, 10L, 5L, 10L, 10L, 5L, 10L, 
+9L, 10L, 15L, 9L, 20L, 13L, 10L, 7L, 3L, NA, 10L, 7L, 10L, 8L, 
+8L, 15L, 5L, 10L, 10L, 10L, 30L, 10L, 5L, 10L, 13L, 8L, 10L, 
+NA, 10L, 10L, 8L, 8L, NA, 12L, 3L, 6L, 10L, 10L, 10L, 10L, 7L, 
+15L, 15L, 60L, 7L, 15L, 6L, 15L, 10L), Sleep = c(9.5, 9, 8, 7.5, 
+5.5, 7, 8, 4, 8, 8, 8.5, 6.5, 5, 5, 7.5, 8.5, 7, 7.5, 6, 8, 6.5, 
+8, 5.5, 6, 8, 7.5, 8.5, 6, 5.5, 8, 7, 6.5, 8, 6.5, 7.5, 6, 6, 
+8.5, 7, 7, 8, 9, 6, 8, 8, 6, 6.5, 10, 7, 10, 10, 6, 7, 9, 8.5, 
+NA, 7, 8, 7.5, 7.5, 6.5, 8, 8, 9, 5, 6, 7.5, 8, 7, 8, 9, 6, 8, 
+9, 7, 7, 8, 6, 8, 6, 8, 9, 10, 7.5, 7, 8, 8, 7, 8, 5, 8, 6, 7.5, 
+7, 8, 7.5, 3, 8, 7, 7, 6, 7.5, 7.5, 8.5, 4, 8, 7, 9, 7, 5, 9, 
+8, 7, 8.5, 8, 8, 8, 8, 8, 5, 5.5, 6, 8, 6.5, 9.5, 8, 8, 8, 8, 
+5, 6, 8, 8, 9, 8, 6.5), Number = c(3L, 7L, 7L, 4L, 1L, 7L, 4L, 
+2L, 4L, 3L, 7L, 6L, 4L, 8L, 8L, 4L, 4L, 7L, 7L, 8L, 2L, 10L, 
+6L, 3L, 3L, 6L, 6L, 7L, 4L, 7L, 7L, 4L, 9L, 7L, 7L, 5L, 2L, 4L, 
+9L, 4L, 1L, 2L, 8L, 3L, 2L, 2L, 8L, 3L, 5L, 6L, 3L, 3L, 3L, 6L, 
+8L, 1L, 7L, 8L, 7L, 4L, 5L, 9L, 3L, 8L, 8L, 8L, 7L, 2L, 7L, 8L, 
+6L, 10L, 7L, 9L, 7L, 4L, 5L, 7L, 2L, 2L, 2L, 3L, 7L, 3L, 10L, 
+10L, 7L, 5L, 6L, 8L, 7L, 2L, 7L, 8L, 8L, 7L, 9L, 1L, 2L, 5L, 
+7L, 5L, 7L, 3L, 6L, 10L, 4L, 3L, 7L, 4L, 7L, 4L, 5L, 2L, 7L, 
+5L, 6L, 5L, 5L, 7L, 8L, 7L, 4L, 8L, 5L, 5L, 3L, 2L, 4L, 7L, 7L, 
+5L, 4L, 4L, 7L, 7L), Hand = c("Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Ambidextrous", 
+"Right", "Right", "Right", "Left", "Right", "Right", "Left", 
+"Right", "Right", "Right", "Right", "Left", "Right", "Right", 
+"Right", "Right", "Left", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Left", "Right", 
+"Right", "Right", "Left", "Right", "Right", "Left", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Left", "Right", "Right", 
+"Ambidextrous", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Left", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", NA, "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Left", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Right", "Right", 
+"Right", "Right", "Right", "Right", "Right", "Ambidextrous"), 
+    Credit = c(9, 16, 17, 4, 16, 16, 16, 16, 16, 16, 16, 18, 
+    16, 15, 17, 18, 17, 15, 14, 15, 16, 17, 16, 16, 18, 16, 15, 
+    16, 17, 17, 16, 15, 15, 16, 15, 15, 15, 18, 16, 16, 12, 16, 
+    16, 14, 12, 16, 17, 13, 15, 17, 15, 15, 17, 16, NA, 16, 14, 
+    16, 15, 15, 18, 9, 13, 16, 13, 14, 17, 16, 14, 15, 18, 15, 
+    14, 16, 18, 17, 16, 16, 17, 7, 18, 15, 15, 15, 15, 15, 17, 
+    17, 16, 16, 15, 6, 15, 18, 15, 15, 18, 15, 15, 17, 13, 15, 
+    16, 15, 18, 12, 17, 18, 16, 18, 15, 13, 12, 18, 16, 18, 15, 
+    14, 14, 12, 14.5, 15, 15, 16, 16, 16, 16, 15, 16, 17, 16, 
+    14, 15, 16, 16, 15.5)), class = "data.frame", row.names = c(NA, 
+-136L))
+SURVEY<-na.omit(Survey_Data)
+
+```
+
+# Analyzing Bivariate Data with **R (III)**
+
+We finalize our discussion of bivariate data analysis. In particular, we focus on **linear regression** analysis using our survey dataset with continuous variables.
+
+## Beginning Semester Survey Data
+
+The original data contains 136 observations and 15 variables. But, we omit the observations with a missing value, so the final data dimension becomes $108\times 15$. 
+
+```{r,eval=FALSE}
+01. Sports:    What is your favorite professional sport? 
+02. States:    How many states in the US have you traveled to? 
+03. Cat_Dog:   Are you more of a cat person or a dog person? 
+04. Pets:      What is the number of pets you and your family currently have? 
+05. Gender:    What is your gender? 
+06. Browser:   What is your preferred internet browser? 
+07. Shoes:     How many pairs of shoes do you have? 
+08. Height:    How tall are you (inch)? 
+09. MO_Height: What is your mothers height (inch)? 
+10. FA_Height: What is your fathers height (inch)? 
+11. Arrival:   How many minutes does it take for you to reach the recitation classroom from your residence? 
+12. Sleep:     How many HOURS did you sleep last night, to the nearest half-hour? 
+13. Number:    What is your favorite whole number between 1 and 10? 
+14. Hand:      Are you right- or left-handed? 
+15. Credit:    How many credits are you taking this semester? 
+```
+Note that the survey dataset is recorded in "SURVEY".
+```{webr-r}
+## Variable names
+names(SURVEY)
+## Data dimension
+dim(SURVEY)
+```
+
+## Heights relationship between parents and children
+
+Do you believe your height is inherited from your father or mother? If your answer is YES, it might make sense to predict a child's height based on one parent's height using linear regression. Let’s explore this idea with our survey dataset.
+
+Our first step is to examine the correlation and scatter plots. We'll create these for the mother’s and father’s height variables, respectively.
+```{webr-r}
+## In this lab, the data is not "attached"
+## So, we are using "$" operator to select the variable
+cor(SURVEY$Height,SURVEY$MO_Height)
+plot(SURVEY$Height,SURVEY$MO_Height)
+## Please try the same operations with Height and FA_Height
+
+
+```
+
+Do you think the variables exhibit sufficient linear associations to justify proceeding with linear regression? Based on the results, the answer seems to be 'NO.' A common rule of thumb is that a correlation of around 0.7 (or at least 0.6) is recommended. So, should we stop our analysis here?
+
+## Searching for the relationship within subsets.
+
+This type of issue is quite common in data analysis. However, we can still move forward by identifying meaningful relationships within specific subsets. In this lab, we will use the $\texttt{subset()}$ function to accomplish this."
+
+### Example: Subsetting with $\texttt{subset()}$
+The $\texttt{subset()}$ function takes three arguments: the first is the dataset to subset, the second is the condition for selecting observations, and the third specifies the variables to retain. For example, using the $\texttt{mtcars}$ dataset:
+```{webr-r}
+## Choose all the observations with Shoes>10
+Subset1<-subset(SURVEY,Shoes>20)
+## Just checking the dimension
+Subset1
+## Choose all the observations with Shoes>10 
+## and the Shoes and Height variables
+Subset2<-subset(SURVEY,Shoes>20,c("Shoes","Height"))
+Subset2
+```
+
+Now, let us subset our data for analysis. A common way for the subset would be through the gender variable. So,
+```{webr-r}
+## Female Survey dataset
+FSV<-subset(SURVEY,Gender=="Female",c("Height","MO_Height","FA_Height","Sleep"))
+## Male Survey dataset
+MSV<-subset(SURVEY,Gender=="Male",c("Height","MO_Height","FA_Height","Sleep"))
+```
+
+Then, let us check the correlations for two datasets.
+```{webr-r}
+## For the female sub-group
+cor(FSV$Height,FSV$MO_Height)
+cor(FSV$Height,FSV$FA_Height)
+## Try it for the male sub-group
+
+
+```
+
+Based on the result, we can confirm a reasonable level of correlation between $\texttt{Height}$ and $\texttt{MO\_Height}$ within the male group. So, let us use it for the linear regression analysis.
+
+## Regression analysis with the $\texttt{lm()}$ built-in function
+
+In the previous lab, we calculated the regression coefficients manually using formulas. While that approach was informative, it’s not practical to repeat every time. Here, we’ll use the built-in $\texttt{lm()}$ function for convenience. With $\texttt{lm()}$, we use a "tilde" to link the response variable ($\texttt{Height}$) with the explanatory variable ($\texttt{MO\_Height}$).
+
+```{webr-r}
+## Regression coefficients
+Reg1 <- lm(Height~MO_Height,data=MSV)
+Reg1
+## Regression summary
+summary(Reg1)
+
+```
+Let’s focus on the R-squared value from the regression summary. This coefficient of determination ($\mathbf{R}^2$), as we discussed in class, represents the proportion of variation in a student's height explained by the mother's height. Currently, the R-squared value is not particularly high, indicating that the model’s predictive power is limited.
+
+What if we use both the mother’s height (MO_Height) and the father’s height (FA_Height) for prediction, even though we haven't covered this yet? This approach is known as multiple regression analysis. It can be easily implemented as follows:
+
+```{webr-r}
+Reg2 <- lm(Height~MO_Height+FA_Height,data=MSV)
+Reg2
+## Regression summary
+summary(Reg2)
+
+```
+
+Lastly, let’s make predictions. Since we are using data from male students, all interpretations should be limited to this subset.
+```{webr-r}
+## Prediction of a "male" student height when his mother's height is 68.
+new.obs1<-data.frame(MO_Height=68)
+predict(Reg1,newdata=new.obs1)
+## Prediction of a "male" student height when his mother's height is 68 and father's height is 70.
+new.obs2<-data.frame(MO_Height=68,FA_Height=70)
+predict(Reg2,newdata=new.obs2)
+
+```
+
+## Lab Questions
+```{webr-r}
+#| context: setup
+
+Mammal<-structure(list(name = c("Arctic fox", "Owl monkey", "Mountain beaver", 
+"Cow", "Grey wolf", "Goat", "Roe deer", "Guinea pig", "Verbet", 
+"Chinchilla", "Ground squirrel", "Arctic ground squirrel", "African giant pouched rat", 
+"Lesser short-tailed shrew", "Star-nosed mole", "Nine-banded armadillo", 
+"Tree hyrax", "N.A. opossum", "Asian elephant", "Big brown bat", 
+"Donkey", "Horse", "European hedgehog", "Patas monkey", "Cat", 
+"Galago", "Genet", "Giraffe", "Gorilla", "Grey seal", "Rock hyrax-a", 
+"Human", "African elephant", "Water opossum", "Rhesus monkey", 
+"Kangaroo", "Yellow-bellied marmot", "Golden hamster", "Mouse", 
+"Little brown bat", "Slow loris", "Okapi", "Rabbit", "Sheep", 
+"Jaguar", "Chimpanzee", "Baboon", "Desert hedgehog", "Giant armadillo", 
+"Rock hyrax-b", "Raccoon", "Rat", "E. American mole", "Mole rat", 
+"Musk shrew", "Pig", "Echidna", "Brazilian tapir", "Tenrec", 
+"Phalanger", "Tree shrew", "Red fox"), body_mass_kg = c(3.38, 
+0.48, 1.35, 465, 36.33, 27.66, 14.83, 1.04, 4.19, 0.42, 0.1, 
+0.92, 1, 0.01, 0.06, 3.5, 2, 1.7, 2547, 0.02, 187.1, 521, 0.79, 
+10, 3.3, 0.2, 1.41, 529, 207, 85, 0.75, 62, 6654, 3.5, 6.8, 35, 
+4.05, 0.12, 0.02, 0.01, 1.4, 250, 2.5, 55.5, 100, 52.16, 10.55, 
+0.55, 60, 3.6, 4.29, 0.28, 0.07, 0.12, 0.05, 192, 3, 160, 0.9, 
+1.62, 0.1, 4.24), brain_mass_g = c(44.5, 15.5, 8.1, 423, 119.5, 
+115, 98.2, 5.5, 58, 6.4, 4, 5.7, 6.6, 0.14, 1, 10.8, 12.3, 6.3, 
+4603, 0.3, 419, 655, 3.5, 115, 25.6, 5, 17.5, 680, 406, 325, 
+12.3, 1320, 5712, 3.9, 179, 56, 17, 1, 0.4, 0.25, 12.5, 490, 
+12.1, 175, 157, 440, 179.5, 2.4, 81, 21, 39.2, 1.9, 1.2, 3, 0.33, 
+180, 25, 169, 2.6, 11.4, 2.5, 50.4)), 
+row.names = c(NA, -62L), 
+class = c("spec_tbl_df", 
+"tbl_df", "tbl", "data.frame"))
+```
+
+Larger animals tend to have larger brains, but is the increase in brain size proportional to the increase in body size? Allison and Cicchetti (1976) compiled data on the body and brain sizes of 62 mammal species, available in the dataset $\texttt{Mammal}$. This dataset includes columns for the species name, average body mass (in kg), and average brain size (in g). Since both variables are highly right-skewed, we apply a log transformation for analysis.
+```{webr-r}
+## Check data
+Mammal
+## Transform
+DATA<-log(Mammal[,2:3])
+colnames(DATA)<-c("LM.Body","LM.Brain")
+plot(DATA$LM.Body,DATA$LM.Brain)
+```
+
+1. Calculate the correlation between the log body mass and log brain size.
+```{webr-r}
+
+```
+
+2. Perform the linear regression analysis for log brain size based on the log average body mass,
+using the $\texttt{lm()}$ function.
+```{webr-r}
+
+```
+
+3. Predict the log brain size when the log body mass is 3.12.
+```{webr-r}
+new.obs<-data.frame(LM.Body=3.12)
+
+```
+
+
+

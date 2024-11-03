@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 1 – MATH 012: R-Labs</title>
+<title>Lab 4 – MATH 012: R-Labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -357,7 +391,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-1","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"2 + 2"},{"id":2,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-2","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## subtraction operator: \"-\"\n\n## multiplication operator: \"*\"\n\n## division operator: \"/\""},{"id":3,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-3","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"log(42)"},{"id":4,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-4","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"exp(12)"},{"id":5,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-5","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"sqrt(4)"},{"id":6,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-6","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"4^3"},{"id":7,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-7","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":""},{"id":8,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-8","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 24"},{"id":9,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-9","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x + 12"},{"id":10,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-10","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 18"},{"id":11,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-11","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## i\n\n## ii\n\n## iii\n\n## iv"}];
+globalThis.qwebrCellDetails = [{"code":"Survey_Data<-structure(list(Sports = c(\"MLB\", \"NFL\", \"NHL\", \"Other\", \"NBA\", \n\"NHL\", \"NBA\", \"NFL\", \"NBA\", \"MLB\", \"NHL\", \"Other\", \"NBA\", \"Other\", \n\"NBA\", \"MLB\", \"NBA\", \"NFL\", \"MLB\", \"NFL\", \"NBA\", \"Other\", \"MLB\", \n\"Other\", \"Other\", \"NFL\", \"NFL\", \"NFL\", \"NHL\", \"Other\", \"NFL\", \n\"Other\", \"MLB\", \"NBA\", \"MLB\", \"NBA\", \"NBA\", \"Other\", \"NHL\", \"MLB\", \n\"NFL\", \"Other\", \"NFL\", \"NBA\", \"NFL\", \"Other\", \"NFL\", \"Other\", \n\"MLB\", \"NFL\", \"NFL\", \"Other\", \"NBA\", \"MLB\", \"Other\", \"NBA\", \"Other\", \n\"Other\", \"NBA\", \"Other\", \"NHL\", \"NBA\", \"NFL\", \"NFL\", \"Other\", \n\"Other\", \"MLB\", \"NFL\", \"NBA\", \"NBA\", \"Other\", \"NBA\", \"NBA\", \"NHL\", \n\"Other\", \"NFL\", \"Other\", \"NFL\", \"NFL\", \"NBA\", \"NBA\", \"Other\", \n\"NHL\", \"NFL\", \"MLB\", \"NBA\", \"NFL\", \"Other\", \"NHL\", \"MLB\", \"NHL\", \n\"NBA\", \"NHL\", \"Other\", \"Other\", \"NFL\", \"NBA\", \"NBA\", \"MLB\", \"MLB\", \n\"NHL\", \"MLB\", \"NBA\", \"NFL\", \"NFL\", \"NFL\", \"Other\", \"Other\", \"Other\", \n\"Other\", \"NBA\", \"Other\", \"NFL\", \"NBA\", \"NHL\", \"Other\", \"MLB\", \n\"NFL\", \"NBA\", \"Other\", \"NFL\", \"NBA\", \"NFL\", \"Other\", \"Other\", \n\"NFL\", \"NFL\", \"NBA\", \"NBA\", \"NFL\", \"Other\", \"NBA\", \"NBA\", \"NFL\", \n\"MLB\", \"NHL\"), States = c(23L, 20L, 3L, 9L, 11L, 20L, 15L, 13L, \n20L, 15L, 10L, 15L, 12L, 6L, 16L, 17L, 20L, 9L, 15L, 17L, 12L, \n7L, 12L, 9L, 14L, 15L, 6L, 18L, 17L, 15L, 5L, 10L, 16L, 27L, \n13L, 15L, 30L, 5L, 15L, 14L, 13L, NA, 30L, 18L, 23L, 8L, 18L, \n20L, 18L, 15L, 14L, 16L, 24L, 13L, 28L, 3L, 13L, 19L, 18L, 7L, \n36L, 3L, 10L, 26L, 12L, 8L, 18L, 10L, 6L, 18L, 18L, 20L, 20L, \n10L, 26L, 5L, 8L, 7L, 20L, 6L, 22L, 10L, 15L, 15L, 25L, 5L, 12L, \n5L, 10L, 11L, 4L, 6L, 9L, 7L, 5L, 10L, 15L, 14L, 19L, 15L, 12L, \n11L, 3L, 6L, 15L, 6L, 15L, 5L, 12L, 13L, 4L, 1L, 15L, 35L, 8L, \n9L, 17L, 5L, 5L, 8L, 3L, 2L, 10L, 15L, 17L, 12L, 13L, 5L, 12L, \n15L, 2L, 8L, 13L, 27L, 1L, 16L), Cat_Dog = c(\"Dog\", \"Dog\", \"Dog\", \n\"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Other\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \n\"Dog\", \"Other\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Cat\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \n\"Dog\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Cat\", \"Cat\", \"Cat\", \n\"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Cat\", \n\"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Other\", \"Other\", \"Cat\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Cat\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\"), Pets = c(1L, \n1L, 1L, 0L, 0L, 2L, 1L, 1L, 2L, 0L, 1L, 1L, 0L, 0L, 0L, 1L, 1L, \n0L, 0L, 1L, 2L, 4L, 1L, 4L, 1L, 1L, 1L, 2L, 3L, 0L, 2L, 1L, 0L, \n2L, 1L, 2L, 1L, 3L, 1L, 2L, 1L, 2L, 6L, 3L, 1L, 1L, 1L, 0L, 1L, \n1L, 1L, 0L, 0L, 2L, 8L, 1L, 2L, 1L, 0L, 0L, 3L, 2L, 0L, 1L, 1L, \n4L, 0L, 1L, 2L, 1L, 3L, 1L, 0L, 0L, 2L, 1L, 1L, 1L, 0L, 1L, 2L, \n1L, 2L, 1L, 1L, 1L, 2L, 0L, 1L, 0L, 2L, 1L, 4L, 3L, 1L, 0L, 2L, \n1L, 1L, 0L, 2L, 2L, 2L, 3L, 3L, 2L, 0L, 2L, 2L, 1L, 0L, 2L, 1L, \n1L, 7L, 0L, 1L, 0L, 0L, 0L, 0L, 1L, 1L, 3L, 2L, 1L, 1L, 1L, 1L, \n0L, 0L, 0L, 1L, 1L, 1L, 0L), Gender = c(\"Female\", \"Female\", \"Male\", \n\"Male\", \"Female\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Male\", \"Female\", \"Female\", \"Male\", NA, \"Male\", \"Male\", \"Female\", \n\"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", NA, \n\"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Male\", \"Male\", \"Male\", \"Female\", NA, \"Female\", \"Female\", \"Female\", \n\"Male\", \"Female\", \"Female\", \"Male\", \"Male\", \"Female\", \"Male\", \n\"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \"Male\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Male\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Male\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \n\"Female\", \"Male\", \"Female\", \"Male\", \"Male\", \"Male\", \"Female\", \n\"Male\", \"Male\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Male\", \"Female\", \"Male\", \"Female\", \"Male\"), Browser = c(\"Safari\", \n\"Chrome\", \"Chrome\", \"Safari\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Edge\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Safari\", \"Firefox\", \"Chrome\", \"Chrome\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Chrome\", \"Chrome\", \"Safari\", \"Safari\", \"Chrome\", \"Safari\", \n\"Safari\", \"Safari\", \"Chrome\", \"Safari\", \"Chrome\", \"Firefox\", \n\"Safari\", \"Chrome\", \"Safari\", \"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Safari\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Other\", \n\"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \n\"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Other\", \"Chrome\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \"Edge\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Safari\", \"Chrome\", \"Safari\", \"Safari\", \"Edge\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Other\", \"Firefox\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Safari\", \n\"Safari\", \"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \"Safari\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Edge\", \"Chrome\"), Shoes = c(8L, 10L, 4L, \n7L, 25L, 30L, 8L, 9L, 17L, 11L, 30L, NA, 6L, 10L, 12L, 12L, 10L, \n8L, 6L, 10L, 8L, NA, 4L, 12L, 3L, 10L, 20L, 6L, 8L, 6L, 11L, \n11L, 13L, 10L, 6L, 5L, 12L, 6L, 10L, 5L, 5L, 23L, 15L, 20L, 8L, \n10L, 8L, 5L, 20L, 10L, 8L, 7L, 13L, 8L, 5L, 6L, 15L, 6L, 17L, \n4L, 9L, 10L, 3L, 25L, 15L, 4L, NA, 13L, 5L, 5L, 6L, 8L, 8L, 10L, \n18L, 12L, 20L, 35L, 10L, 3L, 4L, 4L, 21L, 15L, 2L, 6L, 15L, 5L, \n6L, 9L, 8L, 3L, 7L, 10L, 4L, 20L, 6L, 20L, 9L, 10L, 15L, 8L, \n9L, 10L, 8L, 8L, 3L, 2L, 3L, 10L, 3L, 5L, 5L, 14L, 4L, 9L, 10L, \n6L, 6L, 9L, 9L, 5L, 6L, 7L, 10L, 15L, 8L, 20L, 20L, 7L, NA, 5L, \n71L, 18L, 5L, 10L), Height = c(62L, 62L, 70L, 72L, 66L, 70L, \n64L, 69L, 64L, 67L, 61L, 64L, 73L, 66L, 63L, 67L, 65L, 64L, 75L, \n61L, 66L, 61L, NA, NA, 70L, 66L, 62L, 66L, 64L, 65L, 68L, 65L, \n65L, 66L, 65L, NA, 70L, 60L, 63L, 70L, 74L, 63L, 64L, 68L, 68L, \n64L, 61L, 70L, 62L, 67L, 64L, 61L, 70L, 64L, 65L, NA, NA, 69L, \n65L, 66L, 71L, 72L, 69L, 70L, 64L, 67L, 63L, 66L, 71L, 64L, 63L, \n70L, 72L, 69L, 72L, 60L, 68L, 62L, 67L, 67L, 72L, 65L, 65L, 66L, \n70L, 66L, 63L, 66L, 65L, 63L, 63L, 67L, 69L, 65L, 72L, 65L, 67L, \nNA, 65L, 64L, 63L, 61L, 68L, 63L, 72L, 62L, 73L, 69L, 71L, 68L, \n73L, 73L, 63L, 68L, 63L, 67L, 62L, 65L, 65L, 63L, 61L, 63L, 66L, \n63L, 62L, 64L, 64L, 66L, 63L, 63L, NA, 69L, 63L, 73L, 60L, 72L\n), MO_Height = c(62L, 64L, 64L, 64L, 66L, 65L, 62L, 65L, 64L, \n65L, 64L, 66L, 64L, 64L, 61L, 67L, 69L, 67L, 67L, 59L, 66L, NA, \nNA, NA, 65L, 65L, 67L, 60L, 65L, 60L, 67L, 62L, 65L, 66L, 64L, \nNA, 62L, 62L, 64L, 66L, 68L, 60L, 61L, 65L, 66L, 61L, 64L, 65L, \n62L, 63L, 65L, 59L, 69L, 62L, 63L, NA, NA, 68L, 68L, 65L, 61L, \n67L, 62L, 68L, 64L, NA, 67L, 66L, 64L, 62L, 67L, 64L, 60L, 67L, \n65L, 60L, 66L, 63L, 66L, 59L, 65L, NA, 68L, 65L, 61L, 67L, 65L, \n64L, 65L, 65L, 62L, 59L, 64L, 64L, 67L, 67L, 69L, NA, 65L, 62L, \n68L, 64L, 65L, 61L, 67L, 64L, 68L, NA, 65L, 64L, NA, NA, 61L, \n65L, 60L, 65L, 59L, 64L, 64L, 63L, 59L, 54L, 67L, 65L, 65L, 65L, \n63L, 62L, 61L, 64L, NA, 67L, 65L, 66L, 63L, 63L), FA_Height = c(70L, \n67L, 66L, 69L, 70L, 76L, 69L, 70L, 70L, 74L, 69L, 74L, 68L, 67L, \n68L, 72L, 74L, 70L, 72L, 74L, 74L, NA, NA, NA, 71L, 76L, 71L, \n64L, 73L, 69L, 70L, 70L, 71L, 70L, 64L, NA, 68L, 67L, 69L, 73L, \n60L, 70L, 68L, 62L, 71L, 68L, 69L, 69L, 70L, 71L, 71L, 65L, 67L, \n68L, 67L, NA, NA, 71L, 71L, 73L, 65L, 67L, 68L, 76L, 70L, NA, \n70L, 72L, 64L, 71L, 70L, 72L, 74L, 70L, 70L, NA, 67L, 70L, 70L, \n67L, 75L, 70L, 71L, 71L, 72L, 62L, 74L, 65L, 72L, 70L, 69L, 67L, \n71L, 67L, 70L, 74L, 71L, NA, 73L, 71L, 71L, 68L, 68L, NA, 72L, \n67L, 70L, NA, 72L, 78L, NA, NA, 65L, 69L, 65L, 69L, 66L, 64L, \n64L, 68L, 70L, 58L, 71L, 71L, 67L, 71L, 69L, 71L, 70L, 71L, NA, \n68L, 74L, 68L, 65L, 70L), Arrival = c(7L, 150L, 10L, 25L, 11L, \n10L, 15L, 8L, NA, 4L, 20L, 15L, 5L, 10L, 15L, 10L, 10L, 15L, \nNA, 7L, 10L, NA, 7L, 15L, 5L, 17L, 15L, 15L, 6L, 10L, 10L, 10L, \n12L, 10L, NA, 15L, 10L, 5L, 5L, 5L, 10L, 20L, 9L, 10L, 7L, 6L, \n10L, 30L, 10L, 10L, 7L, 9L, 10L, 16L, NA, 10L, 9L, 8L, 7L, 20L, \n4L, 30L, 15L, 5L, 10L, 15L, 5L, 10L, 15L, 15L, 10L, 9L, 8L, 7L, \n10L, 15L, 7L, 13L, 25L, 20L, 7L, 10L, 5L, 10L, 10L, 5L, 10L, \n9L, 10L, 15L, 9L, 20L, 13L, 10L, 7L, 3L, NA, 10L, 7L, 10L, 8L, \n8L, 15L, 5L, 10L, 10L, 10L, 30L, 10L, 5L, 10L, 13L, 8L, 10L, \nNA, 10L, 10L, 8L, 8L, NA, 12L, 3L, 6L, 10L, 10L, 10L, 10L, 7L, \n15L, 15L, 60L, 7L, 15L, 6L, 15L, 10L), Sleep = c(9.5, 9, 8, 7.5, \n5.5, 7, 8, 4, 8, 8, 8.5, 6.5, 5, 5, 7.5, 8.5, 7, 7.5, 6, 8, 6.5, \n8, 5.5, 6, 8, 7.5, 8.5, 6, 5.5, 8, 7, 6.5, 8, 6.5, 7.5, 6, 6, \n8.5, 7, 7, 8, 9, 6, 8, 8, 6, 6.5, 10, 7, 10, 10, 6, 7, 9, 8.5, \nNA, 7, 8, 7.5, 7.5, 6.5, 8, 8, 9, 5, 6, 7.5, 8, 7, 8, 9, 6, 8, \n9, 7, 7, 8, 6, 8, 6, 8, 9, 10, 7.5, 7, 8, 8, 7, 8, 5, 8, 6, 7.5, \n7, 8, 7.5, 3, 8, 7, 7, 6, 7.5, 7.5, 8.5, 4, 8, 7, 9, 7, 5, 9, \n8, 7, 8.5, 8, 8, 8, 8, 8, 5, 5.5, 6, 8, 6.5, 9.5, 8, 8, 8, 8, \n5, 6, 8, 8, 9, 8, 6.5), Number = c(3L, 7L, 7L, 4L, 1L, 7L, 4L, \n2L, 4L, 3L, 7L, 6L, 4L, 8L, 8L, 4L, 4L, 7L, 7L, 8L, 2L, 10L, \n6L, 3L, 3L, 6L, 6L, 7L, 4L, 7L, 7L, 4L, 9L, 7L, 7L, 5L, 2L, 4L, \n9L, 4L, 1L, 2L, 8L, 3L, 2L, 2L, 8L, 3L, 5L, 6L, 3L, 3L, 3L, 6L, \n8L, 1L, 7L, 8L, 7L, 4L, 5L, 9L, 3L, 8L, 8L, 8L, 7L, 2L, 7L, 8L, \n6L, 10L, 7L, 9L, 7L, 4L, 5L, 7L, 2L, 2L, 2L, 3L, 7L, 3L, 10L, \n10L, 7L, 5L, 6L, 8L, 7L, 2L, 7L, 8L, 8L, 7L, 9L, 1L, 2L, 5L, \n7L, 5L, 7L, 3L, 6L, 10L, 4L, 3L, 7L, 4L, 7L, 4L, 5L, 2L, 7L, \n5L, 6L, 5L, 5L, 7L, 8L, 7L, 4L, 8L, 5L, 5L, 3L, 2L, 4L, 7L, 7L, \n5L, 4L, 4L, 7L, 7L), Hand = c(\"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Ambidextrous\", \n\"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \"Left\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \n\"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \"Left\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \n\"Ambidextrous\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Left\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", NA, \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Ambidextrous\"), \n    Credit = c(9, 16, 17, 4, 16, 16, 16, 16, 16, 16, 16, 18, \n    16, 15, 17, 18, 17, 15, 14, 15, 16, 17, 16, 16, 18, 16, 15, \n    16, 17, 17, 16, 15, 15, 16, 15, 15, 15, 18, 16, 16, 12, 16, \n    16, 14, 12, 16, 17, 13, 15, 17, 15, 15, 17, 16, NA, 16, 14, \n    16, 15, 15, 18, 9, 13, 16, 13, 14, 17, 16, 14, 15, 18, 15, \n    14, 16, 18, 17, 16, 16, 17, 7, 18, 15, 15, 15, 15, 15, 17, \n    17, 16, 16, 15, 6, 15, 18, 15, 15, 18, 15, 15, 17, 13, 15, \n    16, 15, 18, 12, 17, 18, 16, 18, 15, 13, 12, 18, 16, 18, 15, \n    14, 14, 12, 14.5, 15, 15, 16, 16, 16, 16, 15, 16, 17, 16, \n    14, 15, 16, 16, 15.5)), class = \"data.frame\", row.names = c(NA, \n-136L))\nattach(Survey_Data)","options":{"out-height":"","label":"unnamed-chunk-1","results":"markup","warning":"true","context":"setup","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"true","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":1},{"code":"head(Survey_Data)","options":{"out-height":"","label":"unnamed-chunk-2","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":2},{"code":"FTBL1<-table(Sports)\nFTBL1","options":{"out-height":"","label":"unnamed-chunk-3","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":3},{"code":"## Frequency table\nFTBL2<-table(Gender,Sports)\nFTBL2\n## Relative Frequency table\nRel_FTBL2<-prop.table(FTBL2)\nRel_FTBL2\n## Round to the hundredths place\nround(Rel_FTBL2,2)","options":{"out-height":"","label":"unnamed-chunk-4","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":4},{"code":"## Condition with respect to Gender\nCon_FTBL2<-prop.table(FTBL2,margin=1)\nCon_FTBL2\n## Round to the hundredths place\nround(Con_FTBL2,2)","options":{"out-height":"","label":"unnamed-chunk-5","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":5},{"code":"## Barplot\nbarplot(FTBL1)","options":{"out-height":"","label":"unnamed-chunk-6","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":6},{"code":"## Side-by-side conditional barplot\n## Female is in darkgray; male is in lightgray.\nbarplot(Con_FTBL2,beside=TRUE)","options":{"out-height":"","label":"unnamed-chunk-7","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":7},{"code":"barplot(FTBL1,main=\"Favorite Sports\")\nbarplot(Con_FTBL2,beside=TRUE,main=\"Favorite Sports: Gender Comparison\")","options":{"out-height":"","label":"unnamed-chunk-8","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":8},{"code":"","options":{"out-height":"","label":"unnamed-chunk-9","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":9},{"code":"## Use Freq=FALSE to get a relative frequency table.\nhist(Height,freq=FALSE)\n## Let us refine the title \nhist(Height,main=\"Height: MATH 012 Students\",freq=FALSE)","options":{"out-height":"","label":"unnamed-chunk-10","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":10},{"code":"","options":{"out-height":"","label":"unnamed-chunk-11","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":11},{"code":"## First, a boxplot for Height\nboxplot(Height)\n## Now, a side-by-side boxplot for Height with respect to Gender\nboxplot(Height~Gender)\n## We can have horizontal orientation\nboxplot(Height~Gender,horizontal=TRUE)\n## Please add a relevant title!","options":{"out-height":"","label":"unnamed-chunk-12","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":12},{"code":"","options":{"out-height":"","label":"unnamed-chunk-13","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":13},{"code":"","options":{"out-height":"","label":"unnamed-chunk-14","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":14},{"code":"","options":{"out-height":"","label":"unnamed-chunk-15","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":15},{"code":"","options":{"out-height":"","label":"unnamed-chunk-16","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":16},{"code":"","options":{"out-height":"","label":"unnamed-chunk-17","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":17},{"code":"","options":{"out-height":"","label":"unnamed-chunk-18","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":18},{"code":"","options":{"out-height":"","label":"unnamed-chunk-19","results":"markup","warning":"true","context":"interactive","out-width":"700px","editor-max-height":"","message":"true","editor-font-scale":"1","fig-cap":"","comment":"","read-only":"false","output":"true","autorun":"false","fig-width":7,"fig-height":5,"classes":"","editor-word-wrap":"true","editor-quick-suggestions":"false","dpi":72},"id":19}];
 
 </script>
 <script type="module">
@@ -1661,7 +1695,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_4.html">Lab 4</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1684,7 +1718,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
@@ -1702,7 +1736,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_4.html" class="sidebar-item-text sidebar-link">
+  <a href="./Lab_4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
@@ -1748,12 +1782,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-r-i" id="toc-introduction-to-r-i" class="nav-link active" data-scroll-target="#introduction-to-r-i">Introduction to R (I)</a>
+  <li><a href="#basic-graphics-in-r" id="toc-basic-graphics-in-r" class="nav-link active" data-scroll-target="#basic-graphics-in-r">Basic Graphics in <strong>R</strong></a>
   <ul class="collapse">
-  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Command line</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#mathematical-functions" id="toc-mathematical-functions" class="nav-link" data-scroll-target="#mathematical-functions">Mathematical functions</a></li>
-  <li><a href="#defining-objects" id="toc-defining-objects" class="nav-link" data-scroll-target="#defining-objects">Defining objects</a></li>
+  <li><a href="#beginning-semester-survey-data" id="toc-beginning-semester-survey-data" class="nav-link" data-scroll-target="#beginning-semester-survey-data">Beginning Semester Survey Data</a></li>
+  <li><a href="#frequency-tables" id="toc-frequency-tables" class="nav-link" data-scroll-target="#frequency-tables">Frequency Tables</a></li>
+  <li><a href="#bar-plot" id="toc-bar-plot" class="nav-link" data-scroll-target="#bar-plot">Bar Plot</a></li>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram">Histogram</a></li>
+  <li><a href="#box-plot" id="toc-box-plot" class="nav-link" data-scroll-target="#box-plot">Box Plot</a></li>
   <li><a href="#lab-questions" id="toc-lab-questions" class="nav-link" data-scroll-target="#lab-questions">Lab Questions</a></li>
   </ul></li>
   </ul>
@@ -2046,9 +2081,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_4.html">Lab 4</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lab 1</h1>
+<h1 class="title">Lab 4</h1>
 </div>
 
 
@@ -2065,76 +2100,131 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="introduction-to-r-i" class="level1">
-<h1>Introduction to R (I)</h1>
-<section id="command-line" class="level2">
-<h2 class="anchored" data-anchor-id="command-line">Command line</h2>
-<p>You can type commands in the “Console”.</p>
-<p>Type “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>In your code scripts, it’s often useful to include text that isn’t evaluated by <strong>R</strong>. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. <strong>R</strong> will ignore everything on that line after the “#”.</p>
-<section id="example" class="level4">
-<h4 class="anchored" data-anchor-id="example">Example</h4>
-<p>Let us try the rest of the fundamental arithmetic operations:</p>
+<section id="basic-graphics-in-r" class="level1">
+<h1>Basic Graphics in <strong>R</strong></h1>
+<p><strong>R</strong> offers a variety of options for creating visual displays in statistics. While base <strong>R</strong> itself provides sufficient quality for many plots, additional packages like <span class="math inline">\(\texttt{ggplot2}\)</span> or <span class="math inline">\(\texttt{lattice}\)</span> to produce “publishable” quality graphics. In our lab sessions, we will focus on the basic <strong>R</strong> graphics.</p>
+<section id="beginning-semester-survey-data" class="level2">
+<h2 class="anchored" data-anchor-id="beginning-semester-survey-data">Beginning Semester Survey Data</h2>
+<p>For illustrations, we will use our beginning semester survey data. It contains 136 observations and 16 variables as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fl">01.</span> Sports<span class="sc">:</span>    What is your favorite professional sport? </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fl">02.</span> States<span class="sc">:</span>    How many states <span class="cf">in</span> the US have you traveled to? </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fl">03.</span> Cat_Dog<span class="sc">:</span>   Are you more of a cat person or a dog person? </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fl">04.</span> Pets<span class="sc">:</span>      What is the number of pets you and your family currently have? </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fl">05.</span> Gender<span class="sc">:</span>    What is your gender? </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fl">06.</span> Browser<span class="sc">:</span>   What is your preferred internet browser? </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fl">08.</span> Shoes<span class="sc">:</span>     How many pairs of shoes do you have? </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fl">09.</span> Height<span class="sc">:</span>    How tall are <span class="fu">you</span> (inch)? </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fl">10.</span> MO_Height<span class="sc">:</span> What is your mothers <span class="fu">height</span> (inch)? </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fl">11.</span> FA_Height<span class="sc">:</span> What is your fathers <span class="fu">height</span> (inch)? </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fl">12.</span> Arrival<span class="sc">:</span>   How many minutes does it take <span class="cf">for</span> you to reach the recitation classroom from your residence? </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fl">13.</span> Sleep<span class="sc">:</span>     How many HOURS did you sleep last night, to the nearest half<span class="sc">-</span>hour? </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fl">14.</span> Number<span class="sc">:</span>    What is your favorite whole number between <span class="dv">1</span> and <span class="dv">10</span>? </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fl">15.</span> Hand<span class="sc">:</span>      Are you right<span class="sc">-</span> or left<span class="sc">-</span>handed? </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fl">16.</span> Credit<span class="sc">:</span>    How many credits are you taking this semester? </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let us check the variable name and the first six observations by using the function <span class="math inline">\(\texttt{head()}\)</span>:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-</section>
-<section id="mathematical-functions" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-functions">Mathematical functions</h2>
-<p>You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.</p>
+<section id="frequency-tables" class="level2">
+<h2 class="anchored" data-anchor-id="frequency-tables">Frequency Tables</h2>
+<p>As we discussed in class, a frequency table summarizes the information from the corresponding data set. It also serves as an important intermediate step for creating visual displays such as pie charts, bar plots, histograms, and more.</p>
+<p>Let us create a frequency table of a categorical variable <span class="math inline">\(\texttt{Hand}\)</span> using the function <span class="math inline">\(\texttt{table()}\)</span>.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Parentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.</p>
-<p>Similarly, we can also use “exp()” for the exponential function.</p>
+<p>We can also create a 2-by-2 (relative) frequency table (or contingency table) with two categorical variables.</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Another useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:</p>
+<p>Now, we can finally created conditional frequency table.</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To calculate a value with an exponent, used the “^” symbol. For example <span class="math inline">\(4^3\)</span> is written as:</p>
+<p>Based on the results of conditional frequency table, we can answer questions such as: Which gender prefers MLB? Which gender prefers NBA?</p>
+</section>
+<section id="bar-plot" class="level2">
+<h2 class="anchored" data-anchor-id="bar-plot">Bar Plot</h2>
+<p>A bar plot is highly useful for displaying categorical data, regardless of the number of categories. To create a bar plot, we can use the <span class="math inline">\(\texttt{barplot()}\)</span> function. Note that the function accepts the <span class="math inline">\(\texttt{table}\)</span> object that we created earlier.</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="example-1" class="level4">
-<h4 class="anchored" data-anchor-id="example-1">Example</h4>
-<p>Let us compute the following mathematical expression: <span class="math display">\[\frac{1}{\sqrt{2\pi} 0.5}\log\left(\frac{(12-10.8)^2}{0.4}\right).\]</span></p>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="defining-objects" class="level2">
-<h2 class="anchored" data-anchor-id="defining-objects">Defining objects</h2>
-<p>In <strong>R</strong>, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:</p>
+<p>For any plotting functions, the <span class="math inline">\(\texttt{main}\)</span> argument can be used to add a “title” to the plot.</p>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to <strong>R</strong> that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.</p>
+<section id="example" class="level4">
+<h4 class="anchored" data-anchor-id="example">Example</h4>
+<p>Select a single categorical variable from the data set, and create a bar plot with an appropriate title. (We will address bivariate categorical variables in a lab question.)</p>
 <div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can reassign a new value to a object. E.g.,</p>
+</section>
+</section>
+<section id="histogram" class="level2">
+<h2 class="anchored" data-anchor-id="histogram">Histogram</h2>
+<p>Histogram is a versatile graphical display for a single numerical variable (data). It directly accepts a numerical vector as its first argument. Let us create a histogram for the <span class="math inline">\(\texttt{Height}\)</span> variable.</p>
 <div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The histogram reveals that the distribution of the <span class="math inline">\(\texttt{Height}\)</span> variable is right-skewed.</p>
+<section id="example-1" class="level4">
+<h4 class="anchored" data-anchor-id="example-1">Example</h4>
+<p>Select a single numerical variable from the data set, and create a histogram with an appropriate title. What is the shape of the distribution?</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+</section>
+<section id="box-plot" class="level2">
+<h2 class="anchored" data-anchor-id="box-plot">Box Plot</h2>
+<p>Although the histogram is typically our go-to choice for a single numerical variable, there are situations where a box plot is preferable. For instance, if we want to display <span class="math inline">\(\texttt{Height}\)</span> by <span class="math inline">\(\texttt{Gender}\)</span>, a box plot would be more appropriate.</p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>This graphical representation makes it easy to compare the differences in <span class="math inline">\(\texttt{Height}\)</span> between genders. As demonstrated, a box plot is a clear and intuitive choice when we have one numerical variable and one categorical variable.</p>
 </section>
 <section id="lab-questions" class="level2">
 <h2 class="anchored" data-anchor-id="lab-questions">Lab Questions</h2>
 <ol type="1">
-<li>Calculate the following math expressions.</li>
+<li>Let us consider <span class="math inline">\(\texttt{Browser}\)</span> variable in relation to <span class="math inline">\(\texttt{Cat\_Dog}\)</span>.</li>
 </ol>
 <!-- -->
 <ol type="i">
-<li><span class="math inline">\((23\times 6)+3\)</span>.</li>
-<li><span class="math inline">\(13^3-1100\)</span>.</li>
-<li><span class="math inline">\(\log(23)\)</span> with the natural log.</li>
-<li><span class="math inline">\(\sqrt{81}/(3^3)\)</span>.</li>
+<li>Create a frequency table for the <span class="math inline">\(\texttt{Browser}\)</span> variable.</li>
 </ol>
-<div id="qwebr-insertion-location-11"></div>
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="2" type="i">
+<li>Create a bar plot using the table object in (i).</li>
+</ol>
+<div id="qwebr-insertion-location-14"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="3" type="i">
+<li>Create a conditional frequency table for <span class="math inline">\(\texttt{Browser}\)</span> with respect to <span class="math inline">\(\texttt{Cat\_Dog}\)</span>.</li>
+</ol>
+<div id="qwebr-insertion-location-15"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="4" type="i">
+<li>Create a conditional frequency barplot for <span class="math inline">\(\texttt{Browser}\)</span> with respect to <span class="math inline">\(\texttt{Cat\_Dog}\)</span>. Discuss the percentages of Edge and Safari with respect to the personality.</li>
+</ol>
+<div id="qwebr-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <ol start="2" type="1">
-<li>Please complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbTOq38NTlUTKahr5kGRWgW13nO4pQqgoLad3_0D7jLnbt-Q/viewform?usp=sharing">Give Us Your Input</a></li>
+<li>Let us consider <span class="math inline">\(\texttt{Shoes}\)</span> variable in relation to <span class="math inline">\(\texttt{Gender}\)</span>. Note that we have one numerical and one categorical variable.</li>
 </ol>
+<!-- -->
+<ol type="i">
+<li>Choose a relevant graphical display to summarize the information of <span class="math inline">\(\texttt{Shoes}\)</span>, and provide the plot.</li>
+</ol>
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol type="i">
+<li>Choose a relevant graphical display to summarize the information of <span class="math inline">\(\texttt{Shoes}\)</span> in terms of <span class="math inline">\(\texttt{Gender}\)</span>, and provide the plot.</li>
+</ol>
+<div id="qwebr-insertion-location-18"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="2" type="i">
+<li>Which gender has a higher central value for <span class="math inline">\(\texttt{Shoes}\)</span>? Which gender shows greater variability? What can we infer about the number of pairs of shoes with respect to gender?</li>
+</ol>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 </section>

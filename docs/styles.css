@@ -1,0 +1,22 @@
+/* css styles */
+.navbar {
+  background-color:#653600;
+  border-color:#ffd24f
+}
+.navbar-brand {
+color:#cfab7a!important;
+font-size:25px
+}
+.nav-tabs-custom > .nav-tabs > li.active {border-top-color:#cfab7a}
+
+a {
+  color: #653600;
+  font-weight: 800;
+}
+
+.box {
+  border: 1px solid green ;
+    width: 300px;
+  padding: 50px;
+  margin: 20px;
+} 

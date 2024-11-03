@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 1 – MATH 012: R-Labs</title>
+<title>Lab 7 – MATH 012: R-Labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -357,7 +391,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-1","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"2 + 2"},{"id":2,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-2","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## subtraction operator: \"-\"\n\n## multiplication operator: \"*\"\n\n## division operator: \"/\""},{"id":3,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-3","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"log(42)"},{"id":4,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-4","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"exp(12)"},{"id":5,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-5","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"sqrt(4)"},{"id":6,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-6","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"4^3"},{"id":7,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-7","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":""},{"id":8,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-8","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 24"},{"id":9,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-9","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x + 12"},{"id":10,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-10","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"x <- 18"},{"id":11,"options":{"editor-word-wrap":"true","editor-font-scale":"1","fig-width":7,"editor-quick-suggestions":"false","context":"interactive","out-height":"","editor-max-height":"","read-only":"false","dpi":72,"label":"unnamed-chunk-11","classes":"","out-width":"700px","output":"true","message":"true","autorun":"false","comment":"","results":"markup","fig-cap":"","fig-height":5,"warning":"true"},"code":"## i\n\n## ii\n\n## iii\n\n## iv"}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"autorun":"true","message":"true","context":"setup","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-1","fig-height":5,"editor-quick-suggestions":"false"},"code":"Survey_Data<-structure(list(Sports = c(\"MLB\", \"NFL\", \"NHL\", \"Other\", \"NBA\", \n\"NHL\", \"NBA\", \"NFL\", \"NBA\", \"MLB\", \"NHL\", \"Other\", \"NBA\", \"Other\", \n\"NBA\", \"MLB\", \"NBA\", \"NFL\", \"MLB\", \"NFL\", \"NBA\", \"Other\", \"MLB\", \n\"Other\", \"Other\", \"NFL\", \"NFL\", \"NFL\", \"NHL\", \"Other\", \"NFL\", \n\"Other\", \"MLB\", \"NBA\", \"MLB\", \"NBA\", \"NBA\", \"Other\", \"NHL\", \"MLB\", \n\"NFL\", \"Other\", \"NFL\", \"NBA\", \"NFL\", \"Other\", \"NFL\", \"Other\", \n\"MLB\", \"NFL\", \"NFL\", \"Other\", \"NBA\", \"MLB\", \"Other\", \"NBA\", \"Other\", \n\"Other\", \"NBA\", \"Other\", \"NHL\", \"NBA\", \"NFL\", \"NFL\", \"Other\", \n\"Other\", \"MLB\", \"NFL\", \"NBA\", \"NBA\", \"Other\", \"NBA\", \"NBA\", \"NHL\", \n\"Other\", \"NFL\", \"Other\", \"NFL\", \"NFL\", \"NBA\", \"NBA\", \"Other\", \n\"NHL\", \"NFL\", \"MLB\", \"NBA\", \"NFL\", \"Other\", \"NHL\", \"MLB\", \"NHL\", \n\"NBA\", \"NHL\", \"Other\", \"Other\", \"NFL\", \"NBA\", \"NBA\", \"MLB\", \"MLB\", \n\"NHL\", \"MLB\", \"NBA\", \"NFL\", \"NFL\", \"NFL\", \"Other\", \"Other\", \"Other\", \n\"Other\", \"NBA\", \"Other\", \"NFL\", \"NBA\", \"NHL\", \"Other\", \"MLB\", \n\"NFL\", \"NBA\", \"Other\", \"NFL\", \"NBA\", \"NFL\", \"Other\", \"Other\", \n\"NFL\", \"NFL\", \"NBA\", \"NBA\", \"NFL\", \"Other\", \"NBA\", \"NBA\", \"NFL\", \n\"MLB\", \"NHL\"), States = c(23L, 20L, 3L, 9L, 11L, 20L, 15L, 13L, \n20L, 15L, 10L, 15L, 12L, 6L, 16L, 17L, 20L, 9L, 15L, 17L, 12L, \n7L, 12L, 9L, 14L, 15L, 6L, 18L, 17L, 15L, 5L, 10L, 16L, 27L, \n13L, 15L, 30L, 5L, 15L, 14L, 13L, NA, 30L, 18L, 23L, 8L, 18L, \n20L, 18L, 15L, 14L, 16L, 24L, 13L, 28L, 3L, 13L, 19L, 18L, 7L, \n36L, 3L, 10L, 26L, 12L, 8L, 18L, 10L, 6L, 18L, 18L, 20L, 20L, \n10L, 26L, 5L, 8L, 7L, 20L, 6L, 22L, 10L, 15L, 15L, 25L, 5L, 12L, \n5L, 10L, 11L, 4L, 6L, 9L, 7L, 5L, 10L, 15L, 14L, 19L, 15L, 12L, \n11L, 3L, 6L, 15L, 6L, 15L, 5L, 12L, 13L, 4L, 1L, 15L, 35L, 8L, \n9L, 17L, 5L, 5L, 8L, 3L, 2L, 10L, 15L, 17L, 12L, 13L, 5L, 12L, \n15L, 2L, 8L, 13L, 27L, 1L, 16L), Cat_Dog = c(\"Dog\", \"Dog\", \"Dog\", \n\"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Other\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \n\"Dog\", \"Other\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Cat\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \n\"Dog\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Cat\", \"Cat\", \"Cat\", \n\"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Cat\", \"Dog\", \"Dog\", \"Cat\", \n\"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Other\", \"Other\", \"Cat\", \n\"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \"Dog\", \n\"Dog\", \"Cat\", \"Cat\", \"Dog\", \"Dog\", \"Dog\", \"Dog\"), Pets = c(1L, \n1L, 1L, 0L, 0L, 2L, 1L, 1L, 2L, 0L, 1L, 1L, 0L, 0L, 0L, 1L, 1L, \n0L, 0L, 1L, 2L, 4L, 1L, 4L, 1L, 1L, 1L, 2L, 3L, 0L, 2L, 1L, 0L, \n2L, 1L, 2L, 1L, 3L, 1L, 2L, 1L, 2L, 6L, 3L, 1L, 1L, 1L, 0L, 1L, \n1L, 1L, 0L, 0L, 2L, 8L, 1L, 2L, 1L, 0L, 0L, 3L, 2L, 0L, 1L, 1L, \n4L, 0L, 1L, 2L, 1L, 3L, 1L, 0L, 0L, 2L, 1L, 1L, 1L, 0L, 1L, 2L, \n1L, 2L, 1L, 1L, 1L, 2L, 0L, 1L, 0L, 2L, 1L, 4L, 3L, 1L, 0L, 2L, \n1L, 1L, 0L, 2L, 2L, 2L, 3L, 3L, 2L, 0L, 2L, 2L, 1L, 0L, 2L, 1L, \n1L, 7L, 0L, 1L, 0L, 0L, 0L, 0L, 1L, 1L, 3L, 2L, 1L, 1L, 1L, 1L, \n0L, 0L, 0L, 1L, 1L, 1L, 0L), Gender = c(\"Female\", \"Female\", \"Male\", \n\"Male\", \"Female\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Male\", \"Female\", \"Female\", \"Male\", NA, \"Male\", \"Male\", \"Female\", \n\"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", NA, \n\"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Male\", \"Male\", \"Male\", \"Female\", NA, \"Female\", \"Female\", \"Female\", \n\"Male\", \"Female\", \"Female\", \"Male\", \"Male\", \"Female\", \"Male\", \n\"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \"Male\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Male\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Male\", \"Female\", \n\"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \n\"Female\", \"Male\", \"Female\", \"Male\", \"Male\", \"Male\", \"Female\", \n\"Male\", \"Male\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Female\", \"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \n\"Female\", \"Female\", \"Male\", \"Female\", \"Female\", \"Female\", \"Female\", \n\"Male\", \"Female\", \"Male\", \"Female\", \"Male\"), Browser = c(\"Safari\", \n\"Chrome\", \"Chrome\", \"Safari\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Edge\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Safari\", \"Firefox\", \"Chrome\", \"Chrome\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Chrome\", \"Chrome\", \"Safari\", \"Safari\", \"Chrome\", \"Safari\", \n\"Safari\", \"Safari\", \"Chrome\", \"Safari\", \"Chrome\", \"Firefox\", \n\"Safari\", \"Chrome\", \"Safari\", \"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Safari\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Other\", \n\"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \n\"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Other\", \"Chrome\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \"Edge\", \"Chrome\", \"Chrome\", \n\"Safari\", \"Safari\", \"Chrome\", \"Safari\", \"Safari\", \"Edge\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Other\", \"Firefox\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \"Chrome\", \"Safari\", \n\"Safari\", \"Chrome\", \"Chrome\", \"Safari\", \"Chrome\", \"Safari\", \"Safari\", \n\"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \"Chrome\", \n\"Chrome\", \"Chrome\", \"Edge\", \"Chrome\"), Shoes = c(8L, 10L, 4L, \n7L, 25L, 30L, 8L, 9L, 17L, 11L, 30L, NA, 6L, 10L, 12L, 12L, 10L, \n8L, 6L, 10L, 8L, NA, 4L, 12L, 3L, 10L, 20L, 6L, 8L, 6L, 11L, \n11L, 13L, 10L, 6L, 5L, 12L, 6L, 10L, 5L, 5L, 23L, 15L, 20L, 8L, \n10L, 8L, 5L, 20L, 10L, 8L, 7L, 13L, 8L, 5L, 6L, 15L, 6L, 17L, \n4L, 9L, 10L, 3L, 25L, 15L, 4L, NA, 13L, 5L, 5L, 6L, 8L, 8L, 10L, \n18L, 12L, 20L, 35L, 10L, 3L, 4L, 4L, 21L, 15L, 2L, 6L, 15L, 5L, \n6L, 9L, 8L, 3L, 7L, 10L, 4L, 20L, 6L, 20L, 9L, 10L, 15L, 8L, \n9L, 10L, 8L, 8L, 3L, 2L, 3L, 10L, 3L, 5L, 5L, 14L, 4L, 9L, 10L, \n6L, 6L, 9L, 9L, 5L, 6L, 7L, 10L, 15L, 8L, 20L, 20L, 7L, NA, 5L, \n71L, 18L, 5L, 10L), Height = c(62L, 62L, 70L, 72L, 66L, 70L, \n64L, 69L, 64L, 67L, 61L, 64L, 73L, 66L, 63L, 67L, 65L, 64L, 75L, \n61L, 66L, 61L, NA, NA, 70L, 66L, 62L, 66L, 64L, 65L, 68L, 65L, \n65L, 66L, 65L, NA, 70L, 60L, 63L, 70L, 74L, 63L, 64L, 68L, 68L, \n64L, 61L, 70L, 62L, 67L, 64L, 61L, 70L, 64L, 65L, NA, NA, 69L, \n65L, 66L, 71L, 72L, 69L, 70L, 64L, 67L, 63L, 66L, 71L, 64L, 63L, \n70L, 72L, 69L, 72L, 60L, 68L, 62L, 67L, 67L, 72L, 65L, 65L, 66L, \n70L, 66L, 63L, 66L, 65L, 63L, 63L, 67L, 69L, 65L, 72L, 65L, 67L, \nNA, 65L, 64L, 63L, 61L, 68L, 63L, 72L, 62L, 73L, 69L, 71L, 68L, \n73L, 73L, 63L, 68L, 63L, 67L, 62L, 65L, 65L, 63L, 61L, 63L, 66L, \n63L, 62L, 64L, 64L, 66L, 63L, 63L, NA, 69L, 63L, 73L, 60L, 72L\n), MO_Height = c(62L, 64L, 64L, 64L, 66L, 65L, 62L, 65L, 64L, \n65L, 64L, 66L, 64L, 64L, 61L, 67L, 69L, 67L, 67L, 59L, 66L, NA, \nNA, NA, 65L, 65L, 67L, 60L, 65L, 60L, 67L, 62L, 65L, 66L, 64L, \nNA, 62L, 62L, 64L, 66L, 68L, 60L, 61L, 65L, 66L, 61L, 64L, 65L, \n62L, 63L, 65L, 59L, 69L, 62L, 63L, NA, NA, 68L, 68L, 65L, 61L, \n67L, 62L, 68L, 64L, NA, 67L, 66L, 64L, 62L, 67L, 64L, 60L, 67L, \n65L, 60L, 66L, 63L, 66L, 59L, 65L, NA, 68L, 65L, 61L, 67L, 65L, \n64L, 65L, 65L, 62L, 59L, 64L, 64L, 67L, 67L, 69L, NA, 65L, 62L, \n68L, 64L, 65L, 61L, 67L, 64L, 68L, NA, 65L, 64L, NA, NA, 61L, \n65L, 60L, 65L, 59L, 64L, 64L, 63L, 59L, 54L, 67L, 65L, 65L, 65L, \n63L, 62L, 61L, 64L, NA, 67L, 65L, 66L, 63L, 63L), FA_Height = c(70L, \n67L, 66L, 69L, 70L, 76L, 69L, 70L, 70L, 74L, 69L, 74L, 68L, 67L, \n68L, 72L, 74L, 70L, 72L, 74L, 74L, NA, NA, NA, 71L, 76L, 71L, \n64L, 73L, 69L, 70L, 70L, 71L, 70L, 64L, NA, 68L, 67L, 69L, 73L, \n60L, 70L, 68L, 62L, 71L, 68L, 69L, 69L, 70L, 71L, 71L, 65L, 67L, \n68L, 67L, NA, NA, 71L, 71L, 73L, 65L, 67L, 68L, 76L, 70L, NA, \n70L, 72L, 64L, 71L, 70L, 72L, 74L, 70L, 70L, NA, 67L, 70L, 70L, \n67L, 75L, 70L, 71L, 71L, 72L, 62L, 74L, 65L, 72L, 70L, 69L, 67L, \n71L, 67L, 70L, 74L, 71L, NA, 73L, 71L, 71L, 68L, 68L, NA, 72L, \n67L, 70L, NA, 72L, 78L, NA, NA, 65L, 69L, 65L, 69L, 66L, 64L, \n64L, 68L, 70L, 58L, 71L, 71L, 67L, 71L, 69L, 71L, 70L, 71L, NA, \n68L, 74L, 68L, 65L, 70L), Arrival = c(7L, 150L, 10L, 25L, 11L, \n10L, 15L, 8L, NA, 4L, 20L, 15L, 5L, 10L, 15L, 10L, 10L, 15L, \nNA, 7L, 10L, NA, 7L, 15L, 5L, 17L, 15L, 15L, 6L, 10L, 10L, 10L, \n12L, 10L, NA, 15L, 10L, 5L, 5L, 5L, 10L, 20L, 9L, 10L, 7L, 6L, \n10L, 30L, 10L, 10L, 7L, 9L, 10L, 16L, NA, 10L, 9L, 8L, 7L, 20L, \n4L, 30L, 15L, 5L, 10L, 15L, 5L, 10L, 15L, 15L, 10L, 9L, 8L, 7L, \n10L, 15L, 7L, 13L, 25L, 20L, 7L, 10L, 5L, 10L, 10L, 5L, 10L, \n9L, 10L, 15L, 9L, 20L, 13L, 10L, 7L, 3L, NA, 10L, 7L, 10L, 8L, \n8L, 15L, 5L, 10L, 10L, 10L, 30L, 10L, 5L, 10L, 13L, 8L, 10L, \nNA, 10L, 10L, 8L, 8L, NA, 12L, 3L, 6L, 10L, 10L, 10L, 10L, 7L, \n15L, 15L, 60L, 7L, 15L, 6L, 15L, 10L), Sleep = c(9.5, 9, 8, 7.5, \n5.5, 7, 8, 4, 8, 8, 8.5, 6.5, 5, 5, 7.5, 8.5, 7, 7.5, 6, 8, 6.5, \n8, 5.5, 6, 8, 7.5, 8.5, 6, 5.5, 8, 7, 6.5, 8, 6.5, 7.5, 6, 6, \n8.5, 7, 7, 8, 9, 6, 8, 8, 6, 6.5, 10, 7, 10, 10, 6, 7, 9, 8.5, \nNA, 7, 8, 7.5, 7.5, 6.5, 8, 8, 9, 5, 6, 7.5, 8, 7, 8, 9, 6, 8, \n9, 7, 7, 8, 6, 8, 6, 8, 9, 10, 7.5, 7, 8, 8, 7, 8, 5, 8, 6, 7.5, \n7, 8, 7.5, 3, 8, 7, 7, 6, 7.5, 7.5, 8.5, 4, 8, 7, 9, 7, 5, 9, \n8, 7, 8.5, 8, 8, 8, 8, 8, 5, 5.5, 6, 8, 6.5, 9.5, 8, 8, 8, 8, \n5, 6, 8, 8, 9, 8, 6.5), Number = c(3L, 7L, 7L, 4L, 1L, 7L, 4L, \n2L, 4L, 3L, 7L, 6L, 4L, 8L, 8L, 4L, 4L, 7L, 7L, 8L, 2L, 10L, \n6L, 3L, 3L, 6L, 6L, 7L, 4L, 7L, 7L, 4L, 9L, 7L, 7L, 5L, 2L, 4L, \n9L, 4L, 1L, 2L, 8L, 3L, 2L, 2L, 8L, 3L, 5L, 6L, 3L, 3L, 3L, 6L, \n8L, 1L, 7L, 8L, 7L, 4L, 5L, 9L, 3L, 8L, 8L, 8L, 7L, 2L, 7L, 8L, \n6L, 10L, 7L, 9L, 7L, 4L, 5L, 7L, 2L, 2L, 2L, 3L, 7L, 3L, 10L, \n10L, 7L, 5L, 6L, 8L, 7L, 2L, 7L, 8L, 8L, 7L, 9L, 1L, 2L, 5L, \n7L, 5L, 7L, 3L, 6L, 10L, 4L, 3L, 7L, 4L, 7L, 4L, 5L, 2L, 7L, \n5L, 6L, 5L, 5L, 7L, 8L, 7L, 4L, 8L, 5L, 5L, 3L, 2L, 4L, 7L, 7L, \n5L, 4L, 4L, 7L, 7L), Hand = c(\"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Ambidextrous\", \n\"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \"Left\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \n\"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \"Left\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \"Right\", \n\"Ambidextrous\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Left\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", NA, \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Left\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \n\"Right\", \"Right\", \"Right\", \"Right\", \"Right\", \"Ambidextrous\"), \n    Credit = c(9, 16, 17, 4, 16, 16, 16, 16, 16, 16, 16, 18, \n    16, 15, 17, 18, 17, 15, 14, 15, 16, 17, 16, 16, 18, 16, 15, \n    16, 17, 17, 16, 15, 15, 16, 15, 15, 15, 18, 16, 16, 12, 16, \n    16, 14, 12, 16, 17, 13, 15, 17, 15, 15, 17, 16, NA, 16, 14, \n    16, 15, 15, 18, 9, 13, 16, 13, 14, 17, 16, 14, 15, 18, 15, \n    14, 16, 18, 17, 16, 16, 17, 7, 18, 15, 15, 15, 15, 15, 17, \n    17, 16, 16, 15, 6, 15, 18, 15, 15, 18, 15, 15, 17, 13, 15, \n    16, 15, 18, 12, 17, 18, 16, 18, 15, 13, 12, 18, 16, 18, 15, \n    14, 14, 12, 14.5, 15, 15, 16, 16, 16, 16, 15, 16, 17, 16, \n    14, 15, 16, 16, 15.5)), class = \"data.frame\", row.names = c(NA, \n-136L))\nSURVEY<-na.omit(Survey_Data)"},{"id":2,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-2","fig-height":5,"editor-quick-suggestions":"false"},"code":"## Variable names\nnames(SURVEY)\n## Data dimension\ndim(SURVEY)"},{"id":3,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-3","fig-height":5,"editor-quick-suggestions":"false"},"code":"## In this lab, the data is not \"attached\"\n## So, we are using \"$\" operator to select the variable\ncor(SURVEY$Height,SURVEY$MO_Height)\nplot(SURVEY$Height,SURVEY$MO_Height)\n## Please try the same operations with Height and FA_Height\n"},{"id":4,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-4","fig-height":5,"editor-quick-suggestions":"false"},"code":"## Choose all the observations with Shoes>10\nSubset1<-subset(SURVEY,Shoes>20)\n## Just checking the dimension\nSubset1\n## Choose all the observations with Shoes>10 \n## and the Shoes and Height variables\nSubset2<-subset(SURVEY,Shoes>20,c(\"Shoes\",\"Height\"))\nSubset2"},{"id":5,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-5","fig-height":5,"editor-quick-suggestions":"false"},"code":"## Female Survey dataset\nFSV<-subset(SURVEY,Gender==\"Female\",c(\"Height\",\"MO_Height\",\"FA_Height\",\"Sleep\"))\n## Male Survey dataset\nMSV<-subset(SURVEY,Gender==\"Male\",c(\"Height\",\"MO_Height\",\"FA_Height\",\"Sleep\"))"},{"id":6,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-6","fig-height":5,"editor-quick-suggestions":"false"},"code":"## For the female sub-group\ncor(FSV$Height,FSV$MO_Height)\ncor(FSV$Height,FSV$FA_Height)\n## Try it for the male sub-group\n"},{"id":7,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-7","fig-height":5,"editor-quick-suggestions":"false"},"code":"## Regression coefficients\nReg1 <- lm(Height~MO_Height,data=MSV)\nReg1\n## Regression summary\nsummary(Reg1)"},{"id":8,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-8","fig-height":5,"editor-quick-suggestions":"false"},"code":"Reg2 <- lm(Height~MO_Height+FA_Height,data=MSV)\nReg2\n## Regression summary\nsummary(Reg2)"},{"id":9,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-9","fig-height":5,"editor-quick-suggestions":"false"},"code":"## Prediction of a \"male\" student height when his mother's height is 68.\nnew.obs1<-data.frame(MO_Height=68)\npredict(Reg1,newdata=new.obs1)\n## Prediction of a \"male\" student height when his mother's height is 68 and father's height is 70.\nnew.obs2<-data.frame(MO_Height=68,FA_Height=70)\npredict(Reg2,newdata=new.obs2)"},{"id":10,"options":{"autorun":"true","message":"true","context":"setup","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-10","fig-height":5,"editor-quick-suggestions":"false"},"code":"Mammal<-structure(list(name = c(\"Arctic fox\", \"Owl monkey\", \"Mountain beaver\", \n\"Cow\", \"Grey wolf\", \"Goat\", \"Roe deer\", \"Guinea pig\", \"Verbet\", \n\"Chinchilla\", \"Ground squirrel\", \"Arctic ground squirrel\", \"African giant pouched rat\", \n\"Lesser short-tailed shrew\", \"Star-nosed mole\", \"Nine-banded armadillo\", \n\"Tree hyrax\", \"N.A. opossum\", \"Asian elephant\", \"Big brown bat\", \n\"Donkey\", \"Horse\", \"European hedgehog\", \"Patas monkey\", \"Cat\", \n\"Galago\", \"Genet\", \"Giraffe\", \"Gorilla\", \"Grey seal\", \"Rock hyrax-a\", \n\"Human\", \"African elephant\", \"Water opossum\", \"Rhesus monkey\", \n\"Kangaroo\", \"Yellow-bellied marmot\", \"Golden hamster\", \"Mouse\", \n\"Little brown bat\", \"Slow loris\", \"Okapi\", \"Rabbit\", \"Sheep\", \n\"Jaguar\", \"Chimpanzee\", \"Baboon\", \"Desert hedgehog\", \"Giant armadillo\", \n\"Rock hyrax-b\", \"Raccoon\", \"Rat\", \"E. American mole\", \"Mole rat\", \n\"Musk shrew\", \"Pig\", \"Echidna\", \"Brazilian tapir\", \"Tenrec\", \n\"Phalanger\", \"Tree shrew\", \"Red fox\"), body_mass_kg = c(3.38, \n0.48, 1.35, 465, 36.33, 27.66, 14.83, 1.04, 4.19, 0.42, 0.1, \n0.92, 1, 0.01, 0.06, 3.5, 2, 1.7, 2547, 0.02, 187.1, 521, 0.79, \n10, 3.3, 0.2, 1.41, 529, 207, 85, 0.75, 62, 6654, 3.5, 6.8, 35, \n4.05, 0.12, 0.02, 0.01, 1.4, 250, 2.5, 55.5, 100, 52.16, 10.55, \n0.55, 60, 3.6, 4.29, 0.28, 0.07, 0.12, 0.05, 192, 3, 160, 0.9, \n1.62, 0.1, 4.24), brain_mass_g = c(44.5, 15.5, 8.1, 423, 119.5, \n115, 98.2, 5.5, 58, 6.4, 4, 5.7, 6.6, 0.14, 1, 10.8, 12.3, 6.3, \n4603, 0.3, 419, 655, 3.5, 115, 25.6, 5, 17.5, 680, 406, 325, \n12.3, 1320, 5712, 3.9, 179, 56, 17, 1, 0.4, 0.25, 12.5, 490, \n12.1, 175, 157, 440, 179.5, 2.4, 81, 21, 39.2, 1.9, 1.2, 3, 0.33, \n180, 25, 169, 2.6, 11.4, 2.5, 50.4)), \nrow.names = c(NA, -62L), \nclass = c(\"spec_tbl_df\", \n\"tbl_df\", \"tbl\", \"data.frame\"))"},{"id":11,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-11","fig-height":5,"editor-quick-suggestions":"false"},"code":"## Check data\nMammal\n## Transform\nDATA<-log(Mammal[,2:3])\ncolnames(DATA)<-c(\"LM.Body\",\"LM.Brain\")\nplot(DATA$LM.Body,DATA$LM.Brain)"},{"id":12,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-12","fig-height":5,"editor-quick-suggestions":"false"},"code":""},{"id":13,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-13","fig-height":5,"editor-quick-suggestions":"false"},"code":""},{"id":14,"options":{"autorun":"false","message":"true","context":"interactive","results":"markup","editor-word-wrap":"true","out-width":"700px","warning":"true","classes":"","comment":"","editor-font-scale":"1","read-only":"false","fig-cap":"","editor-max-height":"","fig-width":7,"out-height":"","output":"true","dpi":72,"label":"unnamed-chunk-14","fig-height":5,"editor-quick-suggestions":"false"},"code":"new.obs<-data.frame(LM.Body=3.12)"}];
 
 </script>
 <script type="module">
@@ -1661,7 +1695,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_7.html">Lab 7</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1684,7 +1718,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Lab_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
@@ -1720,7 +1754,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Lab_7.html" class="sidebar-item-text sidebar-link">
+  <a href="./Lab_7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lab 7</span></a>
   </div>
 </li>
@@ -1748,12 +1782,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-r-i" id="toc-introduction-to-r-i" class="nav-link active" data-scroll-target="#introduction-to-r-i">Introduction to R (I)</a>
+  <li><a href="#analyzing-bivariate-data-with-r-iii" id="toc-analyzing-bivariate-data-with-r-iii" class="nav-link active" data-scroll-target="#analyzing-bivariate-data-with-r-iii">Analyzing Bivariate Data with <strong>R (III)</strong></a>
   <ul class="collapse">
-  <li><a href="#command-line" id="toc-command-line" class="nav-link" data-scroll-target="#command-line">Command line</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#mathematical-functions" id="toc-mathematical-functions" class="nav-link" data-scroll-target="#mathematical-functions">Mathematical functions</a></li>
-  <li><a href="#defining-objects" id="toc-defining-objects" class="nav-link" data-scroll-target="#defining-objects">Defining objects</a></li>
+  <li><a href="#beginning-semester-survey-data" id="toc-beginning-semester-survey-data" class="nav-link" data-scroll-target="#beginning-semester-survey-data">Beginning Semester Survey Data</a></li>
+  <li><a href="#heights-relationship-between-parents-and-children" id="toc-heights-relationship-between-parents-and-children" class="nav-link" data-scroll-target="#heights-relationship-between-parents-and-children">Heights relationship between parents and children</a></li>
+  <li><a href="#searching-for-the-relationship-within-subsets." id="toc-searching-for-the-relationship-within-subsets." class="nav-link" data-scroll-target="#searching-for-the-relationship-within-subsets.">Searching for the relationship within subsets.</a>
+  <ul class="collapse">
+  <li><a href="#example-subsetting-with-textttsubset" id="toc-example-subsetting-with-textttsubset" class="nav-link" data-scroll-target="#example-subsetting-with-textttsubset">Example: Subsetting with <span class="math inline">\(\texttt{subset()}\)</span></a></li>
+  </ul></li>
+  <li><a href="#regression-analysis-with-the-textttlm-built-in-function" id="toc-regression-analysis-with-the-textttlm-built-in-function" class="nav-link" data-scroll-target="#regression-analysis-with-the-textttlm-built-in-function">Regression analysis with the <span class="math inline">\(\texttt{lm()}\)</span> built-in function</a></li>
   <li><a href="#lab-questions" id="toc-lab-questions" class="nav-link" data-scroll-target="#lab-questions">Lab Questions</a></li>
   </ul></li>
   </ul>
@@ -2046,9 +2083,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_1.html">Lab 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Lab_1.html">Lab Sessions</a></li><li class="breadcrumb-item"><a href="./Lab_7.html">Lab 7</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lab 1</h1>
+<h1 class="title">Lab 7</h1>
 </div>
 
 
@@ -2065,76 +2102,95 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="introduction-to-r-i" class="level1">
-<h1>Introduction to R (I)</h1>
-<section id="command-line" class="level2">
-<h2 class="anchored" data-anchor-id="command-line">Command line</h2>
-<p>You can type commands in the “Console”.</p>
-<p>Type “2+2” and then hit “Shift+Return” or click the “Run Code” icon. You’ll see that R can perform simple calculations, just like a calculator. The result, 4, will appear, with a “[1]” label indicating that this is the first element of the output. While this labeling may seem unnecessary for simple answers, it becomes quite helpful for more complex outputs.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">Comments</h2>
-<p>In your code scripts, it’s often useful to include text that isn’t evaluated by <strong>R</strong>. This allows you to leave notes for yourself or a friend about what the next line of code does, its strengths and limitations, or any other information you want to remember. To add a comment, start the line with the hash symbol “#”. <strong>R</strong> will ignore everything on that line after the “#”.</p>
-<section id="example" class="level4">
-<h4 class="anchored" data-anchor-id="example">Example</h4>
-<p>Let us try the rest of the fundamental arithmetic operations:</p>
+<section id="analyzing-bivariate-data-with-r-iii" class="level1">
+<h1>Analyzing Bivariate Data with <strong>R (III)</strong></h1>
+<p>We finalize our discussion of bivariate data analysis. In particular, we focus on <strong>linear regression</strong> analysis using our survey dataset with continuous variables.</p>
+<section id="beginning-semester-survey-data" class="level2">
+<h2 class="anchored" data-anchor-id="beginning-semester-survey-data">Beginning Semester Survey Data</h2>
+<p>The original data contains 136 observations and 15 variables. But, we omit the observations with a missing value, so the final data dimension becomes <span class="math inline">\(108\times 15\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fl">01.</span> Sports<span class="sc">:</span>    What is your favorite professional sport? </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fl">02.</span> States<span class="sc">:</span>    How many states <span class="cf">in</span> the US have you traveled to? </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fl">03.</span> Cat_Dog<span class="sc">:</span>   Are you more of a cat person or a dog person? </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fl">04.</span> Pets<span class="sc">:</span>      What is the number of pets you and your family currently have? </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fl">05.</span> Gender<span class="sc">:</span>    What is your gender? </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fl">06.</span> Browser<span class="sc">:</span>   What is your preferred internet browser? </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fl">07.</span> Shoes<span class="sc">:</span>     How many pairs of shoes do you have? </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fl">08.</span> Height<span class="sc">:</span>    How tall are <span class="fu">you</span> (inch)? </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fl">09.</span> MO_Height<span class="sc">:</span> What is your mothers <span class="fu">height</span> (inch)? </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fl">10.</span> FA_Height<span class="sc">:</span> What is your fathers <span class="fu">height</span> (inch)? </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fl">11.</span> Arrival<span class="sc">:</span>   How many minutes does it take <span class="cf">for</span> you to reach the recitation classroom from your residence? </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fl">12.</span> Sleep<span class="sc">:</span>     How many HOURS did you sleep last night, to the nearest half<span class="sc">-</span>hour? </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fl">13.</span> Number<span class="sc">:</span>    What is your favorite whole number between <span class="dv">1</span> and <span class="dv">10</span>? </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fl">14.</span> Hand<span class="sc">:</span>      Are you right<span class="sc">-</span> or left<span class="sc">-</span>handed? </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fl">15.</span> Credit<span class="sc">:</span>    How many credits are you taking this semester? </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note that the survey dataset is recorded in “SURVEY”.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-</section>
-<section id="mathematical-functions" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-functions">Mathematical functions</h2>
-<p>You can use a variety of mathematical functions for calculations. For example, log() calculates the natural logarithm of a number.</p>
+<section id="heights-relationship-between-parents-and-children" class="level2">
+<h2 class="anchored" data-anchor-id="heights-relationship-between-parents-and-children">Heights relationship between parents and children</h2>
+<p>Do you believe your height is inherited from your father or mother? If your answer is YES, it might make sense to predict a child’s height based on one parent’s height using linear regression. Let’s explore this idea with our survey dataset.</p>
+<p>Our first step is to examine the correlation and scatter plots. We’ll create these for the mother’s and father’s height variables, respectively.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Parentheses serve two purposes in R: they group elements within calculations and denote the arguments passed to functions. The “arguments” of a function refer to the values provided as input. For example, in “log(3)”, the “log()” function is applied to the argument “3”.</p>
-<p>Similarly, we can also use “exp()” for the exponential function.</p>
+<p>Do you think the variables exhibit sufficient linear associations to justify proceeding with linear regression? Based on the results, the answer seems to be ‘NO.’ A common rule of thumb is that a correlation of around 0.7 (or at least 0.6) is recommended. So, should we stop our analysis here?</p>
+</section>
+<section id="searching-for-the-relationship-within-subsets." class="level2">
+<h2 class="anchored" data-anchor-id="searching-for-the-relationship-within-subsets.">Searching for the relationship within subsets.</h2>
+<p>This type of issue is quite common in data analysis. However, we can still move forward by identifying meaningful relationships within specific subsets. In this lab, we will use the <span class="math inline">\(\texttt{subset()}\)</span> function to accomplish this.”</p>
+<section id="example-subsetting-with-textttsubset" class="level3">
+<h3 class="anchored" data-anchor-id="example-subsetting-with-textttsubset">Example: Subsetting with <span class="math inline">\(\texttt{subset()}\)</span></h3>
+<p>The <span class="math inline">\(\texttt{subset()}\)</span> function takes three arguments: the first is the dataset to subset, the second is the condition for selecting observations, and the third specifies the variables to retain. For example, using the <span class="math inline">\(\texttt{mtcars}\)</span> dataset:</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Another useful mathematical function is “sqrt()”, which calculates the square root of a number. For example, “sqrt(4)” returns:</p>
+<p>Now, let us subset our data for analysis. A common way for the subset would be through the gender variable. So,</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To calculate a value with an exponent, used the “^” symbol. For example <span class="math inline">\(4^3\)</span> is written as:</p>
+<p>Then, let us check the correlations for two datasets.</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="example-1" class="level4">
-<h4 class="anchored" data-anchor-id="example-1">Example</h4>
-<p>Let us compute the following mathematical expression: <span class="math display">\[\frac{1}{\sqrt{2\pi} 0.5}\log\left(\frac{(12-10.8)^2}{0.4}\right).\]</span></p>
+<p>Based on the result, we can confirm a reasonable level of correlation between <span class="math inline">\(\texttt{Height}\)</span> and <span class="math inline">\(\texttt{MO\_Height}\)</span> within the male group. So, let us use it for the linear regression analysis.</p>
+</section>
+</section>
+<section id="regression-analysis-with-the-textttlm-built-in-function" class="level2">
+<h2 class="anchored" data-anchor-id="regression-analysis-with-the-textttlm-built-in-function">Regression analysis with the <span class="math inline">\(\texttt{lm()}\)</span> built-in function</h2>
+<p>In the previous lab, we calculated the regression coefficients manually using formulas. While that approach was informative, it’s not practical to repeat every time. Here, we’ll use the built-in <span class="math inline">\(\texttt{lm()}\)</span> function for convenience. With <span class="math inline">\(\texttt{lm()}\)</span>, we use a “tilde” to link the response variable (<span class="math inline">\(\texttt{Height}\)</span>) with the explanatory variable (<span class="math inline">\(\texttt{MO\_Height}\)</span>).</p>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-</section>
-<section id="defining-objects" class="level2">
-<h2 class="anchored" data-anchor-id="defining-objects">Defining objects</h2>
-<p>In <strong>R</strong>, we can store information by assigning it to objects. For example, to create an object named “x” with a value of “24”, you can write:</p>
+<p>Let’s focus on the R-squared value from the regression summary. This coefficient of determination (<span class="math inline">\(\mathbf{R}^2\)</span>), as we discussed in class, represents the proportion of variation in a student’s height explained by the mother’s height. Currently, the R-squared value is not particularly high, indicating that the model’s predictive power is limited.</p>
+<p>What if we use both the mother’s height (MO_Height) and the father’s height (FA_Height) for prediction, even though we haven’t covered this yet? This approach is known as multiple regression analysis. It can be easily implemented as follows:</p>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The part in the middle—a less-than sign followed by a hyphen, resembling a left-facing arrow—indicates to <strong>R</strong> that the value on the right should be assigned to the object on the left. After executing the command, whenever we use “x”, it will be replaced by its value, “24”. For instance, if we add “12” to “x”, we should expect a result of “36”.</p>
+<p>Lastly, let’s make predictions. Since we are using data from male students, all interpretations should be limited to this subset.</p>
 <div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can reassign a new value to a object. E.g.,</p>
-<div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="lab-questions" class="level2">
 <h2 class="anchored" data-anchor-id="lab-questions">Lab Questions</h2>
-<ol type="1">
-<li>Calculate the following math expressions.</li>
-</ol>
-<!-- -->
-<ol type="i">
-<li><span class="math inline">\((23\times 6)+3\)</span>.</li>
-<li><span class="math inline">\(13^3-1100\)</span>.</li>
-<li><span class="math inline">\(\log(23)\)</span> with the natural log.</li>
-<li><span class="math inline">\(\sqrt{81}/(3^3)\)</span>.</li>
-</ol>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Larger animals tend to have larger brains, but is the increase in brain size proportional to the increase in body size? Allison and Cicchetti (1976) compiled data on the body and brain sizes of 62 mammal species, available in the dataset <span class="math inline">\(\texttt{Mammal}\)</span>. This dataset includes columns for the species name, average body mass (in kg), and average brain size (in g). Since both variables are highly right-skewed, we apply a log transformation for analysis.</p>
 <div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ol start="2" type="1">
-<li>Please complete the following semester start survey. Participation is voluntary, and you may choose to skip any questions: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbTOq38NTlUTKahr5kGRWgW13nO4pQqgoLad3_0D7jLnbt-Q/viewform?usp=sharing">Give Us Your Input</a></li>
+<ol type="1">
+<li>Calculate the correlation between the log body mass and log brain size.</li>
 </ol>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="2" type="1">
+<li>Perform the linear regression analysis for log brain size based on the log average body mass, using the <span class="math inline">\(\texttt{lm()}\)</span> function.</li>
+</ol>
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<ol start="3" type="1">
+<li>Predict the log brain size when the log body mass is 3.12.</li>
+</ol>
+<div id="qwebr-insertion-location-14"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
 </section>

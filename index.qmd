@@ -1,0 +1,34 @@
+---
+title: "MATH 012: R-Labs"
+
+format:
+  html:
+    page-layout: full
+    toc: true
+---
+
+### Welcome to the World of Statistics and Data Science!
+
+## What is **R**?
+
+**R** is a versatile computer program that enables a wide range of statistical calculations and data analysis. Developed and maintained largely through voluntary contributions from statisticians globally, R is a free and open-source tool available on most operating systems, including Windows, Mac OS, and Linux.
+
+Beyond statistical analysis, **R** also excels in creating graphics and functions as a full-fledged programming language. In this series of labs, we will only begin to explore the extensive capabilities that R offers.
+
+## How can we run **R**?
+
+The base **R** environment is always accessible, but most users prefer to work with an Integrated Development Environment (IDE) for a more user-friendly interface. **RStudio**, for example, is one of the most popular IDEs today.
+
+![](ricons.png){fig-align="center"}
+
+Although you can [download](https://posit.co/downloads/) and run **R** locally on your system, it's not necessary for our labs, as they can be completed directly within self-contained webpages. We recommend sticking to the content provided on the lab webpages to familiarize yourself with the syntax. Once you feel comfortable with the language, you can easily run **R** on your laptop.
+
+## R-Lab procedure during recitations
+
+In most recitation sessions, we will dedicate about 20 minutes to a lab focused on **R** programming and data analysis.
+
+-   Each lab includes a brief tutorial that you can easily follow.
+-   At the end of each lab, you'll find a few questions that you can answer based on the lab materials.
+-   Finally, complete the Gradescope lab quiz, which is directly based on the lab questions.
+
+While lab topics are often closely related to class content, they may diverge, especially around the middle of the semester. Feel free to discuss the questions with fellow students, and don't hesitate to ask the TA for help!
